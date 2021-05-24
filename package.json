@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "node ./tools/runScripts.js && next build",
+    "start": "next start",
+    "heroku": "next build && next start"
   },
   "dependencies": {
     "leaflet": "^1.7.1",
