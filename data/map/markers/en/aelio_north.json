@@ -1,0 +1,58 @@
+{
+  "ryuker": [
+    {
+      "lat": 479.245312,
+      "lng": 123.570198,
+      "markerType": 0,
+      "area": "Northern Aelio",
+      "tooltip": "Ryuker Device",
+      "popupHeader": "Ryuker Device - Altolani Plateau",
+      "popupText": "Northern Aelio"
+    },
+    {
+      "lat": 387.569564,
+      "lng": 181.553625,
+      "markerType": 0,
+      "area": "Northern Aelio",
+      "tooltip": "Ryuker Device",
+      "popupHeader": "Ryuker Device - Halphana Wetlands",
+      "popupText": "Northern Aelio"
+    }
+  ],
+  "cocoon": [
+    {
+      "lat": 396.839959,
+      "lng": 324.933635,
+      "markerType": 1,
+      "area": "Northern Aelio",
+      "tooltip": "Cocoon",
+      "popupHeader": "Cocoon - Enhanced Enemy",
+      "popupText": "Halphana Grasslands"
+    },
+    {
+      "lat": 480.559988,
+      "lng": 196.144901,
+      "markerType": 1,
+      "area": "Central Aelio",
+      "tooltip": "Cocoon",
+      "popupHeader": "Cocoon - Swift Jump",
+      "popupText": "Swift Jump"
+    }
+  ],
+  "tower": [
+  ],
+  "regionmag": [
+    {
+      "lat": 412.592693,
+      "lng": 133.465192,
+      "markerType": 4,
+      "area": "Northern Aelio",
+      "tooltip": "Region Mag - Halphana Wetlands",
+      "popupHeader": "Region Mag",
+      "popupText": "Northern Aelio"
+    }
+  ],
+  "fieldboss": [
+
+  ]
+}

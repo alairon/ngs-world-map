@@ -1,0 +1,28 @@
+{
+  "ryuker": [
+    {
+      "lat": 252.931234,
+      "lng": 330.227914,
+      "markerType": 0,
+      "area": "Mt. Magnus",
+      "tooltip": "Ryuker Device",
+      "popupHeader": "Ryuker Device - Mt. Magnus",
+      "popupText": "Mt. Magnus"
+    }
+  ],
+  "cocoon": [
+
+  ],
+  "tower": [
+
+  ],
+  "regionmag": [
+
+  ],
+  "fieldboss": [
+
+  ],
+  "datapod": [
+    
+  ]
+}

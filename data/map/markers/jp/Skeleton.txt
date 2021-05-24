@@ -1,0 +1,23 @@
+{
+  "ryuker": [
+
+  ],
+  "shop": [
+
+  ],
+  "cocoon": [
+
+  ],
+  "tower": [
+
+  ],
+  "regionmag": [
+
+  ],
+  "fieldboss": [
+
+  ],
+  "datapod": [
+    
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "markers": {
+    "ryuker": "./markers/ryuker.svg",
+    "shop": {
+      "default": "./markers/shop.svg",
+      "class": "./markers/shop.svg",
+      "salon": "./markers/shop.svg",
+      "recycle": "./markers/shop.svg",
+      "itemLab": "./markers/shop.svg",
+      "personalShop": "./markers/shop.svg",
+      "itemShop": "./markers/shop.svg",
+      "food": "./markers/shop.svg"
+    },
+    "cocoon": "./markers/cocoon.svg",
+    "tower": "./markers/tower.svg",
+    "fieldboss": "./markers/fieldboss.svg"
+  },
+  "layers": {
+    "gathering": "./layers/gathering.svg",
+    "combat": "./layers/combat.svg"
+  }
+}

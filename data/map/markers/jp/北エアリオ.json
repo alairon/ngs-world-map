@@ -1,0 +1,60 @@
+{
+  "ryuker": [
+    {
+      "lat": 369.078752,
+      "lng": 355.872366,
+      "markerType": 0,
+      "area": "北エアリオ",
+      "tooltip": "リューカーデバイス",
+      "popupHeader": "リューカーデバイス - アルト・ラニ高原",
+      "popupText": "北エアリオ"
+    },
+    {
+      "lat": 387.569564,
+      "lng": 181.553625,
+      "markerType": 0,
+      "area": "北エアリオ",
+      "tooltip": "リューカーデバイス",
+      "popupHeader": "リューカーデバイス - ハルファナ湿原",
+      "popupText": "北エアリオ"
+    }
+  ],
+  "shop": [
+  ],
+  "cocoon": [
+    {
+      "lat": 396.839959,
+      "lng": 324.933635,
+      "markerType": 2,
+      "area": "北エアリオ",
+      "tooltip": "コクーン",
+      "popupHeader": "コクーン - エンハカンスドエネミー",
+      "popupText": "ハルファナ平原"
+    },
+    {
+      "lat": 480.559988,
+      "lng": 196.144901,
+      "markerType": 2,
+      "area": "北エアリオ",
+      "tooltip": "コクーン",
+      "popupHeader": "コクーン - エンハカンスドエネミー",
+      "popupText": "北エアリオ"
+    }
+  ],
+  "tower": [
+  ],
+  "regionmag": [
+    {
+      "lat": 412.592693,
+      "lng": 133.465192,
+      "markerType": 4,
+      "area": "北エアリオ",
+      "tooltip": "リージョンマグ - ハルファナ湿原",
+      "popupHeader": "リージョンマグ",
+      "popupText": "北エアリオ"
+    }
+  ],
+  "fieldboss": [
+
+  ]
+}

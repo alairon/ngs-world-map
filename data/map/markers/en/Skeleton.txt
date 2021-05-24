@@ -1,0 +1,23 @@
+{
+  "ryuker": [
+    // Marker type 0
+  ],
+  "cocoon": [
+    // Marker type 1
+  ],
+  "tower": [
+    // Marker type 2
+  ],
+  "hut": [
+    // Marker type 3
+  ],
+  "regionmag": [
+    // Marker type 4
+  ],
+  "fieldboss": [
+    // Marker type 5
+  ],
+  "datapod": [
+    // Marker type 6
+  ]
+}
