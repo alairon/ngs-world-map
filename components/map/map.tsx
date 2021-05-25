@@ -1,9 +1,8 @@
 import { MapContainer, ImageOverlay, Marker, Popup, LayersControl, LayerGroup, AttributionControl, ZoomControl } from 'react-leaflet'
-import { Control, CRS, Icon, LatLngBounds, popup } from 'leaflet';
+import { CRS, Icon, LatLngBounds } from 'leaflet';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
-//import data from './marker.json';
 
 function generateHTML(header: string, text: string){
   return (<div><h1>{header}</h1><p>{text}</p></div>);
@@ -11,12 +10,12 @@ function generateHTML(header: string, text: string){
 
 let ryukerIcon: Icon = new Icon({
   iconUrl: './markers/icons/ryuker.svg',
-  iconSize: [40, 40]
+  iconSize: [35, 35]
 });
 
 let cocoonIcon: Icon = new Icon({
   iconUrl: './markers/icons/cocoon.svg',
-  iconSize: [38, 38]
+  iconSize: [30, 30]
 });
 
 let towerIcon: Icon = new Icon({
@@ -26,7 +25,12 @@ let towerIcon: Icon = new Icon({
 
 let regionMag: Icon = new Icon({
   iconUrl: './markers/icons/regionMag.svg',
-  iconSize: [40, 40]
+  iconSize: [30, 30]
+});
+
+const gatheringIcon: Icon = new Icon({
+  iconUrl: './markers/icons/gatheringIcon.svg',
+  iconSize: [8, 8]
 });
 
 function getIcon(iconID){
@@ -43,14 +47,13 @@ function getIcon(iconID){
       case 4:
         return (regionMag); //region mag
       default:
-        return (ryukerIcon); //others
+        return (gatheringIcon); //others
     }
   }
 }
 
-export default function Map({lang: string}){
-  const data = require('../../public/ngs/marker_en.json')
-  const Markers = data.map((data, idx) => {
+export default function Map(props){
+  const Markers = props.landmarks.map((data, idx) => {
       const text = generateHTML(data.popupHeader, data.popupText);
       return (
         <Marker key={idx} position={[data.lat, data.lng]} title={data.tooltip} icon={getIcon(data.markerType)}>
@@ -59,6 +62,17 @@ export default function Map({lang: string}){
           </Popup>
         </Marker>
       )
+  });
+
+  const Gathering = props.gathering.map((data, idx) => {
+    const material = Object.keys(data);
+    return(
+      <Marker key={'g'+idx} position={[data.lat, data.lng]} title={"Gathering Point"} icon={gatheringIcon}>
+        <Popup>
+          GATHERING
+        </Popup>
+      </Marker>
+    )
   });
   
   const imageBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
@@ -102,20 +116,11 @@ export default function Map({lang: string}){
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Gathering">
           <LayerGroup>
-            {Markers}
+            {Gathering}
           </LayerGroup>
         </LayersControl.Overlay>
       </LayersControl>
       
     </MapContainer>
   )
-}
-
-export async function getStaticProps(lang: string){
-  const res: Response = await fetch('./ngs/marker_'+lang+'.json');
-  const data: JSON = await res.json();
-
-  return ({
-    props: data
-  });
 }
