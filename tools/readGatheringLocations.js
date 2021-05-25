@@ -6,12 +6,12 @@
 */
 const fs = require('fs');
 const path = require('path');
-const inputDir = path.join(__dirname, '../data/map/markers/');
-const outputDir = path.join(__dirname, '../public/ngs/');
+const inputDir = path.join(__dirname, '../data/map/markers/en/gathering/');
+const outputDir = path.join(__dirname, '../data/ngs/');
 
 function getMarkers(lang){
-  const markerDir = path.join(inputDir, lang, '/');
-  const jsonRegex = /.\.json/mi;
+  const markerDir = path.join(inputDir, '/');
+  const jsonRegex = /.\.json$/mi;
   const markers = [];
   
   const files = fs.readdirSync(markerDir);
@@ -24,11 +24,12 @@ function getMarkers(lang){
 
       // Reads each section of the JSON. See the skeleton.txt file in the data/map/_lang_ folder for details
       for (const x in Object.keys(content)) {
-        let length = content[Object.keys(content)[x]].length;
+        let length = content[Object.keys(content)[x]].coordinates.length;
 
         if (length > 0){
           for (let y = 0; y < length; y++){
-            markers.push(content[Object.keys(content)[x]][y]);
+            //markers.push({...content[Object.keys(content)[x]], ...content[Object.keys(content)[x]].coordinates[y]});
+            markers.push(content[Object.keys(content)[x]].coordinates[y]);
           }
         }
       }
@@ -37,28 +38,13 @@ function getMarkers(lang){
 
   // Attempt to write a new JSON file with the compiled data
   try{
-    fs.writeFileSync(path.join(outputDir, 'marker_' + lang + '.json'), JSON.stringify(markers));
+    fs.writeFileSync(path.join(outputDir, 'gathering_' + lang + '.json'), JSON.stringify(markers));
   }
   catch (err){
     console.log ("The program was unable to create the JSON" + err);
   }
   finally{
-    console.log(`JSON created at: ${path.join(outputDir, 'marker_' + lang + '.json')}`);
+    console.log(`JSON (${lang}) created at: ${path.join(outputDir, 'gathering_' + lang + '.json')}`);
   }
 }
-
-// frontend stuff
-/*
-function generateMarker(data){
-  let latLng = L.latLng([data.lat, data.lng]);
-  let html = generateHTML(data.popupHeader, data.popupText);
-  let marker = L.marker(latLng, { "title": data.tooltip }).bindPopup(html);
-
-  return (marker);
-}
-
-function generateHTML(header, text){
-  return(`<h1>${header}</h1><p>${text}</p`);
-}
-*/
 exports.getMarkers = getMarkers;
