@@ -1,7 +1,7 @@
 /* readMarkers.js
   This file attempts to gather the data from the /data/map/markers folder
   based on the language passed in (e.g. 'en', 'jp', etc.) and compresses them
-  into a single JSON folder.
+  into a single JSON file.
 
 */
 const fs = require('fs');
@@ -24,14 +24,8 @@ function getMarkers(lang){
 
       // Reads each section of the JSON. See the skeleton.txt file in the data/map/_lang_ folder for details
       for (const x in Object.keys(content)) {
-        let length = content[Object.keys(content)[x]].coordinates.length;
-
-        if (length > 0){
-          for (let y = 0; y < length; y++){
-            //markers.push({...content[Object.keys(content)[x]], ...content[Object.keys(content)[x]].coordinates[y]});
-            markers.push(content[Object.keys(content)[x]].coordinates[y]);
-          }
-        }
+        const element = content[Object.keys(content)[x]];
+        markers.push(element);
       }
     }
   }
