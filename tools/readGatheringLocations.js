@@ -1,8 +1,9 @@
 /* readMarkers.js
+  Built for gathering data structure: G2
+
   This file attempts to gather the data from the /data/map/markers folder
   based on the language passed in (e.g. 'en', 'jp', etc.) and compresses them
   into a single JSON file.
-
 */
 const fs = require('fs');
 const path = require('path');
