@@ -159,7 +159,7 @@ export default function Map(props){
       <ImageOverlay 
         url='./halpha_release.jpg'
         bounds={imageBounds}
-        attribution={"<a href='https://pso2.com' target='_blank' style='black'>PHANTASY STAR ONLINE 2 NEW GENESIS</a>"}
+        attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color:black">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
       />
 
       <LayersControl position="topright">
