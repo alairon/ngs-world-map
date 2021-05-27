@@ -37,7 +37,7 @@ export default function Map(props: Promise<StaticProps>): JSX.Element {
     <main>
       <Head>
         <title>PSO2:NGS World Map</title>
-        <meta name="description" content="New Genesis Map"></meta>
+        <meta name="description" content="Phantasy Star Online 2 Map and Gathering"></meta>
         <link rel="icon" href="/favicon.ico"></link>
       </Head>
 
