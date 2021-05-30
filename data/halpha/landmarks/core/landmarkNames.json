@@ -1,0 +1,33 @@
+{
+  "info": {
+    "dataStructRev": "L2"
+  },
+  "ryuker": {
+    "id": 0,
+    "lang": {
+      "en": "Ryuker Device",
+      "jp": "リューカーデバイス"
+    }
+  },
+  "cocoon": {
+    "id": 1,
+    "lang": {
+      "en": "Cocoon",
+      "jp": "コクーン"
+    }
+  },
+  "tower": {
+    "id": 2,
+    "lang": {
+      "en": "Tower",
+      "jp": "タワー"
+    }
+  },
+  "regionMag": {
+    "id": 3,
+    "lang": {
+      "en": "Region Mag",
+      "jp": "リージョンマグ"
+    }
+  }
+}

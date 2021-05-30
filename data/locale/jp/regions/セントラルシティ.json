@@ -6,63 +6,8 @@
       "markerType": 0,
       "area": "セントラルシティ",
       "tooltip": "リューカーデバイス",
-      "popupHeader": "セントラルシティ - リューカーデバイス",
+      "popupHeader": "セントラルシティ ー リューカーデバイス",
       "popupText": "Teleport<br/>Cook Quick Food<br/>Change Channel"
-    }
-  ],
-  "shop": [
-    {
-      "lat": 318.811357,
-      "lng": 285.467727,
-      "markerType": 1,
-      "area": "セントラルシティ",
-      "tooltip": "Item Shop",
-      "popupHeader": "Item Shop",
-      "popupText": "セントラルシティ<br/>Item Shop Staff Eutroy<br/>A shop that allows ARKS defenders to purchase restasigne and reversasigne"
-    },
-    {
-      "lat": 320.233639,
-      "lng": 289.029897,
-      "markerType": 1,
-      "area": "セントラルシティ",
-      "tooltip": "マイショップ",
-      "popupHeader": "マイショップ",
-      "popupText": "セントラルシティ<br/><ul><li>ユーザー同士の取引を行う施設。</li><li>所持しているアイテムの出品や、他プレイヤーが出品したアイテムの購入ができる。</li></ul>"
-    },
-    {
-      "lat": 321.720937,
-      "lng": 292.308725,
-      "markerType": 1,
-      "area": "セントラルシティ",
-      "tooltip": "アイテムラボ",
-      "popupHeader": "アイテムラボ",
-      "popupText": "セントラルシティ<br/><ul><li>装備品の強化ができる施設。</li><li>潜在開放やマルチウェポン化もここで行う。</li></ul>"
-    },
-    {
-      "lat": 325.890208,
-      "lng": 282.400771,
-      "markerType": 1,
-      "area": "セントラルシティ",
-      "tooltip": "Recycle Shop",
-      "popupHeader": "Recycle Shop",
-      "popupText": "セントラルシティ<br/>Travis"
-    },    {
-      "lat": 327.481118,
-      "lng": 285.582751,
-      "markerType": 1,
-      "area": "セントラルシティ",
-      "tooltip": "Salng",
-      "popupHeader": "Salng",
-      "popupText": "セントラルシティ<br/>Salng Staff Eterna<br/>ARKS defenders can customize their looks"
-    },
-    {
-      "lat": 328.541725,
-      "lng": 288.941508,
-      "markerType": 1,
-      "area": "セントラルシティ",
-      "tooltip": "Class Counter",
-      "popupHeader": "Class Counter",
-      "popupText": "セントラルシティ<br/>Class Counter Admin Croche<br/>ARKS defenders can select their class and subclasses"
     }
   ]
 }
