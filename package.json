@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "node ./tools/runScripts.js",
     "dev": "next dev",
+    "prebuild": "node ./tools/runScripts.js",
     "build": "node ./tools/runScripts.js && next build",
-    "start": "next start",
-    "heroku": "next build && next start"
+    "prestart": "node ./tools/runScripts.js",
+    "start": "next start"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
