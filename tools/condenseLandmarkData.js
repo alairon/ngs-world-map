@@ -1,4 +1,4 @@
-/* readMarkers.js
+/* condenseLandmarkData.js
   This file attempts to gather the data from the /data/map/markers folder
   based on the language passed in (e.g. 'en', 'jp', etc.) and compresses them
   into a single JSON folder.\
@@ -8,7 +8,7 @@ const path = require('path');
 
 function getMarkers(lang, continent){
   const inputDir = path.join(__dirname, '../data/' + continent, 'landmarks');
-  const outputDir = path.join(__dirname, '../data/min/');
+  const outputDir = path.join(__dirname, '../data/ngs/');
   const markerDir = path.join(inputDir, '/');
   const jsonRegex = /.\.json/mi;
   const markers = [];
@@ -36,6 +36,9 @@ function getMarkers(lang, continent){
 
   // Attempt to write a new JSON file with the compiled data
   try{
+    if (!fs.existsSync(outputDir)){
+      fs.mkdirSync(outputDir);
+    }
     fs.writeFileSync(path.join(outputDir, 'landmarks_' + lang + '.json'), JSON.stringify(markers));
     console.log(`JSON created at: ${path.join(outputDir, 'landmarks_' + lang + '.json')}`);
   }
