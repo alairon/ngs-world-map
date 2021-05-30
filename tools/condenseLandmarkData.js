@@ -5,11 +5,11 @@
 */
 const fs = require('fs');
 const path = require('path');
-const inputDir = path.join(__dirname, '../data/map/markers/');
-const outputDir = path.join(__dirname, '../data/ngs/');
 
-function getMarkers(lang){
-  const markerDir = path.join(inputDir, lang, '/');
+function getMarkers(lang, continent){
+  const inputDir = path.join(__dirname, '../data/' + continent, 'landmarks');
+  const outputDir = path.join(__dirname, '../data/min/');
+  const markerDir = path.join(inputDir, '/');
   const jsonRegex = /.\.json/mi;
   const markers = [];
   
@@ -37,27 +37,11 @@ function getMarkers(lang){
   // Attempt to write a new JSON file with the compiled data
   try{
     fs.writeFileSync(path.join(outputDir, 'landmarks_' + lang + '.json'), JSON.stringify(markers));
+    console.log(`JSON created at: ${path.join(outputDir, 'landmarks_' + lang + '.json')}`);
   }
   catch (err){
     console.log ("The program was unable to create the JSON" + err);
   }
-  finally{
-    console.log(`JSON created at: ${path.join(outputDir, 'marker_' + lang + '.json')}`);
-  }
 }
 
-// frontend stuff
-/*
-function generateMarker(data){
-  let latLng = L.latLng([data.lat, data.lng]);
-  let html = generateHTML(data.popupHeader, data.popupText);
-  let marker = L.marker(latLng, { "title": data.tooltip }).bindPopup(html);
-
-  return (marker);
-}
-
-function generateHTML(header, text){
-  return(`<h1>${header}</h1><p>${text}</p`);
-}
-*/
 exports.getMarkers = getMarkers;

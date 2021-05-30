@@ -1,7 +1,7 @@
 /** gatheringDataMerge.ts
  * Built for gathering data structure version: G3
  * 
- * This program merges the localized strings file with the coordinates found in the associated coordinates file
+ * This program merges the localized strings files with the coordinates found in the associated coordinates file
  * The program will also condense the information section to reduce processing on the client's device
  */
 
@@ -11,9 +11,9 @@ const structVer = "G3";
 
 function mapDataMerge(lang, continent){
   const jsonRegex = /.\.json$/mi;
-  const inputStringsDir = path.join(__dirname, '../data/locale/', lang, 'gathering');
-  const inputMapDataDir = path.join(__dirname, '../data/', continent, 'gathering');
-  const outputDir = path.join(__dirname, '../data/ngs');
+  const inputStringsDir = path.join(__dirname, '../data/locale', lang, 'gathering');
+  const inputMapDataDir = path.join(__dirname, '../data', continent, 'gathering');
+  const outputDir = path.join(__dirname, '../data/min');
   
   // Gather the list of files
   const inputStringFiles = fs.readdirSync(inputStringsDir, 'utf8');
@@ -28,7 +28,14 @@ function mapDataMerge(lang, continent){
       const data = JSON.parse(fs.readFileSync(path.join(inputStringsDir, value), 'utf8'));
       if (data){
         for (const value in data){
-          localeData[value] = data[value];
+          if (data[value].info.dataStructRev == structVer){
+            localeData[value] = data[value];
+            delete localeData[value].info.dataStructRev;
+          }
+          else{
+            console.log(`Error while processing '${value}'\n  Expected structure version ${structVer}, but got ${data[value].info.dataStructRev}`);
+            localeData[value] = {};
+          }
         }
       }
     }
@@ -49,12 +56,10 @@ function mapDataMerge(lang, continent){
 
   try{
     fs.writeFileSync(path.join(outputDir, 'gathering_' + lang + '.json'), JSON.stringify(mergedJSON));
+    console.log(`JSON created at: ${path.join(outputDir, 'gathering_' + lang + '.json')}`);
   }
   catch(err){
-    console.log("whoopsie.");
-  }
-  finally{
-    console.log("Operation Complete");
+    console.log ("The program was unable to create the JSON" + err);
   }
 }
 
