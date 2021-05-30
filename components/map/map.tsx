@@ -1,5 +1,5 @@
 import { MapContainer, ImageOverlay, GeoJSON, Marker, Popup, LayersControl, LayerGroup, AttributionControl, ZoomControl } from 'react-leaflet'
-import { CRS, DivIcon, Icon, LatLngBounds } from 'leaflet';
+import { CRS, DivIcon, Icon, imageOverlay, LatLngBounds } from 'leaflet';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
@@ -30,8 +30,23 @@ let regionMag: Icon = new Icon({
   iconSize: [30, 30]
 });
 
+interface IconObject {
+  ryuker: Icon,
+  cocoon: Icon,
+  tower: Icon,
+  regionMag: Icon,
+  hut?: Icon
+}
 
-function gatheringIconSVG(fill: string): DivIcon{
+const icons: IconObject = {
+  ryuker: new Icon({iconUrl: './markers/icons/ryuker.svg', iconSize: [35, 35]}),
+  cocoon: new Icon({iconUrl: './markers/icons/cocoon.svg', iconSize: [30, 30]}),
+  tower: new Icon({iconUrl: './markers/icons/tower.svg', iconSize: [40, 40]}),
+  regionMag: new Icon({iconUrl: './markers/icons/regionMag.svg', iconSize: [30, 30]})
+}
+
+
+function genericIcon(fill: string): DivIcon{
   const img = `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" stroke="black" fill="${fill}"><circle cx="100" cy="100" r="800"/></svg>`;
 
   return(
@@ -46,17 +61,17 @@ function getIcon(iconID){
   if (typeof(iconID) == 'number'){
     switch(iconID){
       case 0:
-        return (ryukerIcon); //ryuker
+        return (icons.ryuker); //ryuker
       case 1:
-        return (cocoonIcon); //cocoon
+        return (icons.cocoon); //cocoon
       case 2:
-        return (towerIcon); //tower
+        return (icons.tower); //tower
       case 3:
-        return (cocoonIcon); //hut
+        return (genericIcon("black")); //hut
       case 4:
-        return (regionMag); //region mag
+        return (icons.regionMag); //region mag
       default:
-        return (new DivIcon()); //others
+        return (genericIcon("black")); //others
     }
   }
 }
@@ -80,7 +95,7 @@ export default function Map(props){
 
     return data.coordinates.map((coord, idy: number) => {
       return(
-        <Marker key={'g'+(idx*idy+idy)} position={[coord.lat, coord.lng]} title={material} icon={gatheringIconSVG(data.info.color)}>
+        <Marker key={'g'+(idx*idy+idy)} position={[coord.lat, coord.lng]} title={material} icon={genericIcon(data.info.color)}>
           <Popup>
             {popupText}
           </Popup>
@@ -124,7 +139,7 @@ export default function Map(props){
         </Popup>
       </GeoJSON>
     )
-  })
+  });
   
   const imageBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
   const mapBounds = new LatLngBounds([[-100, -500], [800, 1000]]);
@@ -159,11 +174,11 @@ export default function Map(props){
       <ImageOverlay 
         url='./halpha_release.jpg'
         bounds={imageBounds}
-        attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color:black">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
+        attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
       />
 
-      <LayersControl position="topright">
-        <LayersControl.BaseLayer checked={true} name="Default">
+      <LayersControl position="topright" collapsed>
+        <LayersControl.BaseLayer checked name="Default">
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name="Landmarks">
           <LayerGroup>
@@ -171,7 +186,7 @@ export default function Map(props){
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Gathering">
-          <LayerGroup>
+          <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>">
             {Gathering}
           </LayerGroup>
         </LayersControl.Overlay>
