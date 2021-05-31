@@ -44,7 +44,7 @@ export default function Map(props): JSX.Element{
         bounds={imageBounds}
         attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
       />
-}
+
       <LayersControl position="topright" collapsed>
         <LayersControl.BaseLayer checked name="Default">
         </LayersControl.BaseLayer>
