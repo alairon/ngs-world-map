@@ -37,11 +37,5 @@
   "bugs": {
     "url": "https://github.com/Snowthorne/ngs-world-map/issues"
   },
-  "homepage": "https://github.com/Snowthorne/ngs-world-map#readme",
-  "browserslist": [
-    "> 0.5%",
-    "last 3 versions",
-    "not dead",
-    "not ie all"
-  ]
+  "homepage": "https://github.com/Snowthorne/ngs-world-map#readme"
 }
