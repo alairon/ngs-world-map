@@ -1,41 +1,13 @@
 import { MapContainer, ImageOverlay, GeoJSON, Marker, Popup, LayersControl, LayerGroup, AttributionControl, ZoomControl } from 'react-leaflet'
-import { CRS, DivIcon, Icon, imageOverlay, LatLngBounds } from 'leaflet';
+import { CRS, DivIcon, Icon, LatLngBounds } from 'leaflet';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
+import { IconObject, GenericMarkerConfig } from './map.d';
 
 // Move to scripts so that we can shrink the JSON sent to users
 function generateHTML(header: string, text: string){
   return (<div><h1>{header}</h1><p>{text}</p></div>);
-}
-
-// Icons for landmarks
-let ryukerIcon: Icon = new Icon({
-  iconUrl: './markers/icons/ryuker.svg',
-  iconSize: [35, 35]
-});
-
-let cocoonIcon: Icon = new Icon({
-  iconUrl: './markers/icons/cocoon.svg',
-  iconSize: [30, 30]
-});
-
-let towerIcon: Icon = new Icon({
-  iconUrl: './markers/icons/tower.svg',
-  iconSize: [40, 40]
-})
-
-let regionMag: Icon = new Icon({
-  iconUrl: './markers/icons/regionMag.svg',
-  iconSize: [30, 30]
-});
-
-interface IconObject {
-  ryuker: Icon,
-  cocoon: Icon,
-  tower: Icon,
-  regionMag: Icon,
-  hut?: Icon
 }
 
 const icons: IconObject = {
@@ -57,7 +29,7 @@ function genericIcon(fill: string): DivIcon{
   )
 }
 
-function getIcon(iconID){
+function getIcon(iconID): Icon | DivIcon{
   if (typeof(iconID) == 'number'){
     switch(iconID){
       case 0:
@@ -76,9 +48,9 @@ function getIcon(iconID){
   }
 }
 
-export default function Map(props){
-  const Markers = props.landmarks.map((data, idx) => {
-    const text = generateHTML(data.popupHeader, data.popupText);
+export default function Map(props): JSX.Element{
+  const Markers: JSX.Element = props.landmarks.map((data, idx) => {
+    const text: JSX.Element = generateHTML(data.popupHeader, data.popupText);
     return (
       <Marker key={idx} position={[data.lat, data.lng]} title={data.tooltip} icon={getIcon(data.markerType)}>
         <Popup>
@@ -88,7 +60,7 @@ export default function Map(props){
     );
   });
 
-  const Gathering = props.gathering.map((data, idx: number) => {
+  const Gathering: JSX.Element = props.gathering.map((data, idx: number) => {
     const material: string = data.info.materialName;
     const uses: string = "Used for: " + data.info.usage;
     const popupText = generateHTML(material, uses);
@@ -104,7 +76,7 @@ export default function Map(props){
     });
   });
 
-  function regionStyle(region){
+  function regionStyle(region: number): GenericMarkerConfig {
     switch(region){
       case 0: // City
         return ({
@@ -131,7 +103,7 @@ export default function Map(props){
     }
   }
 
-  const Regions = props.regions.map((boundary, idx) => {
+  const Regions: JSX.Element = props.regions.map((boundary, idx) => {
     return(
       <GeoJSON key={'r'+idx} data={boundary} style={regionStyle(boundary.properties.region)}>
         <Popup>
@@ -141,8 +113,8 @@ export default function Map(props){
     )
   });
   
-  const imageBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
-  const mapBounds = new LatLngBounds([[-100, -500], [800, 1000]]);
+  const imageBounds: LatLngBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
+  const mapBounds: LatLngBounds = new LatLngBounds([[-100, -500], [800, 1000]]);
 
   return (
     <MapContainer 
