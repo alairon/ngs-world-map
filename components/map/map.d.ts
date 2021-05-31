@@ -14,3 +14,14 @@ export interface GenericMarkerConfig {
   weight: number,
   opacity: number
 }
+
+export interface LandmarkObject_L1{
+  lat: number,
+  lng: number,
+  markerType: number,
+  area: string,
+  region?: string,
+  tooltip: string,
+  popupHeader: string,
+  popupText: string
+}
