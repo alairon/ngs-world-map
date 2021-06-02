@@ -1,12 +1,11 @@
-import { MapContainer, ImageOverlay, GeoJSON, Marker, Popup, LayersControl, LayerGroup, AttributionControl, ZoomControl } from 'react-leaflet'
-import { CRS, DivIcon, Icon, LatLngBounds } from 'leaflet';
-import 'leaflet/dist/leaflet.css'
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
-import 'leaflet-defaulticon-compatibility';
-import { IconObject, GenericMarkerConfig } from './map.d';
+import { MapContainer, ImageOverlay, LayersControl, LayerGroup, AttributionControl, ZoomControl } from 'react-leaflet'
+import { CRS, LatLngBounds } from 'leaflet';
 import Landmarks from './layers/landmarks';
 import Gathering from './layers/gathering';
 import Regions from './layers/regions';
+import 'leaflet/dist/leaflet.css'
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
+import 'leaflet-defaulticon-compatibility';
 
 export default function Map(props): JSX.Element{  
   const imageBounds: LatLngBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
