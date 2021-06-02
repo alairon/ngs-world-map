@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import dynamic from "next/dynamic";
-import {getGatheringMarkers} from '../api/gathering';
+import { getGatheringMarkers } from '../api/gathering';
 import { getLandmarkMarkers } from '../api/landmarks';
 import { getRegions } from '../api/regions';
+import NavBar from '../../components/navigation/NavBar';
 
 interface StaticProps{
   props: {
@@ -40,7 +41,7 @@ export default function Map(props: Promise<StaticProps>): JSX.Element {
         <meta name="description" content="Phantasy Star Online 2 Map and Gathering"></meta>
         <link rel="icon" href="/favicon.ico"></link>
       </Head>
-
+      <NavBar/>
       <MapView {...props}/>
     </main>
   );
