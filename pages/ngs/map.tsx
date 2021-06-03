@@ -41,8 +41,11 @@ export default function Map(props: Promise<StaticProps>): JSX.Element {
         <meta name="description" content="Phantasy Star Online 2 Map and Gathering"></meta>
         <link rel="icon" href="/favicon.ico"></link>
       </Head>
-      <NavBar/>
-      <MapView {...props}/>
+      <NavBar content={{title: "PSO2:NGS World Map", footer: `Map Data &copy; SEGA <Link href="https://pso2.com">PHANTASY STAR ONLINE 2 NEW GENESIS</Link>`}}/>
+
+      <section id="Map">
+        <MapView {...props}/>
+      </section>
     </main>
   );
 }
