@@ -1,0 +1,25 @@
+{
+  "info": {
+    "id": 11101,
+    "region": "Central Aelio"
+  },
+  "ryuker": [
+    {
+      "locationName": "Mt. Mahina Pari",
+      "lat": 294.905127,
+      "lng": 215.766188
+    },
+    {
+      "locationName": "Halphana Plains",
+      "lat": 369.078752,
+      "lng": 355.872366
+    }
+  ],
+  "cocoon": [
+    {
+      "locationName": "First Steps",
+      "lat": 311.637386,
+      "lng": 209.214609
+    }
+  ]
+}

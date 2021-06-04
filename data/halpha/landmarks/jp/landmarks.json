@@ -1,0 +1,26 @@
+{
+  "info": {
+    "dataStructRev": "L3",
+    "lang": "jp"
+  },
+  "ryuker": {
+    "markerType": 0,
+    "name": "リューカーデバイス",
+    "desc": ""
+  },
+  "cocoon": {
+    "markerType": 1,
+    "name": "コクーン",
+    "desc": ""
+  },
+  "tower": {
+    "markerType": 2,
+    "name": "タワー",
+    "desc": ""
+  },
+  "mag": {
+    "markerType": 3,
+    "name": "リージョンマグ",
+    "desc": ""
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "info": {
+    "dataStructRev": "L3",
+    "lang": "jp"
+  },
+  "ryuker": {
+    "markerType": 0,
+    "landmarkName": "リューカーデバイス",
+    "desc": "Teleport, Access storage, Cook Quick Food, Change rooms"
+  },
+  "cocoon": {
+    "markerType": 1,
+    "landmarkName": "コクーン",
+    "desc": ""
+  },
+  "tower": {
+    "markerType": 2,
+    "landmarkName": "タワー",
+    "desc": ""
+  },
+  "mag": {
+    "markerType": 3,
+    "landmarkName": "リージョンマグ",
+    "desc": ""
+  }
+}
