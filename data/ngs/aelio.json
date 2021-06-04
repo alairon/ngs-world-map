@@ -5,7 +5,10 @@
       "type": "Feature",
       "properties": {
         "name": "Mt. Magnus",
-        "region": 2
+        "region": 2,
+        "maxPlayers": 8,
+        "recommendedCP": 864,
+        "avgEnemyLvl": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -99,7 +102,10 @@
       "type": "Feature",
       "properties": {
         "name": "Vanford Laboratory Ruins",
-        "region": 2
+        "region": 2,
+        "maxPlayers": 8,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -181,7 +187,10 @@
       "type": "Feature",
       "properties": {
         "name": "Halphilia Lake",
-        "region": 1
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -283,7 +292,10 @@
       "type": "Feature",
       "properties": {
         "name": "Resol Forest",
-        "region": 2
+        "region": 2,
+        "maxPlayers": 8,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -393,7 +405,10 @@
       "type": "Feature",
       "properties": {
         "name": "Southern Aeilo",
-        "region": 1
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 831,
+        "avgEnemyLvl": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -507,7 +522,10 @@
       "type": "Feature",
       "properties": {
         "name": "Western Aeilo",
-        "region": 1
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -733,7 +751,10 @@
       "type": "Feature",
       "properties": {
         "name": "Northern Aeilo",
-        "region": 1
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 987,
+        "avgEnemyLvl": 10
       },
       "geometry": {
         "type": "Polygon",
@@ -863,7 +884,10 @@
       "type": "Feature",
       "properties": {
         "name": "Central Aeilo",
-        "region": 1
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 800,
+        "avgEnemyLvl": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -1107,7 +1131,8 @@
       "type": "Feature",
       "properties": {
         "name": "Central City",
-        "region": 0
+        "region": 0,
+        "maxPlayers": 100
       },
       "geometry": {
         "type": "Polygon",
