@@ -29,8 +29,8 @@ export default function MenuDrawer(): JSX.Element{
         <DrawerContent 
           sx={{backgroundColor: `Gainsboro`, boxShadow: `0 8px 32px 0 rgba( 31, 38, 135, 0.4)`, backdropFilter: `blur(20px)`, WebkitBackdropFilter: `blur(20px)`}}
         >
-          <DrawerCloseButton />
           <DrawerHeader>PSO2:NGS Tools</DrawerHeader>
+          <DrawerCloseButton />
 
           <DrawerBody>
             <SiteNav />
@@ -41,10 +41,10 @@ export default function MenuDrawer(): JSX.Element{
           <DrawerFooter>
             <Box flex="1" fontSize="10pt" textAlign="center">
               <p>
-                &copy; SEGA <Link href="https://pso2.com">PHANTASY STAR ONLINE 2 NEW GENESIS</Link>
+                &copy; SEGA <Link href="https://pso2.com" isExternal>PHANTASY STAR ONLINE 2 NEW GENESIS</Link>
               </p>
               <p>
-                The materials used on this site (images, data, texts, etc.) are owned by SEGA CORPORATION and/or its subsidiaries.
+                This is a fan site and is not associated with SEGA. The materials used on this site (images, data, texts, etc.) are owned by SEGA CORPORATION and/or its subsidiaries. All other trademarks, logos and copyrights are property of their respective owners.
               </p>
             </Box>
           </DrawerFooter>

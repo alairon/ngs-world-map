@@ -14,12 +14,12 @@ export default function Resources(){
         </AccordionButton>
         <AccordionPanel>
           <Link href="https://pso2.com" isExternal>
-            <Box flex="1">
+            <Box p={1}>
               Phantasy Star Online 2 Global
             </Box>
           </Link>
           <Link href="https://pso2.jp" isExternal>
-            <Box>
+            <Box p={1}>
               Phantasy Star Online 2 JP
             </Box>
           </Link>
@@ -35,21 +35,21 @@ export default function Resources(){
         <AccordionIcon />
       </AccordionButton>
       <AccordionPanel>
-      <Box flex="1" textAlign="left">
+      <Box p={1} textAlign="left">
         <b>Global</b>
       </Box>
         <Link href="https://na.arks-layer.com" isExternal>
-          <Box>
+          <Box p={1}>
             Arks-Layer (Global)
           </Box>
         </Link>
         <Link href="https://pso2na.arks-visiphone.com/wiki/Portal:New_Genesis" isExternal>
-          <Box>
+          <Box p={1}>
             Arks-Visiphone (Global)
           </Box>
         </Link>
         <Link href="https://new-gen.rappy-burst.com/" isExternal>
-          <Box flex="1">
+          <Box p={1}>
             Rappy Burst
           </Box>
         </Link>
@@ -58,22 +58,22 @@ export default function Resources(){
         <b>Japan</b>
       </Box>
       <Link href="http://arks-layer.com" isExternal>
-        <Box flex="1">
+        <Box p={1}>
           Arks-Layer (JP)
         </Box>
       </Link>
       <Link href="https://pso2.arks-visiphone.com/wiki/Portal:New_Genesis" isExternal>
-        <Box flex="1">
+        <Box p={1}>
           Arks-Visiphone (JP)
         </Box>
       </Link>
       <Link href="https://www.bumped.org/psublog/" isExternal>
-        <Box flex="1">
+        <Box p={1}>
           Bumped (PSU Blog)
         </Box>
       </Link>
       <Link href="https://pso2ngs.swiki.jp/" isExternal>
-        <Box flex="1">
+        <Box p={1}>
           PSO2 ニュージェネシス (PSO2：NGS) 攻略　Wiki
         </Box>
       </Link>
