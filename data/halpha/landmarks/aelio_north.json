@@ -21,19 +21,10 @@
   ],
   "cocoon": [
     {
-      "lat": 396.839959,
-      "lng": 324.933635,
-      "markerType": 1,
-      "area": "Northern Aelio",
-      "tooltip": "Cocoon",
-      "popupHeader": "Cocoon - Enhanced Enemy",
-      "popupText": "Halphana Grasslands"
-    },
-    {
       "lat": 480.559988,
       "lng": 196.144901,
       "markerType": 1,
-      "area": "Central Aelio",
+      "area": "Northern Aelio",
       "tooltip": "Cocoon",
       "popupHeader": "Cocoon - Swift Jump",
       "popupText": "Swift Jump"
