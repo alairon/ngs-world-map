@@ -38,6 +38,7 @@ export default function Map(props): JSX.Element{
         position={"topright"}
       />
 
+
       <ImageOverlay 
         url='./halpha_release.jpg'
         bounds={imageBounds}
