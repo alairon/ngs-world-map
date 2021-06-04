@@ -5,7 +5,7 @@ import PopupContent from '../../info/PopupContent';
 
 export default function Gathering(gathering): JSX.Element{
   function genericIcon(fill: string): DivIcon{
-    const svg = `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" stroke="black" fill="${fill}"><circle cx="100" cy="100" r="800"/></svg>`;
+    const svg = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="8" fill="${fill}"/></svg>`;
   
     return(
       new DivIcon({
