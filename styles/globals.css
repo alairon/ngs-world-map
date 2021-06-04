@@ -17,3 +17,29 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.NGSPopup .leaflet-popup-content {
+  margin: 0px;
+}
+
+.NGSPopup .leaflet-popup-content-wrapper{
+  background-color: rgb(64, 84, 108, 0.7);
+  min-width: 200px;
+  color: white;
+  border-color: #65EBF6;
+  border-width: 1px;
+  border-radius: 0px;
+  margin: 0;
+}
+
+.NGSPopup .leaflet-popup-tip{
+  background: #65EBF6;
+}
+
+.NGSPopup .leaflet-popup-tip-container {
+  background-color: "#2B5E8D"
+}
+
+.NGSPopup a.leaflet-popup-close-button {
+  padding: 5px;
+}
