@@ -4,9 +4,10 @@
       "lat": 294.905127,
       "lng": 215.766188,
       "markerType": 0,
-      "area": "Central Aelio",
+      "markerName": "Ryuker Device",
       "tooltip": "Ryuker Device",
-      "popupHeader": "Ryuker Device - Mt. Mahina Pari",
+      "area": "Central Aelio",
+      "popupHeader": "Mt. Mahina Pari",
       "popupText": "Central Aelio"
     },
     {
@@ -15,7 +16,7 @@
       "markerType": 0,
       "area": "Central Aelio",
       "tooltip": "Ryuker Device",
-      "popupHeader": "Ryuker Device - Halphana Plains",
+      "popupHeader": "Halphana Plains - East",
       "popupText": "Central Aelio"
     }
   ],
@@ -24,10 +25,20 @@
       "lat": 311.637386,
       "lng": 209.214609,
       "markerType": 1,
+      "markerName": "Cocoon",
       "area": "Central Aelio",
       "tooltip": "Cocoon",
-      "popupHeader": "Cocoon - First Steps",
+      "popupHeader": "First Steps",
       "popupText": "Central Aelio"
+    },
+    {
+      "lat": 396.839959,
+      "lng": 324.933635,
+      "markerType": 1,
+      "area": "Central Aelio",
+      "tooltip": "Cocoon",
+      "popupHeader": "Cocoon - Enhanced Enemy",
+      "popupText": "Halphana Grasslands"
     }
   ],
   "tower": [

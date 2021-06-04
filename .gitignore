@@ -6,8 +6,8 @@ node_modules
 .pnp
 .pnp.js
 
-# testing
-/coverage
+# compiled map data
+/data/ngs/*.json
 
 # next.js
 /.next/

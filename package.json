@@ -9,12 +9,16 @@
     "predev": "node ./tools/runScripts.js",
     "dev": "next dev",
     "prebuild": "node ./tools/runScripts.js",
-    "build": "node ./tools/runScripts.js && next build",
+    "build": "next build",
     "prestart": "node ./tools/runScripts.js",
     "start": "next start"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
+    "@chakra-ui/icons": "^1.0.13",
+    "@chakra-ui/react": "^1.6.3",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.17",
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "leaflet-geosearch": "^3.3.2",
@@ -24,15 +28,19 @@
     "react-leaflet": "^3.2.0"
   },
   "devDependencies": {
-    "@types/leaflet": "^1.7.0",
-    "@types/react": "^17.0.8",
+    "@babel/core": "^7.14.3",
+    "@types/leaflet": "^1.7.1",
+    "@types/react": "^17.0.9",
     "typescript": "^4.3.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Snowthorne/ngs-world-map.git"
   },
-  "contributors": ["alairon", "Snowthorne"],
+  "contributors": [
+    "alairon",
+    "Snowthorne"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Snowthorne/ngs-world-map/issues"
