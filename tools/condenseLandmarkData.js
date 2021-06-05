@@ -7,6 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
+
 function getMarkers(lang, continent){
   const inputDir = path.join(__dirname, '../data/', `${continent}`, 'landmarks', `${lang}`);
   const markerStrings = path.join(__dirname, '../data', `${continent}`, 'landmarks', `landmarks_${lang}.json`);
@@ -34,14 +35,15 @@ function getMarkers(lang, continent){
     if (jsonRegex.test(fileName)){
       // Reads the JSON file
       let content = JSON.parse(fs.readFileSync(path.join(inputDir, fileName), 'utf8'));
-
       let keys = Object.keys(content);
 
       keys.map((key) => {
         if (content[key].length > 0){
           content[key].map((data) => {
-            markers.push(Object.assign(coreMarkerData[key], data));
-          })
+            const marker = Object.assign({}, coreMarkerData[key], content["info"], data);
+            delete marker["id"];
+            markers.push(marker);
+          });
         }
       });
     }
