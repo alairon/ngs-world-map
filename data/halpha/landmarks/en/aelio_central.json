@@ -19,7 +19,14 @@
     {
       "locationName": "First Steps",
       "lat": 311.637386,
-      "lng": 209.214609
+      "lng": 209.214609,
+      "desc": "Reach for the goal!"
+    },
+    {
+      "locationName": "Enhanced Enemy",
+      "desc": "",
+      "lat": 396.839959,
+      "lng": 324.933635
     }
   ]
 }
