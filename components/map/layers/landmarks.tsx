@@ -16,10 +16,10 @@ function genericIcon(fill: string): DivIcon{
 
 // Paths are relative to the public/ngs folder
 const icons: IconObject = {
-  ryuker: new Icon({iconUrl: './markers/icons/ryuker.svg', iconSize: [35, 35]}),
-  cocoon: new Icon({iconUrl: './markers/icons/cocoon.svg', iconSize: [30, 30]}),
-  tower: new Icon({iconUrl: './markers/icons/tower.svg', iconSize: [40, 40]}),
-  regionMag: new Icon({iconUrl: './markers/icons/regionMag.svg', iconSize: [30, 30]})
+  ryuker: new Icon({iconUrl: '../ngs/markers/icons/ryuker.svg', iconSize: [35, 35]}),
+  cocoon: new Icon({iconUrl: '../../ngs/markers/icons/cocoon.svg', iconSize: [30, 30]}),
+  tower: new Icon({iconUrl: '../../ngs/markers/icons/tower.svg', iconSize: [40, 40]}),
+  regionMag: new Icon({iconUrl: '../../ngs/markers/icons/regionMag.svg', iconSize: [30, 30]})
 }
 
 function getIcon(iconID): Icon | DivIcon{

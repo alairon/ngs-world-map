@@ -7,9 +7,10 @@ import {
 import SiteNav from './MenuItems/SiteNav';
 import Notices from './MenuItems/Notices';
 import Resources from './MenuItems/Resources';
+import LanguageSelector from './MenuItems/Languages';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
-export default function MenuDrawer(): JSX.Element{
+export default function MenuDrawer(props): JSX.Element{
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 

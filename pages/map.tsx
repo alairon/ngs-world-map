@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import dynamic from "next/dynamic";
-import { getGatheringMarkers } from '../api/gathering';
-import { getLandmarkMarkers } from '../api/landmarks';
-import { getRegions } from '../api/regions';
-import NavBar from '../../components/navigation/NavBar';
+import dynamic from 'next/dynamic';
+import { getGatheringMarkers } from './api/gathering';
+import { getLandmarkMarkers } from './api/landmarks';
+import { getRegions } from './api/regions';
+import NavBar from '../components/navigation/NavBar';
 
 interface StaticProps{
   props: {
@@ -13,10 +13,10 @@ interface StaticProps{
   }
 }
 
-export async function getStaticProps(): Promise<StaticProps>{
-  const landmarks: JSON = await getLandmarkMarkers('en');
-  const gathering: JSON = await getGatheringMarkers('en');
-  const regions: JSON = await getRegions('en');
+export async function getStaticProps({locale}): Promise<StaticProps>{
+  const landmarks: JSON = await getLandmarkMarkers(locale);
+  const gathering: JSON = await getGatheringMarkers(locale);
+  const regions: JSON = await getRegions(locale);
 
   return ({
     props: {
@@ -28,9 +28,8 @@ export async function getStaticProps(): Promise<StaticProps>{
 }
 
 export default function Map(props: Promise<StaticProps>): JSX.Element {
-
   // Imports the map with SSR disabled since it needs to be run on the client
-  const MapView = dynamic(() => import ("../../components/map/map"), {
+  const MapView = dynamic(() => import ("../components/map/map"), {
     ssr: false
   });
 

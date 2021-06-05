@@ -40,7 +40,7 @@ export default function Map(props): JSX.Element{
 
 
       <ImageOverlay 
-        url='./halpha_release.jpg'
+        url='../../ngs/halpha_release.jpg'
         bounds={imageBounds}
         attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
       />
