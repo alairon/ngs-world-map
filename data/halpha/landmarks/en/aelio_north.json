@@ -1,0 +1,39 @@
+{
+  "info": {
+    "id": 11109,
+    "region": "Northern Aelio"
+  },
+  "ryuker": [
+    {
+      "locationName": "Altolani Plateau",
+      "lat": 479.245312,
+      "lng": 123.570198
+    },
+    {
+      "locationName": "Halphana Wetlands",
+      "lat": 387.569564,
+      "lng": 181.553625
+    }
+  ],
+  "cocoon": [
+    {
+      "locationName": "Enhanced Enemy",
+      "desc": "",
+      "lat": 396.839959,
+      "lng": 324.933635
+    },
+    {
+      "locationName": "Swift Jump",
+      "desc": "",
+      "lat": 480.559988,
+      "lng": 196.144901
+    }
+  ],
+  "mag": [
+    {
+      "locationName": "Halphana Wetlands",
+      "lat": 412.592693,
+      "lng": 133.465192
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "info": {
+    "id": 11100,
+    "region": "Central City"
+  },
+  "ryuker": [
+    {
+      "locationName": "Central City",
+      "lat": 314.092357,
+      "lng": 277.374926
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { Marker, Popup } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
-import { IconObject, LandmarkObject_L1 } from '../map.d';
+import { IconObject, LandmarkObject_L3 } from '../map.d';
 import PopupContent from '../../info/PopupContent';
 
 function genericIcon(fill: string): DivIcon{
@@ -32,21 +32,35 @@ function getIcon(iconID): Icon | DivIcon{
       case 2:
         return (icons.tower); //tower
       case 3:
-        return (genericIcon("black")); //hut
-      case 4:
         return (icons.regionMag); //region mag
+        case 4:
+        return (genericIcon("black")); //hut
       default:
         return (genericIcon("black")); //others
     }
   }
 }
 
-export default function Landmarks(landmarks: LandmarkObject_L1 | any){
-  const Markers: JSX.Element = landmarks.data.map((landmark: LandmarkObject_L1, idx: number) => {
+function generateContent(markerType: number, props: Object): JSX.Element{
+  switch (markerType){
+    case 0:
+      //  Ryuker
+    case 1:
+      // 
+    case 2:
+    case 3:
+    case 4:
+    default:
+      return(<div></div>)
+  }
+}
+
+export default function Landmarks(landmarks: LandmarkObject_L3 | any){
+  const Markers: JSX.Element = landmarks.data.map((landmark: LandmarkObject_L3, idx: number) => {
     return (
-      <Marker key={idx} position={[landmark.lat, landmark.lng]} title={landmark.tooltip} icon={getIcon(landmark.markerType)}>
+      <Marker key={idx} position={[landmark.lat, landmark.lng]} title={landmark.landmarkName} icon={getIcon(landmark.markerType)}>
         <Popup className={"NGSPopup"}>
-          <PopupContent title={landmark.tooltip} content={landmark.popupHeader}/>
+          <PopupContent title={landmark.landmarkName} contentHeader={landmark.locationName} content={landmark.desc}/>
         </Popup>
       </Marker>
     );

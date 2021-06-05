@@ -1,5 +1,4 @@
-const landmarks = require('./condenseLandmarkData').getMarkers; // Landmarks
-// const readGathering = require('./readGatheringLocations'); //G2
+const landmarks = require('./condenseLandmarkData').getMarkers; // L3
 const gathering = require('./condenseGatheringData').mapDataMerge; //G3
 
 /** Supported Languages

@@ -1,0 +1,39 @@
+{
+  "info": {
+    "id": 11106,
+    "region": "Southern Aelio"
+  },
+  "ryuker": [
+    {
+      "locationName": "Barflow Waterfall",
+      "lat": 175.849521,
+      "lng": 322.271019
+    },
+    {
+      "locationName": "Mt. Picott",
+      "lat": 103.077538,
+      "lng": 417.205563
+    }
+  ],
+  "cocoon": [
+    {
+      "locationName": "Wild Rush",
+      "lat": 131.816246,
+      "lng": 388.827780
+    }
+  ],
+  "tower": [
+    {
+      "locationName": "Great Wall",
+      "lat": 120.143909,
+      "lng": 432.411104
+    }
+  ],
+  "mag": [
+    {
+      "locationName": "???",
+      "lat": 98.502213,
+      "lng": 301.928687
+    }
+  ]
+}
