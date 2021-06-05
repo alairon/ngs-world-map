@@ -1,11 +1,10 @@
 {
   "dualotite":{
     "info": {
-      "dataStructRev": "G3",
+      "dataStructRev": "G4",
       "materialName": "Dualotite",
       "usage": "Potential, Limit Break",
-      "color": "#B242A6",
-      "credits": "@ANI_PSO2GL"
+      "color": "#B242A6"
     }
   }
 }

@@ -12,6 +12,6 @@ continents.map((continent) => {
   supportedLanguages.map((lang) => {
     console.log(`Compiling data for: ${continent} (${lang})`);
     landmarks(lang, continent);
-    //gathering(lang, continent);
+    gathering(lang, continent);
   });
 })

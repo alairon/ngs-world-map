@@ -1,11 +1,10 @@
 {
   "halphaReactor": {
     "info": {
-      "dataStructRev": "G3",
+      "dataStructRev": "G4",
       "materialName": "Halpha Reactor",
       "usage": "3,500 N-Meseta",
-      "color": "#D9A41F",
-      "credits": "@ANI_PSO2GL"
+      "color": "#D9A41F"
     }
   }
 }

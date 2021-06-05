@@ -1,5 +1,5 @@
 /** gatheringDataMerge.js
- * Built for gathering data structure version: G3
+ * Built for gathering data structure version: G4 (2021-06-05)
  * 
  * This program merges the localized strings files with the coordinates found in the associated coordinates file
  * The program will also condense the information section to reduce processing on the client's device
@@ -7,12 +7,13 @@
 
 const fs = require('fs');
 const path = require('path');
-const structVer = "G3";
+const structVer = "G4";
 
 function mapDataMerge(lang, continent){
   const jsonRegex = /.\.json$/mi;
-  const inputStringsDir = path.join(__dirname, '../data/locale', lang, 'gathering');
-  const inputMapDataDir = path.join(__dirname, '../data', continent, 'gathering');
+  const dataDir = '../data';
+  const inputStringsDir = path.join(__dirname, `${dataDir}`, `${continent}`, 'gathering',  `${lang}`);
+  const inputMapDataDir = path.join(__dirname, `${dataDir}`, `${continent}`, 'gathering', 'coordinates');
   const outputDir = path.join(__dirname, '../data/ngs');
   
   // Gather the list of files

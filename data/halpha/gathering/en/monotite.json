@@ -1,11 +1,10 @@
 {
   "monotite": {
     "info": {
-      "dataStructRev": "G3",
+      "dataStructRev": "G4",
       "materialName": "Monotite",
       "usage": "Weapon Potential, Limit Break",
-      "color": "#EE2420",
-      "credits": "@ANI_PSO2GL"
+      "color": "#EE2420"
     }
   }
 }

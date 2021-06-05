@@ -1,11 +1,10 @@
 {
   "photonChunk":{
     "info": {
-      "dataStructRev": "G3",
+      "dataStructRev": "G4",
       "materialName": "Photon Chunk",
       "usage": "Limit Break",
-      "color": "#4534D1",
-      "credits": "@ANI_PSO2GL"
+      "color": "#4534D1"
     }
   }
 }
