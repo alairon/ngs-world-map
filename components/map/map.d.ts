@@ -25,3 +25,13 @@ export interface LandmarkObject_L1{
   popupHeader: string,
   popupText: string
 }
+
+export interface LandmarkObject_L3{
+  lat: number,
+  lng: number,
+  markerType: number,
+  desc: string,
+  region: string,
+  landmarkName: string,
+  locationName: string
+}
