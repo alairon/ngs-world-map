@@ -1,5 +1,4 @@
-const landmarks = require('./condenseLandmarkData').getMarkers; // Landmarks
-// const readGathering = require('./readGatheringLocations'); //G2
+const landmarks = require('./condenseLandmarkData').getMarkers; // L3
 const gathering = require('./condenseGatheringData').mapDataMerge; //G3
 
 /** Supported Languages
@@ -13,6 +12,6 @@ continents.map((continent) => {
   supportedLanguages.map((lang) => {
     console.log(`Compiling data for: ${continent} (${lang})`);
     landmarks(lang, continent);
-    gathering(lang, continent);
+    //gathering(lang, continent);
   });
 })
