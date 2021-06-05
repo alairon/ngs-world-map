@@ -1,0 +1,10 @@
+{
+  "photonQuartz":{
+    "info": {
+      "dataStructRev": "G4",
+      "materialName": "フォトンクォーツ",
+      "usage": "マルチウェポン化",
+      "color": "#0F92D9"
+    }
+  }
+}
