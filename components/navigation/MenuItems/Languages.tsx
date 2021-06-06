@@ -7,12 +7,12 @@ export default function LanguageSwitcher(){
   return(
     <ButtonGroup>
       <Button>
-        <Link href={`en${asPath}`} locale="en">
+        <Link href={`${asPath}`} locale="en">
           English
         </Link>
       </Button>
       <Button>
-        <Link href={`jp${asPath}`} locale="jp">
+        <Link href={`${asPath}`} locale="jp">
           日本語
         </Link>
       </Button>
