@@ -36,7 +36,7 @@ export default function Map(props): JSX.Element{
       />
 
       <ZoomControl 
-        position={"topright"}
+        position={"bottomright"}
       />
 
 
@@ -46,7 +46,7 @@ export default function Map(props): JSX.Element{
         attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
       />
 
-      <LayersControl position="topright" collapsed>
+      <LayersControl position="bottomright" collapsed>
         <LayersControl.BaseLayer checked name="Default">
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name="Landmarks">

@@ -1,4 +1,4 @@
-import { Flex, Box, Spacer, Heading, useProps } from '@chakra-ui/react';
+import { Flex, Box, Spacer, Heading } from '@chakra-ui/react';
 import MenuDrawer from './Menu'; 
 import LanguageSelector from './MenuItems/Languages';
 
@@ -7,13 +7,13 @@ export default function NavBar(props){
 
   return(
     <nav>
-      <Flex>
-        <MenuDrawer />
-        <Box p="2">
-          <Heading size="md">{`${title}`}</Heading>
+      <Flex position="fixed" width={"100%"} zIndex={1200} bg={"rgba(85, 84, 88, 0.95)"} sx={{backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)'}}>
+        <Box p="2" zIndex={"auto"}>
+          <Heading size="md" color="white">{`${title}`}</Heading>
         </Box>
         <Spacer />
         <LanguageSelector />
+        <MenuDrawer/>
       </Flex>
     </nav>
   );
