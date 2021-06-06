@@ -17,6 +17,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/ngs/map',
+        destination: '/map',
+        permanent: true
+      },
+      {
         source: '/index',
         destination: '/map',
         locale: false,
