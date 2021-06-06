@@ -17,6 +17,12 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/index',
+        destination: '/map',
+        locale: false,
+        permanent: true
+      },
+      {
         source: '/skillsim',
         destination: './skillSim',
         locale: false,
