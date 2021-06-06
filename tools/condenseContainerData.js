@@ -48,11 +48,6 @@ function mapDataMerge(lang, continent){
       if (data){
         for (const value in data){
           if (localeData[value] != 'undefined'){
-            console.log("=====")
-            console.log(localeData[value]);
-            console.log("-----")
-            console.log(data[value]);
-            console.log("=====")
             mergedJSON.push(Object.assign(localeData[value], data[value]));
           }
         }

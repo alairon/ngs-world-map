@@ -41,20 +41,6 @@ function getIcon(iconID): Icon | DivIcon{
   }
 }
 
-function generateContent(markerType: number, props: Object): JSX.Element{
-  switch (markerType){
-    case 0:
-      //  Ryuker
-    case 1:
-      // 
-    case 2:
-    case 3:
-    case 4:
-    default:
-      return(<div></div>)
-  }
-}
-
 export default function Landmarks(landmarks: LandmarkObject_L3 | any){
   const Markers: JSX.Element = landmarks.data.map((landmark: LandmarkObject_L3, idx: number) => {
     return (

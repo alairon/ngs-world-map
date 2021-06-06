@@ -60,8 +60,8 @@ export default function Map(props): JSX.Element{
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Containers">
-        <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>">
-            <Gathering data={props.containers} />
+          <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>">
+            <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Regions">

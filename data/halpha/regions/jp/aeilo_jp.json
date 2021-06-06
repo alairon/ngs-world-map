@@ -4,8 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mt. Magnus",
-        "region": 2
+        "name": "マグナス山",
+        "region": 2,
+        "maxPlayers": 8,
+        "recommendedCP": 864,
+        "avgEnemyLvl": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -98,8 +101,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Vanford Laboratory Ruins",
-        "region": 2
+        "name": "ヴァンフォード研究所跡",
+        "region": 2,
+        "maxPlayers": 0,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -180,8 +186,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Halphia Lake",
-        "region": 1
+        "name": "ハルフィリア湖",
+        "region": 1,
+        "maxPlayers": 0,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -282,8 +291,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Resol Forest",
-        "region": 2
+        "name": "レゾルの森",
+        "region": 2,
+        "maxPlayers": 0,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -392,8 +404,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Southern Aeilo",
-        "region": 1
+        "name": "南エアリオ",
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 831,
+        "avgEnemyLvl": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -506,8 +521,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Western Aeilo",
-        "region": 1
+        "name": "西エアリオ",
+        "region": 1,
+        "maxPlayers": 0,
+        "recommendedCP": 0,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -732,8 +750,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Northern Aeilo",
-        "region": 1
+        "name": "北エアリオ",
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 987,
+        "avgEnemyLvl": 10
       },
       "geometry": {
         "type": "Polygon",
@@ -862,8 +883,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Central Aeilo",
-        "region": 1
+        "name": "中央エアリオ",
+        "region": 1,
+        "maxPlayers": 32,
+        "recommendedCP": 800,
+        "avgEnemyLvl": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -1106,8 +1130,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Central City",
-        "region": 0
+        "name": "セントラルシティ",
+        "region": 0,
+        "maxPlayers": 100
       },
       "geometry": {
         "type": "Polygon",

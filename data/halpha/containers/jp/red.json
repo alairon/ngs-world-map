@@ -3,7 +3,8 @@
     "info": {
       "dataStructRev": "C1",
       "name": "Red Container",
-      "desc": ""
+      "color": "#d10306",
+      "desc": "メセタ、カプセル、ユニット"
     }
   }
 }
