@@ -21,10 +21,11 @@ export default function LanguageSwitcher(){
     <Menu>
       <MenuButton as={Button} sx={{minWidth: "30px", backgroundColor: "rgb(64, 84, 108, 0.7)",
     color: "white",
-    borderColor: "#65EBF6",
+    borderColor: `rgb(64,84,108)`,
     borderWidth: `1px`,
-    borderRadius: `0px`,
-    margin: 0}}>
+    borderRadius: `0px`, margin: 0,
+    _hover: {borderColor: "#65EBF6", borderWidth: `1px`}
+    }}>
         <LangString/>
       </MenuButton>
       <MenuList position={"relative"} className={"NGSMenuButton"}>
