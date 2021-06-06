@@ -19,7 +19,7 @@ export default function SiteNav(props){
           </Button>
         </NextLink>
         <NextLink href="./skillSim" locale={props.locale}>
-          <Button disabled>
+          <Button>
             <a>Skill Simulator</a>
           </Button>
         </NextLink>
