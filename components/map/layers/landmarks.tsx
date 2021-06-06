@@ -1,7 +1,7 @@
 import { Marker, Popup } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
 import { IconObject, LandmarkObject_L3 } from '../map.d';
-import PopupContent from '../../info/PopupContent';
+import PopupContent from '../info/PopupContent';
 
 function genericIcon(fill: string): DivIcon{
   const img = `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" stroke="black" fill="${fill}"><circle cx="100" cy="100" r="800"/></svg>`;

@@ -1,7 +1,6 @@
 import { Marker, Popup } from 'react-leaflet';
-import { Box, Heading, NumberInputStepper } from '@chakra-ui/react';
 import { DivIcon } from 'leaflet';
-import PopupContent from '../../info/PopupContent';
+import PopupContent from '../info/PopupContent';
 
 export default function Gathering(gathering): JSX.Element{
   function genericIcon(fill: string): DivIcon{
