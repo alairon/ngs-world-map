@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { 
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
-  Tabs, Tab, TabList, TabPanels, TabPanel, Box, FormControl, FormLabel, RadioGroup, HStack, Radio, FormHelperText 
+  Tabs, Tab, TabList, TabPanels, TabPanel, Box, FormControl, FormLabel, RadioGroup, HStack, Radio, FormHelperText, background 
 } from '@chakra-ui/react';
 import SkillTree from '../components/skillTree/skillTree';
 import NavBar from '../components/navigation/NavBar';
@@ -24,6 +24,10 @@ export default function SkillSim(){
       <Box p={1}>
 
       </Box>
+
+      <Box flex="1" bg="#DC3545" w="100%" p={4} color="white" textAlign="center">
+      <p>This page is currently a placeholder for the Skill Tree.</p>
+    </Box>
 
       <Accordion allowToggle>
         <AccordionItem >
@@ -79,9 +83,28 @@ export default function SkillSim(){
           <Tab id="fo">Force</Tab>
           <Tab id="te">Techter</Tab>
         </TabList>
+        <TabPanels>
+          <TabPanel id="huTree">
+            <SkillTree />
+          </TabPanel>
+          <TabPanel id="fiTree">
+            <SkillTree />
+          </TabPanel>
+          <TabPanel id="raTree">
+            <SkillTree />
+          </TabPanel>
+          <TabPanel id="guTree">
+            <SkillTree />
+          </TabPanel>
+          <TabPanel id="foTree">
+            <SkillTree />
+          </TabPanel>
+          <TabPanel id="teTree">
+            <SkillTree />
+          </TabPanel>
+        </TabPanels>
       </Tabs>
 
-      <SkillTree />
     </main>
   );
 }
