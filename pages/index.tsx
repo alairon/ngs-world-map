@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import { Box, Button, ButtonGroup } from '@chakra-ui/react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
           Welcome to PSO2:NGS Tools!
         </h1>
 
-        <p>
+        <Box p={4}>
           <ButtonGroup>
             <Link href="./en/map">
               <Button>
@@ -30,8 +30,7 @@ export default function Home() {
               </Button>
             </Link>
           </ButtonGroup>
-          
-        </p>
+        </Box>
       </main>
 
       <footer className={styles.footer}>
