@@ -1,7 +1,7 @@
 import { Marker, Popup } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
-import { IconObject, LandmarkObject_L1 } from '../map.d';
-import PopupContent from '../../info/PopupContent';
+import { IconObject, LandmarkObject_L3 } from '../map.d';
+import PopupContent from '../info/PopupContent';
 
 function genericIcon(fill: string): DivIcon{
   const img = `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" stroke="black" fill="${fill}"><circle cx="100" cy="100" r="800"/></svg>`;
@@ -16,10 +16,10 @@ function genericIcon(fill: string): DivIcon{
 
 // Paths are relative to the public/ngs folder
 const icons: IconObject = {
-  ryuker: new Icon({iconUrl: './markers/icons/ryuker.svg', iconSize: [35, 35]}),
-  cocoon: new Icon({iconUrl: './markers/icons/cocoon.svg', iconSize: [30, 30]}),
-  tower: new Icon({iconUrl: './markers/icons/tower.svg', iconSize: [40, 40]}),
-  regionMag: new Icon({iconUrl: './markers/icons/regionMag.svg', iconSize: [30, 30]})
+  ryuker: new Icon({iconUrl: '../ngs/markers/icons/ryuker.svg', iconSize: [35, 35]}),
+  cocoon: new Icon({iconUrl: '../../ngs/markers/icons/cocoon.svg', iconSize: [30, 30]}),
+  tower: new Icon({iconUrl: '../../ngs/markers/icons/tower.svg', iconSize: [40, 40]}),
+  regionMag: new Icon({iconUrl: '../../ngs/markers/icons/regionMag.svg', iconSize: [30, 30]})
 }
 
 function getIcon(iconID): Icon | DivIcon{
@@ -32,21 +32,21 @@ function getIcon(iconID): Icon | DivIcon{
       case 2:
         return (icons.tower); //tower
       case 3:
-        return (genericIcon("black")); //hut
-      case 4:
         return (icons.regionMag); //region mag
+        case 4:
+        return (genericIcon("black")); //hut
       default:
         return (genericIcon("black")); //others
     }
   }
 }
 
-export default function Landmarks(landmarks: LandmarkObject_L1 | any){
-  const Markers: JSX.Element = landmarks.data.map((landmark: LandmarkObject_L1, idx: number) => {
+export default function Landmarks(landmarks: LandmarkObject_L3 | any){
+  const Markers: JSX.Element = landmarks.data.map((landmark: LandmarkObject_L3, idx: number) => {
     return (
-      <Marker key={idx} position={[landmark.lat, landmark.lng]} title={landmark.tooltip} icon={getIcon(landmark.markerType)}>
+      <Marker key={idx} position={[landmark.lat, landmark.lng]} title={landmark.landmarkName} icon={getIcon(landmark.markerType)}>
         <Popup className={"NGSPopup"}>
-          <PopupContent title={landmark.tooltip} content={landmark.popupHeader}/>
+          <PopupContent title={landmark.landmarkName} contentHeader={landmark.locationName} content={landmark.desc}/>
         </Popup>
       </Marker>
     );

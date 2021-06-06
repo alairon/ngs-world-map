@@ -1,0 +1,65 @@
+{
+  "hunter": {
+    "A0": {
+      "skillName": "War Cry",
+      "maxSP": 1,
+      "mainClassOnly": false,
+      "minClassLevel": 0,
+      "connectsTo": null
+    },
+    "A1": {
+      "skillName": "Hynter Physique"
+    },
+    "A2": {
+      "skillName": "Flash Guard"
+    },
+    "A3": {
+      "skillName": "Iron Will"
+    },
+    "A4": {
+      "skillName": "Omnidirectional Guard"
+    },
+    "A5": {
+      "skillName": "Slow Landing Charge-Hunter"
+    },
+    "B1": {
+      "skillName": "Hunter Arts Avenger"
+    },
+    "B2": {
+      "skillName": "Sword Attack Extra"
+    },
+    "B3": {
+      "skillName": "Wired Attack Extra"
+    },
+    "B4": {},
+    "B5": {
+      "skillName": "Skill Arts Skip Attack-Hunter"
+    },
+    "B6": {
+      "skillName": "Another Arts Skip Attack-Hunter"
+    },
+    "C0": {},
+    "C1": {
+      "skillName": "Sword Guard Counter"
+    },
+    "C2": {
+      "skillName": "Wired Anchor Advanced"
+    },
+    "C3": {
+      "skillName": "Volkraptor"
+    },
+    "C4": {},
+    "C5": {},
+    "C6": {},
+    "D1": {
+      "skillName": "?????"
+    },
+    "D2": {
+      "skillName": "?????"
+    },
+    "D3": {}, 
+    "D4": {},
+    "D5": {},
+    "D6": {}
+  }
+}

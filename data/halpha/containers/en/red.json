@@ -1,0 +1,10 @@
+{
+  "red": {
+    "info": {
+      "dataStructRev": "C1",
+      "name": "Red Container",
+      "color": "#d10306",
+      "desc": "Can only be opened once per account. Usually contains N-Meseta, but containers protected by a barrier may contain Capsules or Units"
+    }
+  }
+}

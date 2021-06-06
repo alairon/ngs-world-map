@@ -1,6 +1,6 @@
 import { GeoJSON, Popup } from 'react-leaflet';
 import { GenericMarkerConfig } from '../map.d';
-import PopupContent from '../../info/PopupContent';
+import PopupContent from '../info/PopupContent';
 
 function regionStyle(region: number): GenericMarkerConfig {
   switch(region){
@@ -32,6 +32,7 @@ function regionStyle(region: number): GenericMarkerConfig {
 export default function Regions(boundaries: any): JSX.Element{
   const regions: JSX.Element = boundaries.data.map((boundary, idx: number) => {
   const regionNames: Array<string> = ['City', 'Gathering Area', 'Combat Area', '??? Area'];
+  const regionNamesJP: Array<string> = ['都市', '探索セクション', '戦闘セクション', '???セクション'];
 
     let contentDiv: JSX.Element = <div><b>{regionNames[boundary.properties.region]}</b><br/><b>Max Players:</b> {boundary.properties.maxPlayers}<br/><b>Recommended CP:</b> {boundary.properties.recommendedCP}<br/><b>Average Enemy Level:</b> {boundary.properties.avgEnemyLvl}</div>;
     if (boundary.properties.region == 0){

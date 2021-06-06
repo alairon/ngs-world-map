@@ -12,7 +12,7 @@ interface GeoJSON {
 
 export async function getRegions(lang: string): Promise<JSON>{
   //const data: JSON = require('../../data/ngs/regions_' + lang + '.json');
-  const data: GeoJSON = require('../../data/ngs/aelio.json');
+  const data: GeoJSON = require(`../../data/ngs/regions_${lang}.json`);
   return (data.features);
 }
 

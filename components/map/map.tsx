@@ -3,6 +3,7 @@ import { CRS, LatLngBounds } from 'leaflet';
 import Landmarks from './layers/landmarks';
 import Gathering from './layers/gathering';
 import Regions from './layers/regions';
+import Containers from './layers/containers';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
@@ -40,7 +41,7 @@ export default function Map(props): JSX.Element{
 
 
       <ImageOverlay 
-        url='./halpha_release.jpg'
+        url='../../ngs/halpha_release.webp'
         bounds={imageBounds}
         attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
       />
@@ -56,6 +57,11 @@ export default function Map(props): JSX.Element{
         <LayersControl.Overlay name="Gathering">
           <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>">
             <Gathering data={props.gathering} />
+          </LayerGroup>
+        </LayersControl.Overlay>
+        <LayersControl.Overlay name="Containers">
+          <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>">
+            <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Regions">

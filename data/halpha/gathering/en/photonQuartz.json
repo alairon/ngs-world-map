@@ -1,0 +1,10 @@
+{
+  "photonQuartz":{
+    "info": {
+      "dataStructRev": "G4",
+      "materialName": "Photon Quartz",
+      "usage": "Multi-Weapon",
+      "color": "#0F92D9"
+    }
+  }
+}

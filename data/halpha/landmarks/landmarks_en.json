@@ -1,0 +1,26 @@
+{
+  "info": {
+    "dataStructRev": "L3",
+    "lang": "en"
+  },
+  "ryuker": {
+    "markerType": 0,
+    "landmarkName": "Ryuker Device",
+    "desc": "Teleport, Access storage, Cook Quick Food, Change rooms"
+  },
+  "cocoon": {
+    "markerType": 1,
+    "landmarkName": "Cocoon",
+    "desc": ""
+  },
+  "tower": {
+    "markerType": 2,
+    "landmarkName": "Tower",
+    "desc": ""
+  },
+  "mag": {
+    "markerType": 3,
+    "landmarkName": "Region Mag",
+    "desc": ""
+  }
+}
