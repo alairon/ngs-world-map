@@ -1,5 +1,6 @@
 const landmarks = require('./condenseLandmarkData').getMarkers; // L3
-const gathering = require('./condenseGatheringData').mapDataMerge; //G3
+const gathering = require('./condenseGatheringData').mapDataMerge; //G4
+const containers = require('./condenseContainerData').mapDataMerge; //C1
 
 /** Supported Languages
  * en: English
@@ -13,5 +14,6 @@ continents.map((continent) => {
     console.log(`Compiling data for: ${continent} (${lang})`);
     landmarks(lang, continent);
     gathering(lang, continent);
+    containers(lang, continent);
   });
 })

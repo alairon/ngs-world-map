@@ -18,6 +18,10 @@ a {
   box-sizing: border-box;
 }
 
+.leaflet-top .leaflet-control{
+  margin-top: 50px !important;
+}
+
 .NGSPopup .leaflet-popup-content {
   margin: 0px;
 }

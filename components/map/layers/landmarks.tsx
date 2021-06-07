@@ -1,7 +1,7 @@
 import { Marker, Popup } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
-import { IconObject, LandmarkObject_L3 } from '../map.d';
-import PopupContent from '../../info/PopupContent';
+import { IconObject, LandmarkObject_L3 } from '../MapView.d';
+import PopupContent from '../info/PopupContent';
 
 function genericIcon(fill: string): DivIcon{
   const img = `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" stroke="black" fill="${fill}"><circle cx="100" cy="100" r="800"/></svg>`;
@@ -16,10 +16,10 @@ function genericIcon(fill: string): DivIcon{
 
 // Paths are relative to the public/ngs folder
 const icons: IconObject = {
-  ryuker: new Icon({iconUrl: './markers/icons/ryuker.svg', iconSize: [35, 35]}),
-  cocoon: new Icon({iconUrl: './markers/icons/cocoon.svg', iconSize: [30, 30]}),
-  tower: new Icon({iconUrl: './markers/icons/tower.svg', iconSize: [40, 40]}),
-  regionMag: new Icon({iconUrl: './markers/icons/regionMag.svg', iconSize: [30, 30]})
+  ryuker: new Icon({iconUrl: '../ngs/markers/icons/ryuker.svg', iconSize: [35, 35]}),
+  cocoon: new Icon({iconUrl: '../../ngs/markers/icons/cocoon.svg', iconSize: [30, 30]}),
+  tower: new Icon({iconUrl: '../../ngs/markers/icons/tower.svg', iconSize: [40, 40]}),
+  regionMag: new Icon({iconUrl: '../../ngs/markers/icons/regionMag.svg', iconSize: [30, 30]})
 }
 
 function getIcon(iconID): Icon | DivIcon{
@@ -38,20 +38,6 @@ function getIcon(iconID): Icon | DivIcon{
       default:
         return (genericIcon("black")); //others
     }
-  }
-}
-
-function generateContent(markerType: number, props: Object): JSX.Element{
-  switch (markerType){
-    case 0:
-      //  Ryuker
-    case 1:
-      // 
-    case 2:
-    case 3:
-    case 4:
-    default:
-      return(<div></div>)
   }
 }
 

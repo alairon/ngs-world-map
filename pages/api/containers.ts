@@ -3,16 +3,15 @@
   For the landmarks, please see 'landmarks.ts'
 */
 import type { NextApiRequest, NextApiResponse } from 'next';
-// Typical location of files: data/map/markers/_lang_/gathering/_materialName_.json
 
-export async function getGatheringMarkers(lang: string): Promise<JSON>{
-  const data: JSON = require('../../data/ngs/gathering_' + lang + '.json');
+export async function getContainerMarkers(lang: string): Promise<JSON>{
+  const data: JSON = require('../../data/ngs/containers_' + lang + '.json');
   return (data);
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET'){
-    const markers = await getGatheringMarkers('en');
+    const markers = await getContainerMarkers('en');
     switch(req.body){
       case 'en':
         res.status(200).json(markers);

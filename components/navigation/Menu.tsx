@@ -7,21 +7,32 @@ import {
 import SiteNav from './MenuItems/SiteNav';
 import Notices from './MenuItems/Notices';
 import Resources from './MenuItems/Resources';
+import { useRouter } from 'next/router';
 import { HamburgerIcon } from '@chakra-ui/icons';
 
-export default function MenuDrawer(): JSX.Element{
+export default function MenuDrawer(props): JSX.Element{
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+  const { locale } = useRouter();
+
+  const localeStrings = (() => {
+    switch(locale){
+      case 'en':
+        return (<span>Menu</span>);
+      case 'jp':
+        return (<span>メニュー</span>);
+    }
+  });
 
   return(
     <nav>
       <Button leftIcon={<HamburgerIcon/>} borderRadius="1px" ref={btnRef} colorScheme="blue" onClick={onOpen}>
-        Menu
+        {localeStrings()}
       </Button>
       <Drawer 
         isOpen={isOpen}
         onClose={onClose}
-        placement="left"
+        placement="right"
         size={"md"}
         finalFocusRef={btnRef}
       >
