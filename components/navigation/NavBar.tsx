@@ -7,9 +7,9 @@ export default function NavBar(props){
 
   return(
     <nav>
-      <Flex position="fixed" width={"100%"} zIndex={1200} bg={"rgba(85, 84, 88, 0.95)"} sx={{backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)'}}>
-        <Box p="2" zIndex={"auto"}>
-          <Heading size="md" color="white">{`${title}`}</Heading>
+      <Flex position="fixed" width={"100%"} zIndex={1200} bg={"rgba(64, 84, 108, 0.95)"} sx={{backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)'}}>
+        <Box p="2" zIndex={"auto"} maxWidth={"40%"}>
+          <Heading size="md" color="white" isTruncated>{`${title}`}</Heading>
         </Box>
         <Spacer />
         <LanguageSelector />

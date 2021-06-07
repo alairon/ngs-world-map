@@ -19,26 +19,27 @@ export default function LanguageSwitcher(){
   const { asPath }= useRouter();
   return(
     <Menu>
-      <MenuButton as={Button} sx={{minWidth: "30px", backgroundColor: "rgb(64, 84, 108, 0.7)",
+      <MenuButton as={Button} sx={{backgroundColor: "rgb(85,84,88, 0.7)",
     color: "white",
     borderColor: `rgb(64,84,108)`,
     borderWidth: `1px`,
     borderRadius: `0px`, margin: 0,
-    _hover: {borderColor: "#65EBF6", borderWidth: `1px`}
+    _hover: {borderColor: "#65EBF6", borderWidth: `1px`},
+    _active: {backgroundColor: "rgb(74,122,167)", borderColor: "#65ebf6", borderWidth: '1px'}
     }}>
         <LangString/>
       </MenuButton>
-      <MenuList position={"relative"} className={"NGSMenuButton"}>
-          <Link href={`en${asPath}`} locale="en" passHref>
-        <MenuItem>
+      <MenuList>
+        <Link href={`en${asPath}`} locale="en" passHref>
+          <MenuItem>
             English
-        </MenuItem>
-          </Link>
-          <Link href={`${asPath}`} locale="jp" passHref>
-        <MenuItem>
+          </MenuItem>
+        </Link>
+        <Link href={`${asPath}`} locale="jp" passHref>
+          <MenuItem>
             日本語
-        </MenuItem>
-          </Link>
+          </MenuItem>
+        </Link>
       </MenuList>
     </Menu>
   );
