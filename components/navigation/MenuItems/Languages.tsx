@@ -18,8 +18,8 @@ export function LangString(){
 export default function LanguageSwitcher(){
   const { asPath }= useRouter();
   return(
-    <Menu>
-      <MenuButton as={Button} sx={{backgroundColor: "rgb(85,84,88, 0.7)",
+    <Menu offset={[0, 0]} placement="bottom-end" isLazy>
+      <MenuButton as={Button} sx={{backgroundColor: "rgba(85,84,88, 0.7)",
     color: "white",
     borderColor: `rgb(64,84,108)`,
     borderWidth: `1px`,
@@ -29,14 +29,22 @@ export default function LanguageSwitcher(){
     }}>
         <LangString/>
       </MenuButton>
-      <MenuList>
+      <MenuList minWidth={"150px"} bg={"rgba(85, 84, 88, 0.7)"} border="none">
         <Link href={`en${asPath}`} locale="en" passHref>
-          <MenuItem>
+          <MenuItem as={Button} textAlign={"center"} bg={"inherit"} marginBottom={"2px"} sx={{borderRadius:"0px", color: "white",
+            _hover: {borderColor: "#65EBF6", borderWidth: `1px`},
+            _active: {backgroundColor: "rgb(74,122,167)", borderColor: "#65ebf6", borderWidth: '1px'},
+            _focus: {background: "rgb(74,122,167)", borderColor: "#65EBF6", borderWidth: `1px`}
+            }}>
             English
           </MenuItem>
         </Link>
         <Link href={`${asPath}`} locale="jp" passHref>
-          <MenuItem>
+          <MenuItem as={Button} textAlign={"center"} bg={"inherit"} marginTop={"2px"} sx={{borderRadius:"0px", color: "white", 
+            _hover: {borderColor: "#65EBF6", borderWidth: `1px`},
+            _active: {backgroundColor: "rgb(74,122,167)", borderColor: "#65ebf6", borderWidth: '1px'},
+            _focus: {background: "rgb(74,122,167)", borderColor: "#65EBF6", borderWidth: `1px`}
+            }}>
             日本語
           </MenuItem>
         </Link>
