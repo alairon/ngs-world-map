@@ -53,6 +53,16 @@ export default function Resources(){
             Rappy Burst
           </Box>
         </Link>
+        <Link href="https://www.reddit.com/r/PSO2/" isExternal>
+          <Box p={1}>
+            Phantasy Star Online 2 Subreddit
+          </Box>
+        </Link>
+        <Link href="https://www.reddit.com/r/PSO2NGS/" isExternal>
+          <Box p={1}>
+            Phantasy Star Online 2 New Genesis Subreddit
+          </Box>
+        </Link>
       <Box>&nbsp;</Box>
       <Box flex="1" textAlign="left">
         <b>Japan</b>
