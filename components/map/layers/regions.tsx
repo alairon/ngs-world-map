@@ -1,5 +1,5 @@
 import { GeoJSON, Popup } from 'react-leaflet';
-import { GenericMarkerConfig } from '../map.d';
+import { GenericMarkerConfig } from '../MapView';
 import PopupContent from '../info/PopupContent';
 
 function regionStyle(region: number): GenericMarkerConfig {

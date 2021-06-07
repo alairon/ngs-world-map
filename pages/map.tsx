@@ -33,7 +33,7 @@ export async function getStaticProps({locale}): Promise<StaticProps>{
 
 export default function Map(props: Promise<StaticProps>): JSX.Element {
   // Imports the map with SSR disabled since it needs to be run on the client
-  const MapView = dynamic(() => import ("../components/map/map"), {
+  const MapView = dynamic(() => import ("../components/map/MapView"), {
     ssr: false
   });
 

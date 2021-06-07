@@ -1,6 +1,6 @@
 import { Marker, Popup } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
-import { IconObject, LandmarkObject_L3 } from '../map.d';
+import { IconObject, LandmarkObject_L3 } from '../MapView';
 import PopupContent from '../info/PopupContent';
 
 function genericIcon(fill: string): DivIcon{
