@@ -4,14 +4,30 @@ import Landmarks from './layers/landmarks';
 import Gathering from './layers/gathering';
 import Regions from './layers/regions';
 import Containers from './layers/containers';
-import { useRef } from 'react';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
+import { useRouter } from 'next/router';
 
 export default function Map(props): JSX.Element{  
+  const {locale} = useRouter();
   const imageBounds: LatLngBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
   const mapBounds: LatLngBounds = new LatLngBounds([[-100, -500], [800, 1000]]);
+
+  const localeStrings = {
+    "en": {
+      "landmarks": "Landmarks",
+      "gathering": "Gathering",
+      "containers": "Containers",
+      "regions": "Regions"
+    },
+    "jp": {
+      "landmarks": "Landmarks",
+      "gathering": "ギャザリング",
+      "containers": "アイテムコンテナ",
+      "regions": "リージョン"
+    }
+  }
 
   return (
     <MapContainer 
@@ -51,22 +67,22 @@ export default function Map(props): JSX.Element{
       <LayersControl position="topright" collapsed>
         <LayersControl.BaseLayer checked name="Default">
         </LayersControl.BaseLayer>
-        <LayersControl.Overlay checked name="Landmarks">
+        <LayersControl.Overlay checked name={localeStrings[locale].landmarks}>
           <LayerGroup>
             <Landmarks data={props.landmarks} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name="Gathering">
-          <LayerGroup attribution="<a href='https://new-gen.rappy-burst.com/gathering/' target='_blank' rel='noreferrer' style='color:inherit'>Rappy Burst</a>">
+        <LayersControl.Overlay name={localeStrings[locale].gathering}>
+          <LayerGroup>
             <Gathering data={props.gathering} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name="Containers">
-          <LayerGroup attribution="<a href='https://new-gen.rappy-burst.com/gathering/' target='_blank' rel='noreferrer' style='color:inherit'>Rappy Burst</a>">
+        <LayersControl.Overlay name={localeStrings[locale].containers}>
+          <LayerGroup>
             <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name="Regions">
+        <LayersControl.Overlay name={localeStrings[locale].regions}>
           <LayerGroup>
             <Regions data={props.regions} />
           </LayerGroup>
