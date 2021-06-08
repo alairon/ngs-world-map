@@ -1,6 +1,7 @@
 import { Flex, Box, Spacer, Heading } from '@chakra-ui/react';
 import MenuDrawer from './Menu'; 
 import LanguageSelector from './MenuItems/Languages';
+import About from './MenuItems/About'
 
 export default function NavBar(props){
   let title = props.content.title ? props.content.title : "PSO2:NGS Tools";
@@ -12,8 +13,8 @@ export default function NavBar(props){
           <Heading size="md" color="white" isTruncated>{`${title}`}</Heading>
         </Box>
         <Spacer />
+        <About/>
         <LanguageSelector />
-        <MenuDrawer/>
       </Flex>
     </nav>
   );
