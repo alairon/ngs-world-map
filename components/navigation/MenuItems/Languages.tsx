@@ -7,9 +7,9 @@ export function LangString(){
   const { locale } = useRouter();
   switch (locale){
     case 'en':
-      return(<span><Icon as={MdLanguage}/>&nbsp;Language</span>);
+      return(<span><Icon as={MdLanguage}/>&nbsp;English</span>);
     case 'jp':
-      return(<span><Icon as={MdLanguage}/>&nbsp;言語</span>)
+      return(<span><Icon as={MdLanguage}/>&nbsp;日本語</span>)
     default:
       return(<span><Icon as={MdLanguage}/>&nbsp;Language</span>);
   }
