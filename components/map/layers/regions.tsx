@@ -1,7 +1,7 @@
 import { GeoJSON, Popup } from 'react-leaflet';
 import { GenericMarkerConfig } from '../MapView.d';
-import PopupContent from '../info/RegionDialog';
-import ContentDialog from '../info/ContentDialog';
+import RegionDialog from '../info/RegionDialog';
+import PopupContent from '../info/ContentDialog';
 
 function regionStyle(region: number): GenericMarkerConfig {
   switch(region){
@@ -35,7 +35,7 @@ export default function Regions(boundaries: any): JSX.Element{
     return(
       <GeoJSON key={'r'+idx} data={boundary} style={regionStyle(boundary.properties.region)}>
         <Popup className={"NGSPopup"}>
-          <PopupContent title={boundary.properties.name} content={boundary.properties} />
+          <PopupContent title={boundary.properties.name} content={RegionDialog(boundary.properties)} />
         </Popup>
       </GeoJSON>
     )

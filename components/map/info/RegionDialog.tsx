@@ -8,31 +8,43 @@ function generateContentBody(contentProps){
     "jp": ["都市", "探索セクション", "戦闘セクション", "??? セクション"]
   }
 
-  if (contentProps.content.region == 0){
+  if (contentProps.region == 0){
     return (
+      <Box>
+      {/* Title bar */}
+      <Box sx={{backgroundColor: "#2b5e8d"}}>
+        <Heading size="sm">{contentProps.title}</Heading>
+      </Box>
       <Container paddingTop='5px' margin={0}>
         <Box paddingBottom="5px">
-          <Heading size={"sm"}>{localeStrings[locale][contentProps.content.region]}</Heading>
+          <Heading size={"sm"}>{localeStrings[locale][contentProps.region]}</Heading>
         </Box>
         <Box>
-          Max Players: {contentProps.content.maxPlayers}
+          Max Players: {contentProps.maxPlayers}
         </Box>
       </Container>
+      </Box>
     )
   }
   return(
+    <Box>
+            {/* Title bar */}
+            <Box sx={{backgroundColor: "#2b5e8d"}}>
+        <Heading size="sm">{contentProps.title}e</Heading>
+      </Box>
     <Container paddingTop='5px' margin={0}>
     <Box paddingBottom="5px">
-      <Heading size={"sm"}>{localeStrings[locale][contentProps.content.region]}</Heading>
+      <Heading size={"sm"}>{localeStrings[locale][contentProps.region]}</Heading>
     </Box>
     <Box>
-      Max Players: {contentProps.content.maxPlayers}
+      Max Players: {contentProps.maxPlayers}
       <br/>
-      Recommended CP: {contentProps.content.recommendedCP}
+      Recommended CP: {contentProps.recommendedCP}
       <br/>
-      Average Enemy Level: {contentProps.content.avgEnemyLvl}
+      Average Enemy Level: {contentProps.avgEnemyLvl}
     </Box>
   </Container>
+    </Box>
   );
 }
 
@@ -41,7 +53,7 @@ export default function PopupContent(props: any){
   return(
     <Box>
       {/* Title bar */}
-      <Box sx={{padding: "5px 5em 0 5px", backgroundColor: "#2b5e8d"}}>
+      <Box sx={{backgroundColor: "#2b5e8d"}}>
         <Heading size="sm">{props.title}</Heading>
       </Box>
 
