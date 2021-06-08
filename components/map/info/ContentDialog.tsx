@@ -5,7 +5,7 @@ export default function ContentDialog(props: any){
     <Box>
       {/* Title bar */}
       <Box sx={{backgroundColor: "#2b5e8d"}}>
-        <Heading size="sm" paddingTop="5px" paddingLeft="5px">{props.title}</Heading>
+        <Heading size="sm" padding="5px 0 5px 5px">{props.title}</Heading>
       </Box>
 
       {/* Contents */}

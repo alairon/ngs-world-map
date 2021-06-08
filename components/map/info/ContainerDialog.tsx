@@ -5,7 +5,7 @@ export default function ContainerDialog(contentProps){
     <Box>
       {/* Title bar */}
       <Box sx={{backgroundColor: "#2b5e8d"}}>
-        <Heading size="sm" paddingTop="5px" paddingLeft="5px">{contentProps.title}</Heading>
+        <Heading size="sm" padding="5px 0 5px 5px">{contentProps.title}</Heading>
       </Box>
   
       {/* Contents */}
