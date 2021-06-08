@@ -2,6 +2,7 @@ import { GeoJSON, Popup } from 'react-leaflet';
 import { GenericMarkerConfig } from '../MapView.d';
 import RegionDialog from '../info/RegionDialog';
 import PopupContent from '../info/ContentDialog';
+import { useRouter } from 'next/router';
 
 function regionStyle(region: number): GenericMarkerConfig {
   switch(region){
@@ -30,12 +31,23 @@ function regionStyle(region: number): GenericMarkerConfig {
   }
 }
 
+function areaHeader(region: number): string{
+  const { locale } = useRouter();
+
+  const localeString = {
+    "en": ["City Area", "Gathering Area", "Combat Area", "??? Area"], 
+    "jp": ["都市", "探索セクション", "戦闘セクション", "??? セクション"]
+  }
+
+  return(localeString[locale][region]);
+}
+
 export default function Regions(boundaries: any): JSX.Element{
   const regions: JSX.Element = boundaries.data.map((boundary, idx: number) => {
     return(
       <GeoJSON key={'r'+idx} data={boundary} style={regionStyle(boundary.properties.region)}>
         <Popup className={"NGSPopup"}>
-          <PopupContent title={boundary.properties.name} content={RegionDialog(boundary.properties)} />
+          <PopupContent title={boundary.properties.name} contentHeader={areaHeader(boundary.properties.region)} content={RegionDialog(boundary.properties)} />
         </Popup>
       </GeoJSON>
     )

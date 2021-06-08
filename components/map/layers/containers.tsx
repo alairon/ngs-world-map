@@ -1,6 +1,6 @@
 import { Marker, Popup } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
-import PopupContent from '../info/ContentDialog';
+import PopupContent from '../info/ContainerDialog';
 
 function containerIcon(fill: string): DivIcon{
   const svg = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="75" height="75" stroke="white" stroke-width="8" fill="${fill}"/></svg>`;

@@ -87,7 +87,7 @@ const localeStrings = {
   );
 }
 
-export default function PopupContent(props: any){
+export default function TrialDialog(props: any){
   const content = generateContentBody(props);
   return(
     <Box>
@@ -97,7 +97,7 @@ export default function PopupContent(props: any){
       </Box>
 
       {/* Contents */}
-      <Box fontSize={"semibold"} sx={{margin: "5px", padding: "5px", backgroundColor: "inherit"}}>
+      <Box sx={{margin: "5px", padding: "5px", backgroundColor: "inherit"}}>
         <Heading size="sm">{props.contentHeader}</Heading>
         {content}
       </Box>

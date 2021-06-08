@@ -1,49 +1,35 @@
-import { Box, Container, Heading } from '@chakra-ui/react';
+import { Container, Box, Heading } from '@chakra-ui/react';
 import {useRouter} from 'next/router';
 
 function generateContentBody(contentProps){
   const {locale} = useRouter();
   const localeStrings = {
-    "en": ["City Area", "Gathering Area", "Combat Area", "??? Area"],
-    "jp": ["都市", "探索セクション", "戦闘セクション", "??? セクション"]
+    "en": {
+      "maxPlayers": "Max Players",
+      "recommendedCP": "Recommended CP",
+      "avgEnemyLvl": "Average Enemy Level"
+    },
+    "jp": {
+      "maxPlayers": "Max Players",
+      "recommendedCP": "推奨戦闘力",
+      "avgEnemyLvl": "Average Enemy Level"
+    } 
   }
 
   if (contentProps.region == 0){
     return (
       <Box>
-      {/* Title bar */}
-      <Box sx={{backgroundColor: "#2b5e8d"}}>
-        <Heading size="sm">{contentProps.title}</Heading>
-      </Box>
-      <Container paddingTop='5px' margin={0}>
-        <Box paddingBottom="5px">
-          <Heading size={"sm"}>{localeStrings[locale][contentProps.region]}</Heading>
-        </Box>
-        <Box>
-          Max Players: {contentProps.maxPlayers}
-        </Box>
-      </Container>
+        <b>{localeStrings[locale].maxPlayers}</b>: {contentProps.maxPlayers}
       </Box>
     )
   }
   return(
     <Box>
-            {/* Title bar */}
-            <Box sx={{backgroundColor: "#2b5e8d"}}>
-        <Heading size="sm">{contentProps.title}e</Heading>
-      </Box>
-    <Container paddingTop='5px' margin={0}>
-    <Box paddingBottom="5px">
-      <Heading size={"sm"}>{localeStrings[locale][contentProps.region]}</Heading>
-    </Box>
-    <Box>
-      Max Players: {contentProps.maxPlayers}
+      <b>{localeStrings[locale].maxPlayers}</b>: {contentProps.maxPlayers}
       <br/>
-      Recommended CP: {contentProps.recommendedCP}
+      <b>{localeStrings[locale].recommendedCP}</b>: {contentProps.recommendedCP}
       <br/>
-      Average Enemy Level: {contentProps.avgEnemyLvl}
-    </Box>
-  </Container>
+      <b>{localeStrings[locale].avgEnemyLvl}</b>: {contentProps.avgEnemyLvl}
     </Box>
   );
 }
@@ -51,17 +37,11 @@ function generateContentBody(contentProps){
 export default function PopupContent(props: any){
   const content = generateContentBody(props);
   return(
-    <Box>
-      {/* Title bar */}
-      <Box sx={{backgroundColor: "#2b5e8d"}}>
-        <Heading size="sm">{props.title}</Heading>
-      </Box>
-
-      {/* Contents */}
-      <Box fontSize={"semibold"} sx={{margin: "5px", padding: "5px", backgroundColor: "inherit"}}>
+    <Container margin={0}>
+      <Box sx={{margin: "5px", padding: "5px", backgroundColor: "none"}}>
         <Heading size="sm">{props.contentHeader}</Heading>
         {content}
       </Box>
-    </Box>
+    </Container>
   );
 }
