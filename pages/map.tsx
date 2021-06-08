@@ -5,6 +5,7 @@ import { getLandmarkMarkers } from './api/landmarks';
 import { getContainerMarkers } from './api/containers'
 import { getRegions } from './api/regions';
 import NavBar from '../components/navigation/NavBar';
+import { useRouter } from 'next/router';
 
 interface StaticProps{
   props: {
@@ -32,19 +33,31 @@ export async function getStaticProps({locale}): Promise<StaticProps>{
 }
 
 export default function Map(props: Promise<StaticProps>): JSX.Element {
+  const {locale} = useRouter();
   // Imports the map with SSR disabled since it needs to be run on the client
   const MapView = dynamic(() => import ("../components/map/MapView"), {
     ssr: false
   });
 
+  const localeStrings = {
+    "jp": {
+      "title": "PSO2:NGS ワールドマップ",
+      "description": "PSO2 ニュージェネシス (PSO2:NGS) ワールドマップ",
+    },
+    "en": {
+      "title": "PSO2:NGS World Map",
+      "description": "Phantasy Star Online 2 New Genesis (PSO2:NGS) World Map",
+    }
+  }
+
   return (
     <main>
       <Head>
-        <title>PSO2:NGS World Map</title>
-        <meta name="description" content="Phantasy Star Online 2 Map and Gathering"></meta>
+        <title>{localeStrings[locale].title}</title>
+        <meta name="description" content={localeStrings[locale].description}></meta>
         <link rel="icon" href="/favicon.ico"></link>
       </Head>
-      <NavBar content={{title: "PSO2:NGS World Map", footer: `Map Data &copy; SEGA <Link href="https://pso2.com">PHANTASY STAR ONLINE 2 NEW GENESIS</Link>`}}/>
+      <NavBar content={{title: localeStrings[locale].title, footer: `Map Data &copy; SEGA <Link href="https://pso2.com">PHANTASY STAR ONLINE 2 NEW GENESIS</Link>`}}/>
 
       <section id="Map">
         <MapView {...props}/>

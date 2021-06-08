@@ -6,21 +6,21 @@
   "ryuker": {
     "markerType": 0,
     "landmarkName": "リューカーデバイス",
-    "desc": ""
+    "description": ""
   },
   "cocoon": {
     "markerType": 1,
     "landmarkName": "コクーン",
-    "desc": ""
+    "description": ""
   },
   "tower": {
     "markerType": 2,
     "landmarkName": "タワー",
-    "desc": ""
+    "description": ""
   },
   "mag": {
     "markerType": 3,
     "landmarkName": "リージョンマグ",
-    "desc": ""
+    "description": ""
   }
 }

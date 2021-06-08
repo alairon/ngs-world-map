@@ -4,21 +4,33 @@ import Landmarks from './layers/landmarks';
 import Gathering from './layers/gathering';
 import Regions from './layers/regions';
 import Containers from './layers/containers';
-import { useEffect, useRef } from 'react';
-import { Menu, MenuButton, Button, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, MenuDivider} from '@chakra-ui/react';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
+import { useRouter } from 'next/router';
 
 export default function Map(props): JSX.Element{  
-  let mapRef, landmarkRef, gatheringRef, containersRef, regionsRef;
-    landmarkRef = gatheringRef = containersRef = regionsRef = useRef();
+  const {locale} = useRouter();
   const imageBounds: LatLngBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
   const mapBounds: LatLngBounds = new LatLngBounds([[-100, -500], [800, 1000]]);
 
+  const localeStrings = {
+    "en": {
+      "landmarks": "Landmarks",
+      "gathering": "Gathering",
+      "containers": "Containers",
+      "regions": "Regions"
+    },
+    "jp": {
+      "landmarks": "Landmarks",
+      "gathering": "ギャザリング",
+      "containers": "アイテムコンテナ",
+      "regions": "リージョン"
+    }
+  }
+
   return (
     <MapContainer 
-      ref={mapRef}
       id={"ngs-halpha"}
       crs={CRS.Simple}
       center={[326,294]}
@@ -33,6 +45,7 @@ export default function Map(props): JSX.Element{
       maxBoundsViscosity={0.5}
       attributionControl={false}
       style={{position: "absolute", height: "100%", width: "100%", backgroundColor: "#011B3C"}}
+      closePopupOnClick={true}
     >
       
       <AttributionControl 
@@ -54,23 +67,23 @@ export default function Map(props): JSX.Element{
       <LayersControl position="topright" collapsed>
         <LayersControl.BaseLayer checked name="Default">
         </LayersControl.BaseLayer>
-        <LayersControl.Overlay checked name="Landmarks">
-          <LayerGroup ref={landmarkRef}>
+        <LayersControl.Overlay checked name={localeStrings[locale].landmarks}>
+          <LayerGroup>
             <Landmarks data={props.landmarks} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name="Gathering">
-          <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>" ref={gatheringRef}>
+        <LayersControl.Overlay name={localeStrings[locale].gathering}>
+          <LayerGroup>
             <Gathering data={props.gathering} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name="Containers">
-          <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>" ref={containersRef}>
+        <LayersControl.Overlay name={localeStrings[locale].containers}>
+          <LayerGroup>
             <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name="Regions">
-          <LayerGroup ref={regionsRef}>
+        <LayersControl.Overlay name={localeStrings[locale].regions}>
+          <LayerGroup>
             <Regions data={props.regions} />
           </LayerGroup>
         </LayersControl.Overlay>

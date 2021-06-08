@@ -1,6 +1,8 @@
 import { GeoJSON, Popup } from 'react-leaflet';
 import { GenericMarkerConfig } from '../MapView.d';
-import PopupContent from '../info/PopupContent';
+import RegionDialog from '../info/RegionDialog';
+import PopupContent from '../info/ContentDialog';
+import { useRouter } from 'next/router';
 
 function regionStyle(region: number): GenericMarkerConfig {
   switch(region){
@@ -29,19 +31,23 @@ function regionStyle(region: number): GenericMarkerConfig {
   }
 }
 
+function areaHeader(region: number): string{
+  const { locale } = useRouter();
+
+  const localeString = {
+    "en": ["City Area", "Gathering Area", "Combat Area", "??? Area"], 
+    "jp": ["都市", "探索セクション", "戦闘セクション", "??? セクション"]
+  }
+
+  return(localeString[locale][region]);
+}
+
 export default function Regions(boundaries: any): JSX.Element{
   const regions: JSX.Element = boundaries.data.map((boundary, idx: number) => {
-  const regionNames: Array<string> = ['City', 'Gathering Area', 'Combat Area', '??? Area'];
-  const regionNamesJP: Array<string> = ['都市', '探索セクション', '戦闘セクション', '???セクション'];
-
-    let contentDiv: JSX.Element = <div><b>{regionNames[boundary.properties.region]}</b><br/><b>Max Players:</b> {boundary.properties.maxPlayers}<br/><b>Recommended CP:</b> {boundary.properties.recommendedCP}<br/><b>Average Enemy Level:</b> {boundary.properties.avgEnemyLvl}</div>;
-    if (boundary.properties.region == 0){
-      contentDiv = <div><b>{regionNames[boundary.properties.region]}</b><br/><b>Max Players:</b> {boundary.properties.maxPlayers}</div>;
-    }
     return(
       <GeoJSON key={'r'+idx} data={boundary} style={regionStyle(boundary.properties.region)}>
         <Popup className={"NGSPopup"}>
-          <PopupContent title={boundary.properties.name} content={contentDiv} />
+          <PopupContent title={boundary.properties.name} contentHeader={areaHeader(boundary.properties.region)} content={RegionDialog(boundary.properties)} />
         </Popup>
       </GeoJSON>
     )

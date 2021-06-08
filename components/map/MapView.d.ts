@@ -30,7 +30,8 @@ export interface LandmarkObject_L3{
   lat: number,
   lng: number,
   markerType: number,
-  desc: string,
+  description: string,
+  details?: JSON,
   region: string,
   landmarkName: string,
   locationName: string

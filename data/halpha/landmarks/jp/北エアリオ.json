@@ -18,7 +18,25 @@
   "cocoon": [
     {
       "locationName": "スウィフトジャンプ",
-      "desc": "",
+      "description": "This is the facility where an Instructor who tests the jumping abilities of every ARKS. Use \"Jump\" & \"Double Jump\" to reach the target goal.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 880,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "99回落下する",
+        "mainMission": [
+          "Reach the Goal!"
+        ],
+        "sideMission": [
+          "1:20秒以内にクリア",
+          "落下回数5回未満でクリア",
+          "グライドの使用5回未満でクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+1 SP"
+        ]
+      },
       "lat": 480.559988,
       "lng": 196.144901
     }

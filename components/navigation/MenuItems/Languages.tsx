@@ -7,9 +7,9 @@ export function LangString(){
   const { locale } = useRouter();
   switch (locale){
     case 'en':
-      return(<span><Icon as={MdLanguage}/>&nbsp;Language</span>);
+      return(<span><Icon as={MdLanguage}/>&nbsp;English</span>);
     case 'jp':
-      return(<span><Icon as={MdLanguage}/>&nbsp;言語</span>)
+      return(<span><Icon as={MdLanguage}/>&nbsp;日本語</span>)
     default:
       return(<span><Icon as={MdLanguage}/>&nbsp;Language</span>);
   }
@@ -18,7 +18,7 @@ export function LangString(){
 export default function LanguageSwitcher(){
   const { asPath }= useRouter();
   return(
-    <Menu offset={[0, 0]} placement="bottom-end" isLazy>
+    <Menu offset={[0, 0]} autoSelect={false} placement="bottom-end" isLazy>
       <MenuButton as={Button} sx={{backgroundColor: "rgba(85,84,88, 0.7)",
     color: "white",
     borderColor: `rgb(64,84,108)`,

@@ -1,7 +1,7 @@
 {
   "info": {
     "id": 11106,
-    "region": "Southern Aelio"
+    "region": "South Aelio"
   },
   "ryuker": [
     {
@@ -18,6 +18,25 @@
   "cocoon": [
     {
       "locationName": "Wild Rush",
+      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Use your combat skills to take out every enemy.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 864,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "1:39:00 time limit",
+        "mainMission": [
+          "Defeat 42 Enemies"
+        ],
+        "sideMission": [
+          "Clear in under 1:40",
+          "Clear with fewer than 5 incapacitations",
+          "Clear with 5 Point Cubes",
+          "Complete: Side Missions"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
       "lat": 131.816246,
       "lng": 388.827780
     }
@@ -25,15 +44,27 @@
   "tower": [
     {
       "locationName": "Great Wall",
+      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Make full use of your combat abilities as a Daedal Sword awaits you in the final area.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 950,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "1:39:00 time limit",
+        "mainMission": [
+          "Defeat the Daedal Sword!"
+        ],
+        "sideMission": [
+          "Clear in under 23:00",
+          "Clear with fewer than 5 incapacitations",
+          "Clear with 5 Point Cubes",
+          "Complete: Side Missions"
+        ],
+        "rewards": [
+          "+2 Skill Points"
+        ]
+      },
       "lat": 120.143909,
       "lng": 432.411104
-    }
-  ],
-  "mag": [
-    {
-      "locationName": "???",
-      "lat": 98.502213,
-      "lng": 301.928687
     }
   ]
 }

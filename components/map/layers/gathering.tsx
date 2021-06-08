@@ -1,6 +1,6 @@
 import { Marker, Popup } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
-import PopupContent from '../info/PopupContent';
+import GatheringDialog from '../info/GatheringDialog';
 
 function genericIcon(fill: string): DivIcon{
   const svg = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="black" stroke-width="8" fill="${fill}"/></svg>`;
@@ -19,7 +19,7 @@ export default function Gathering(gathering): JSX.Element{
       return(
         <Marker key={'g'+(idx*idy+idy)} position={[coord.lat, coord.lng]} title={nodes.info.materialName} icon={genericIcon(nodes.info.color)}>
           <Popup className={"NGSPopup"}>
-            <PopupContent title={nodes.info.materialName} content={nodes.info.usage} />
+            {GatheringDialog(nodes.info)}
         </Popup>
         </Marker>
       );

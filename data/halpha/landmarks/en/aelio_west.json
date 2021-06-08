@@ -1,6 +1,85 @@
 {
   "info": {
     "id": 11102,
-    "region": "Western Aelio"
-  }
+    "region": "West Aelio"
+  },
+  "ryuker": [
+    {
+      "locationName": "???",
+      "lng": 70.464367,
+      "lat": 427.176746
+    },
+    {
+      "locationName": "???",
+      "lng": 71.527656,
+      "lat": 255.65694
+    }
+  ],
+  "cocoon": [
+    {
+      "locationName": "???",
+      "description": "???",
+      "details": {
+        "partyLimit": 0,
+        "recommendedCP": 0,
+        "clearCondition": "???",
+        "failCondition": "???",
+        "mainMission": [
+          "???"
+        ],
+        "sideMission": [
+          "???"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
+      "lng": 25.307708,
+      "lat": 459.462731
+    },
+    {
+      "locationName": "???",
+      "description": "???",
+      "details": {
+        "partyLimit": 0,
+        "recommendedCP": 0,
+        "clearCondition": "???",
+        "failCondition": "???",
+        "mainMission": [
+          "???"
+        ],
+        "sideMission": [
+          "???"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
+      "lng": 187.463107,
+      "lat": 126.684609
+    }
+  ],
+  "tower": [
+    {
+      "locationName": "???",
+      "description": "???",
+      "details": {
+        "partyLimit": 0,
+        "recommendedCP": 0,
+        "clearCondition": "???",
+        "failCondition": "???",
+        "mainMission": [
+          "???"
+        ],
+        "sideMission": [
+          "???"
+        ],
+        "rewards": [
+          "+2 Skill Points"
+        ]
+      },
+      "lng": 87.973115,
+      "lat": 496.000414
+    }
+  ]
 }
