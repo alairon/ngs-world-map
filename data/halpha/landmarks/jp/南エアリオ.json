@@ -18,6 +18,25 @@
   "cocoon": [
     {
       "locationName": "ワイルドラッシュ",
+      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Use your combat skills to take out every enemy.",
+      "details": {
+        "partyLimit": 1,
+        "recommendedCP": 800,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "20回戦闘不能になる",
+        "mainMission": [
+          "Reach for the goal!"
+        ],
+        "sideMission": [
+          "0:50以内にクリア",
+          "戦闘不能回数5回未満でクリア",
+          "ダメージ回数5回未満でクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+1 SP"
+        ]
+      },
       "lat": 131.816246,
       "lng": 388.827780
     }
@@ -25,15 +44,27 @@
   "tower": [
     {
       "locationName": "グレートウォール",
+      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Make full use of your combat abilities as a Daedal Sword awaits you in the final area.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 950,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "制限時間1:39:00の経過",
+        "mainMission": [
+          "Defeat the Daedal Sword!"
+        ],
+        "sideMission": [
+          "23:00以内にクリア",
+          "戦闘不能回数5回未満でクリア",
+          "ポイントキューブを5個取得してクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+2 SP"
+        ]
+      },
       "lat": 120.143909,
       "lng": 432.411104
-    }
-  ],
-  "mag": [
-    {
-      "locationName": "???",
-      "lat": 98.502213,
-      "lng": 301.928687
     }
   ]
 }

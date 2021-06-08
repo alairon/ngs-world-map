@@ -18,13 +18,49 @@
   "cocoon": [
     {
       "locationName": "ファーストステップ",
-      "desc": "",
+      "description": "This is the facility where an Instructor who tests the basic abilities of every ARKS. By following the instructions, one can learn new abilities while reaching the targeted goal.",
+      "details": {
+        "partyLimit": 1,
+        "recommendedCP": 800,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "30:00以上経過する",
+        "mainMission": [
+          "Reach for the goal!"
+        ],
+        "sideMission": [
+          "5:00以内にクリア",
+          "10:00以内にクリア",
+          "ポイントキューブを10個取得してクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+1 SP"
+        ]
+      },
       "lat": 311.637386,
       "lng": 209.214609
     },
     {
       "locationName": "エンハンスドエネミー",
-      "desc": "",
+      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Use your combat skills to take out the Enhanced Pedas Sword.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 864,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "20回戦闘不能になる",
+        "mainMission": [
+          "Defeat the Pedas Sword!"
+        ],
+        "sideMission": [
+          "0:50以内にクリア",
+          "戦闘不能回数5回未満でクリア",
+          "ダメージ回数5回未満でクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+1 SP"
+        ]
+      },
       "lat": 396.839959,
       "lng": 324.933635
     }

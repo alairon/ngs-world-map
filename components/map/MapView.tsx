@@ -4,21 +4,17 @@ import Landmarks from './layers/landmarks';
 import Gathering from './layers/gathering';
 import Regions from './layers/regions';
 import Containers from './layers/containers';
-import { useEffect, useRef } from 'react';
-import { Menu, MenuButton, Button, MenuItem, MenuItemOption, MenuList, MenuOptionGroup, MenuDivider} from '@chakra-ui/react';
+import { useRef } from 'react';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
 
 export default function Map(props): JSX.Element{  
-  let mapRef, landmarkRef, gatheringRef, containersRef, regionsRef;
-    landmarkRef = gatheringRef = containersRef = regionsRef = useRef();
   const imageBounds: LatLngBounds = new LatLngBounds([[0, 0], [1000, 1000]]);
   const mapBounds: LatLngBounds = new LatLngBounds([[-100, -500], [800, 1000]]);
 
   return (
     <MapContainer 
-      ref={mapRef}
       id={"ngs-halpha"}
       crs={CRS.Simple}
       center={[326,294]}
@@ -33,6 +29,7 @@ export default function Map(props): JSX.Element{
       maxBoundsViscosity={0.5}
       attributionControl={false}
       style={{position: "absolute", height: "100%", width: "100%", backgroundColor: "#011B3C"}}
+      closePopupOnClick={true}
     >
       
       <AttributionControl 
@@ -55,22 +52,22 @@ export default function Map(props): JSX.Element{
         <LayersControl.BaseLayer checked name="Default">
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name="Landmarks">
-          <LayerGroup ref={landmarkRef}>
+          <LayerGroup>
             <Landmarks data={props.landmarks} />
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Gathering">
-          <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>" ref={gatheringRef}>
+          <LayerGroup attribution="<a href='https://new-gen.rappy-burst.com/gathering/' target='_blank' rel='noreferrer' style='color:inherit'>Rappy Burst</a>">
             <Gathering data={props.gathering} />
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Containers">
-          <LayerGroup attribution="<a href='https://twitter.com/ANI_PSO2GL' target='_blank' rel='noreferrer' style='color:inherit'>@ANI_PSO2GL</a>" ref={containersRef}>
+          <LayerGroup attribution="<a href='https://new-gen.rappy-burst.com/gathering/' target='_blank' rel='noreferrer' style='color:inherit'>Rappy Burst</a>">
             <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name="Regions">
-          <LayerGroup ref={regionsRef}>
+          <LayerGroup>
             <Regions data={props.regions} />
           </LayerGroup>
         </LayersControl.Overlay>

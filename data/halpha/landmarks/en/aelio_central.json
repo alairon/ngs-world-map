@@ -18,13 +18,53 @@
   "cocoon": [
     {
       "locationName": "First Steps",
+      "description": "This is the facility where an Instructor who tests the basic abilities of every ARKS. By following the instructions, one can learn new abilities while reaching the targeted goal.",
+      "details": {
+        "partyLimit": 1,
+        "recommendedCP": 800,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "30:00 time limit",
+        "mainMission": [
+          "Reach for the goal!"
+        ],
+        "sideMission": [
+          "Clear in under 5:00",
+          "Clear in under 10:00",
+          "Clear with 10 Point Cubes",
+          "Complete: Side Missions"
+        ],
+        "rewards": [
+          "+1 Skill Point",
+          "0 EXP",
+          "0 Meseta"
+        ]
+      },
       "lat": 311.637386,
-      "lng": 209.214609,
-      "desc": "Reach for the goal!"
+      "lng": 209.214609
     },
     {
       "locationName": "Enhanced Enemy",
-      "desc": "",
+      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Use your combat skills to take out the Enhanced Pedas Sword.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 864,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "Become incapacitated 20 times",
+        "mainMission": [
+          "Defeat the Pedas Sword!"
+        ],
+        "sideMission": [
+          "Clear in under 0:50",
+          "Clear in under 5 deaths",
+          "Clear in under 10 damage attempts",
+          "Complete: Side Missions"
+        ],
+        "rewards": [
+          "+1 Skill Point",
+          "0 EXP",
+          "0 Meseta"
+        ]
+      },
       "lat": 396.839959,
       "lng": 324.933635
     }

@@ -17,14 +17,28 @@
   ],
   "cocoon": [
     {
-      "locationName": "Enhanced Enemy",
-      "desc": "",
-      "lat": 396.839959,
-      "lng": 324.933635
-    },
-    {
       "locationName": "Swift Jump",
-      "desc": "",
+      "description": "This is the facility where an Instructor who tests the jumping abilities of every ARKS. Use \"Jump\" & \"Double Jump\" to reach the target goal.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 880,
+        "clearCondition": "Complete Main Mission",
+        "failCondition": "Fall 99 times",
+        "mainMission": [
+          "Reach the Goal!"
+        ],
+        "sideMission": [
+          "Clear in under 1:20",
+          "Clear without falling 5 times",
+          "Clear while using no more than 5 Glide(s)",
+          "Complete: Side Missions"
+        ],
+        "rewards": [
+          "+1 Skill Point",
+          "0 EXP",
+          "0 Meseta"
+        ]
+      },
       "lat": 480.559988,
       "lng": 196.144901
     }

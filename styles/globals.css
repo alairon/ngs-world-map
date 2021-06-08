@@ -27,7 +27,7 @@ a {
 }
 
 .NGSPopup .leaflet-popup-content-wrapper{
-  background-color: rgb(64, 84, 108, 0.7);
+  background-color: rgba(64, 84, 108, 0.7);
   min-width: 200px;
   color: white;
   border-color: #65EBF6;
