@@ -9,8 +9,8 @@ export default function ContentDialog(props: any){
       </Box>
 
       {/* Contents */}
-      <Box fontSize={"semibold"} sx={{backgroundColor: "rgba(29,38,53,0.6)"}}>
-        <Heading size="sm" paddingLeft={5} paddingTop={3}>{props.contentHeader}</Heading>
+      <Box margin={"5px"}  sx={{backgroundColor: "rgba(29,38,53,0.6)"}}>
+        <Heading size="sm" paddingTop={3} textAlign="center">{props.contentHeader}</Heading>
         {props.content}
       </Box>
     </Box>
