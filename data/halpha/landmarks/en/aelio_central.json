@@ -5,36 +5,38 @@
   },
   "ryuker": [
     {
-      "locationName": "Mt. Mahina Pari",
+      "locationName": "Halphana Plains: West",
       "lat": 294.905127,
       "lng": 215.766188
     },
     {
-      "locationName": "Halphana Plains",
+      "locationName": "Halphana Plains: East",
       "lat": 369.078752,
       "lng": 355.872366
     }
   ],
   "cocoon": [
     {
-      "locationName": "First Steps",
-      "description": "This is the facility where an Instructor who tests the basic abilities of every ARKS. By following the instructions, one can learn new abilities while reaching the targeted goal.",
+      "locationName": "First Step",
+      "description": "Follow the instructions to reach the goal while learning the new action.",
       "details": {
         "partyLimit": 1,
         "recommendedCP": 800,
-        "clearCondition": "Complete Main Mission",
-        "failCondition": "30:00 time limit",
+        "clearCondition": "Complete the Main Mission",
+        "prerequisite": "---",
+        "failCondition": "Time exceeds 30:00",
+        "enemyLvl": 1,
         "mainMission": [
-          "Reach for the goal!"
+          "Reach the finish point"
         ],
         "sideMission": [
-          "Clear in under 5:00",
-          "Clear in under 10:00",
+          "Clear before 5:00",
+          "Clear beore 10:00",
           "Clear with 10 Point Cubes",
-          "Complete: Side Missions"
+          "Complete all Side Missions and clear"
         ],
         "rewards": [
-          "+1 Skill Point"
+          "+1 Skill Point (on first clear)"
         ]
       },
       "lat": 311.637386,
