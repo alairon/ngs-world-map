@@ -5,30 +5,38 @@
   },
   "ryuker": [
     {
-      "locationName": "???",
+      "locationName": "Cryano Cliffs",
       "lng": 70.464367,
       "lat": 427.176746
     },
     {
-      "locationName": "???",
+      "locationName": "Lakau Coast",
       "lng": 71.527656,
       "lat": 255.65694
+    },
+    {
+      "locationName": "Crykau Hills",
+      "lng": 153.627899,
+      "lat": 187.029744
     }
   ],
   "cocoon": [
     {
-      "locationName": "???",
-      "description": "???",
+      "locationName": "Test Flight",
+      "description": "Use Photon Glide to reach the target destination",
       "details": {
         "partyLimit": 0,
-        "recommendedCP": 0,
-        "clearCondition": "???",
-        "failCondition": "???",
+        "recommendedCP": 835,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "Fall 99 times",
         "mainMission": [
-          "???"
+          "Reach the finish point"
         ],
         "sideMission": [
-          "???"
+          "Clear before 1:15",
+          "Clear without falling 5 times",
+          "Obtain 5 Point Cubes",
+          "Complete all Side Missions and clear"
         ],
         "rewards": [
           "+1 Skill Point"
@@ -38,18 +46,18 @@
       "lat": 459.462731
     },
     {
-      "locationName": "???",
-      "description": "???",
+      "locationName": "Rolling Rush",
+      "description": "Use your combat skills to take out \"Gololox\"",
       "details": {
-        "partyLimit": 0,
-        "recommendedCP": 0,
-        "clearCondition": "???",
-        "failCondition": "???",
+        "partyLimit": 4,
+        "recommendedCP": 1184,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "Become incapacitated 30 times",
         "mainMission": [
-          "???"
+          "Defeat Gololox"
         ],
         "sideMission": [
-          "???"
+          "Clear in under 6:30"
         ],
         "rewards": [
           "+1 Skill Point"
@@ -80,6 +88,13 @@
       },
       "lng": 87.973115,
       "lat": 496.000414
+    }
+  ],
+  "mag": [
+    {
+      "locationName": "Lakau Coast",
+      "lng": 89.849906,
+      "lat": 265.827956
     }
   ]
 }

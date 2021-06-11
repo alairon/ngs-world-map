@@ -7,7 +7,7 @@
         "name": "Mt. Magnus",
         "region": 2,
         "maxPlayers": 8,
-        "recommendedCP": 864,
+        "recommendedCP": 894,
         "avgEnemyLvl": 5
       },
       "geometry": {
@@ -103,8 +103,8 @@
       "properties": {
         "name": "Vanford Laboratory Ruins",
         "region": 2,
-        "maxPlayers": 0,
-        "recommendedCP": 0,
+        "maxPlayers": 8,
+        "recommendedCP": 1009,
         "avgEnemyLvl": 0
       },
       "geometry": {
@@ -186,11 +186,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Halphia Lake",
+        "name": "Lake Halphia",
         "region": 1,
-        "maxPlayers": 0,
-        "recommendedCP": 0,
-        "avgEnemyLvl": 0
+        "maxPlayers": 32,
+        "recommendedCP": 9999,
+        "avgEnemyLvl": 60
       },
       "geometry": {
         "type": "Polygon",
@@ -294,7 +294,7 @@
         "name": "Resol Forest",
         "region": 2,
         "maxPlayers": 0,
-        "recommendedCP": 0,
+        "recommendedCP": 1184,
         "avgEnemyLvl": 0
       },
       "geometry": {
@@ -523,8 +523,8 @@
       "properties": {
         "name": "West Aeilo",
         "region": 1,
-        "maxPlayers": 0,
-        "recommendedCP": 0,
+        "maxPlayers": 32,
+        "recommendedCP": 933,
         "avgEnemyLvl": 0
       },
       "geometry": {
@@ -753,8 +753,8 @@
         "name": "North Aeilo",
         "region": 1,
         "maxPlayers": 32,
-        "recommendedCP": 987,
-        "avgEnemyLvl": 10
+        "recommendedCP": 1045,
+        "avgEnemyLvl": 0
       },
       "geometry": {
         "type": "Polygon",

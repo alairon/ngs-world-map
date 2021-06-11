@@ -9,5 +9,31 @@
       "lat": 252.931234,
       "lng": 330.227914
     }
+  ],
+  "cocoon": [
+    {
+      "locationName": "???",
+      "description": "Use your combat skills to take out every enemy",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 0,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "???",
+        "mainMission": [
+          "???"
+        ],
+        "sideMission": [
+          "???",
+          "???",
+          "???",
+          "Complete all Side Missions and clear"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
+      "lng": 411.0707,
+      "lat": 200.935749
+    }
   ]
 }
