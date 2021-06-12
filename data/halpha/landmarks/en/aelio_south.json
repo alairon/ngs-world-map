@@ -21,14 +21,14 @@
       "description": "Use your combat skills to take out every enemy",
       "details": {
         "partyLimit": 4,
-        "recommendedCP": 864,
+        "recommendedCP": 894,
         "clearCondition": "Complete the Main Mission",
-        "failCondition": "1:39:00 time limit",
+        "failCondition": "Time exceeds 1:00:00",
         "mainMission": [
           "Defeat 42 Enemies"
         ],
         "sideMission": [
-          "Clear in under 1:40",
+          "Clear in under 1:45",
           "Clear with fewer than 5 incapacitations",
           "Clear with 5 Point Cubes",
           "Complete all Side Missions and clear"

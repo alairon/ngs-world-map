@@ -25,7 +25,7 @@
       "locationName": "Test Flight",
       "description": "Use Photon Glide to reach the target destination",
       "details": {
-        "partyLimit": 0,
+        "partyLimit": 4,
         "recommendedCP": 835,
         "clearCondition": "Complete the Main Mission",
         "failCondition": "Fall 99 times",
@@ -46,18 +46,21 @@
       "lat": 459.462731
     },
     {
-      "locationName": "Rolling Rush",
-      "description": "Use your combat skills to take out \"Gololox\"",
+      "locationName": "Roaring Rush",
+      "description": "Make use of your battle skills to defeat Goronox",
       "details": {
         "partyLimit": 4,
         "recommendedCP": 1184,
         "clearCondition": "Complete the Main Mission",
         "failCondition": "Become incapacitated 30 times",
         "mainMission": [
-          "Defeat Gololox"
+          "Defeat all enemies"
         ],
         "sideMission": [
-          "Clear in under 6:30"
+          "Clear before 6:30",
+          "Clear without being incapacitated 2 times",
+          "Clear having taken damage fewer than 15 times",
+          "Complete all Side Missions and clear"
         ],
         "rewards": [
           "+1 Skill Point"
@@ -69,18 +72,21 @@
   ],
   "tower": [
     {
-      "locationName": "???",
-      "description": "???",
+      "locationName": "ALTERS Rush",
+      "description": "Make use of your battle skills to defeat the Chiacurio in the final area",
       "details": {
-        "partyLimit": 0,
-        "recommendedCP": 0,
-        "clearCondition": "???",
-        "failCondition": "???",
+        "partyLimit": 4,
+        "recommendedCP": 1184,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "Become incapacitated 30 times",
         "mainMission": [
-          "???"
+          "Defeat the Chiacurio"
         ],
         "sideMission": [
-          "???"
+          "Clear before 8:00",
+          "Suppress fewer than 4 enemies",
+          "Clear without being incapacitated",
+          "Complete all Side Missions and clear"
         ],
         "rewards": [
           "+4 Skill Points"

@@ -12,20 +12,20 @@
   ],
   "cocoon": [
     {
-      "locationName": "???",
-      "description": "Use your combat skills to take out every enemy",
+      "locationName": "Runway",
+      "description": "Use Photon Dash to reach the target destination",
       "details": {
         "partyLimit": 4,
-        "recommendedCP": 0,
+        "recommendedCP": 1009,
         "clearCondition": "Complete the Main Mission",
-        "failCondition": "???",
+        "failCondition": "Time exceeds 1:00:00",
         "mainMission": [
-          "???"
+          "Defeat the Bujin"
         ],
         "sideMission": [
-          "???",
-          "???",
-          "???",
+          "Clear before 1:55",
+          "Clear before 2:35",
+          "Obtain 5 Point Cubes",
           "Complete all Side Missions and clear"
         ],
         "rewards": [

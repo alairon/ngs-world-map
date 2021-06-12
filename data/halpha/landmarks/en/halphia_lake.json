@@ -5,9 +5,35 @@
   },
   "ryuker": [
     {
-      "locationName": " Halphia Lake",
+      "locationName": "Halphia Lake",
       "lng": 447.039739,
       "lat": 472.134753
+    }
+  ],
+  "cocoon": [
+    {
+      "locationName": "Fleeting Fight",
+      "description": "Make use of your battle skills to defeat the Bujin",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 1184,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "Become incapacitated 30 times",
+        "mainMission": [
+          "Defeat the Bujin"
+        ],
+        "sideMission": [
+          "Clear before 5:00",
+          "Clear without being incapacitated 5 times",
+          "Clear having taken damage fewer than 20 times",
+          "Complete all Side Missions and clear"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
+      "lng": 460.071533,
+      "lat": 436.638437
     }
   ]
 }
