@@ -20,7 +20,7 @@ const localeStrings = {
     "mainMission": "Main Mission",
     "sideMission": "Side Missions",
     "rewards": "1st Clear Reward",
-    "firstReward": "1st Clear Reward"
+    "firstReward": ""
   },
   "jp": {
     "partyLimit": "パーティー",
@@ -29,8 +29,8 @@ const localeStrings = {
     "failCondition": "失敗条件",
     "mainMission": "メインミッション",
     "sideMission": "サイドミッション",
-    "rewards": "報酬",
-    "firstReward": "1st Clear Reward"
+    "rewards": "初回クリア報酬",
+    "firstReward": ""
   }
 }
   return(
