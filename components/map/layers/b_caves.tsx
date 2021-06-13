@@ -18,7 +18,7 @@ export default function BaseLayer_Caves(caveData: any):JSX.Element {
   const Caves: JSX.Element = dataHeaders.map((entry) => {
     return caveData.data[entry].map((data, idx: number) => {
       if(data.geometry){
-        return <GeoJSON key={'bm'+idx} data={data.geometry} />;
+        return <GeoJSON key={'bm'+idx} data={data.geometry} style={{color: "red"}}/>;
       }
       return <Marker key={'bm'+idx} position={[data.lat, data.lng]} title={"Cave Entrance"} icon={genericIcon()} />;
     })
