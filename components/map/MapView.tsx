@@ -17,12 +17,14 @@ export default function Map(props): JSX.Element{
 
   const localeStrings = {
     "en": {
+      "caves": "Caves",
       "landmarks": "Landmarks",
       "gathering": "Gathering",
       "containers": "Containers",
       "regions": "Regions"
     },
     "jp": {
+      "caves": "洞窟",
       "landmarks": "Landmarks",
       "gathering": "ギャザリング",
       "containers": "アイテムコンテナ",
@@ -69,7 +71,7 @@ export default function Map(props): JSX.Element{
         <LayersControl.BaseLayer checked name="Default">
           <TileLayer url={""}></TileLayer>
         </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name="Caves">
+        <LayersControl.BaseLayer name={localeStrings[locale].caves}>
           <FeatureGroup attribution={"Rappy Burst"}>
             <Caves data={props.caves} />
           </FeatureGroup>
