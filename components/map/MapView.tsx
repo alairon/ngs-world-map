@@ -1,8 +1,9 @@
-import { MapContainer, ImageOverlay, LayersControl, LayerGroup, AttributionControl, ZoomControl } from 'react-leaflet'
+import { MapContainer, ImageOverlay, LayersControl, LayerGroup, AttributionControl, ZoomControl, TileLayer, FeatureGroup } from 'react-leaflet'
 import { CRS, LatLngBounds } from 'leaflet';
 import Landmarks from './layers/landmarks';
 import Gathering from './layers/gathering';
 import Regions from './layers/regions';
+import Caves from './layers/b_caves';
 import Containers from './layers/containers';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
@@ -66,6 +67,12 @@ export default function Map(props): JSX.Element{
 
       <LayersControl position="topright" collapsed>
         <LayersControl.BaseLayer checked name="Default">
+          <TileLayer url={""}></TileLayer>
+        </LayersControl.BaseLayer>
+        <LayersControl.BaseLayer name="Caves">
+          <FeatureGroup attribution={"Rappy Burst"}>
+            <Caves />
+          </FeatureGroup>
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name={localeStrings[locale].landmarks}>
           <LayerGroup>
@@ -73,12 +80,12 @@ export default function Map(props): JSX.Element{
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name={localeStrings[locale].gathering}>
-          <LayerGroup>
+          <LayerGroup attribution={"Rappy Burst"}>
             <Gathering data={props.gathering} />
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name={localeStrings[locale].containers}>
-          <LayerGroup>
+          <LayerGroup attribution={"Rappy Burst"}>
             <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
