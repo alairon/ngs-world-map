@@ -21,7 +21,7 @@ const icons: IconObject = {
   ryuker: new Icon({iconUrl: '../ngs/markers/icons/ryuker.svg', iconSize: [35, 35]}),
   cocoon: new Icon({iconUrl: '../../ngs/markers/icons/cocoon.svg', iconSize: [30, 30]}),
   tower: new Icon({iconUrl: '../../ngs/markers/icons/tower.svg', iconSize: [40, 40]}),
-  regionMag: new Icon({iconUrl: '../../ngs/markers/icons/regionMag.svg', iconSize: [30, 30]})
+  regionMag: new Icon({iconUrl: '../../ngs/markers/icons/regionMag.svg', iconSize: [35, 35]})
 }
 
 function getIcon(iconID): Icon | DivIcon{
