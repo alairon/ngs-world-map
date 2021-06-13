@@ -26,7 +26,7 @@ export default function Home() {
             </Link>
             <Link href="./jp/map">
               <Button>
-                World Map (JP)
+                ワールドマップ (JP)
               </Button>
             </Link>
           </ButtonGroup>

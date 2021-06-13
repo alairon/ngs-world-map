@@ -10,6 +10,11 @@ export async function getGatheringMarkers(lang: string): Promise<JSON>{
   return (data);
 }
 
+export async function getCaveData(): Promise<JSON>{
+  const data: JSON = require('../../data/ngs/caves.json');
+  return (data);
+}
+
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET'){
     const markers = await getGatheringMarkers('en');

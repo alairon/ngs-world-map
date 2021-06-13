@@ -5,57 +5,35 @@
   },
   "ryuker": [
     {
-      "locationName": "Mt. Mahina Pari",
+      "locationName": "Halphana Plains: West",
       "lat": 294.905127,
       "lng": 215.766188
     },
     {
-      "locationName": "Halphana Plains",
+      "locationName": "Halphana Plains: East",
       "lat": 369.078752,
       "lng": 355.872366
     }
   ],
   "cocoon": [
     {
-      "locationName": "First Steps",
-      "description": "This is the facility where an Instructor who tests the basic abilities of every ARKS. By following the instructions, one can learn new abilities while reaching the targeted goal.",
+      "locationName": "First Step",
+      "description": "Follow the instructions to reach the goal while learning the new action.",
       "details": {
         "partyLimit": 1,
         "recommendedCP": 800,
-        "clearCondition": "Complete Main Mission",
-        "failCondition": "30:00 time limit",
+        "clearCondition": "Complete the Main Mission",
+        "prerequisite": "---",
+        "failCondition": "Time exceeds 30:00",
+        "enemyLvl": 1,
         "mainMission": [
-          "Reach for the goal!"
+          "Reach the finish point"
         ],
         "sideMission": [
-          "Clear in under 5:00",
-          "Clear in under 10:00",
-          "Clear with 10 Point Cubes",
-          "Complete: Side Missions"
-        ],
-        "rewards": [
-          "+1 Skill Point"
-        ]
-      },
-      "lat": 311.637386,
-      "lng": 209.214609
-    },
-    {
-      "locationName": "Enhanced Enemy",
-      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Use your combat skills to take out the Enhanced Pedas Sword.",
-      "details": {
-        "partyLimit": 4,
-        "recommendedCP": 864,
-        "clearCondition": "Complete Main Mission",
-        "failCondition": "Become incapacitated 20 times",
-        "mainMission": [
-          "Defeat the Pedas Sword!"
-        ],
-        "sideMission": [
-          "Clear in under 0:50",
-          "Clear in under 5 deaths",
-          "Clear in under 10 damage attempts",
-          "Complete: Side Missions"
+          "Clear before 5:00",
+          "Clear before 10:00",
+          "Obtain 10 Point Cubes",
+          "Complete all Side Missions and clear"
         ],
         "rewards": [
           "+1 Skill Point"
@@ -63,6 +41,56 @@
       },
       "lat": 396.839959,
       "lng": 324.933635
+    },
+    {
+      "locationName": "Enhanced Enemy",
+      "description": "Defeat the enhanced Pettas Sword using your battle skills",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 894,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "Become incapacitated 30 times",
+        "mainMission": [
+          "Defeat the Pettas Sword"
+        ],
+        "sideMission": [
+          "Clear before 0:55",
+          "Clear without being incapacitated 5 times",
+          "Clear having taken damage fewer than 10 times",
+          "Complete all Side Missions and clear"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
+      "lat": 311.637386,
+      "lng": 209.214609
+    }
+  ],
+  "tower": [
+    {
+      "locationName": "Great Wall",
+      "description": "Defeat the Daityl Sword in the final area using your battle skills",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 1184,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "1:00:00 time limit",
+        "mainMission": [
+          "Defeat the Daityl Sword"
+        ],
+        "sideMission": [
+          "Clear in under 23:00",
+          "Clear without being incapacitated 5 times",
+          "Ontain 5 Point Cubes",
+          "Complete all Side Missions and clear"
+        ],
+        "rewards": [
+          "+4 Skill Points"
+        ]
+      },
+      "lng": 419.801501,
+      "lat": 353.895639
     }
   ]
 }

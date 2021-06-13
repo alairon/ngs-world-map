@@ -1,11 +1,11 @@
 {
   "info": {
     "id": 11104,
-    "region": "ヴァンフォード研究所跡"
+    "region": "Vanford Laboratory Ruins"
   },
   "ryuker": [
     {
-      "locationName": "ヴァンフォード研究所跡",
+      "locationName": "Vanford Laboratory Ruins",
       "lng": 476.940972,
       "lat": 376.1875
     }

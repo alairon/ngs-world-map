@@ -10,6 +10,11 @@ export async function getLandmarkMarkers(lang: string): Promise<JSON>{
   return (data);
 }
 
+export async function getLabelMarkers(lang: string): Promise<JSON>{
+  const data: JSON = require('../../data/ngs/labels_' + lang + '.json');
+  return (data);
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
   if (req.method === 'GET'){
     const markersEN = await getLandmarkMarkers('en');

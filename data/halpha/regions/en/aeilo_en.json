@@ -392,7 +392,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Southern Aeilo",
+        "name": "South Aeilo",
         "region": 1
       },
       "geometry": {
@@ -506,7 +506,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Western Aeilo",
+        "name": "West Aeilo",
         "region": 1
       },
       "geometry": {

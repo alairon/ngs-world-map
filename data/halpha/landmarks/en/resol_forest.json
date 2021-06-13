@@ -1,11 +1,11 @@
 {
   "info": {
     "id": 11111,
-    "region": "レゾルの森"
+    "region": "Resol Forest"
   },
   "ryuker": [
     {
-      "locationName": "レゾルの森",
+      "locationName": "Resol Forest",
       "lng": 308.327534,
       "lat": 455.426486
     }

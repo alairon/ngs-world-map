@@ -9,5 +9,31 @@
       "lat": 252.931234,
       "lng": 330.227914
     }
+  ],
+  "cocoon": [
+    {
+      "locationName": "Runway",
+      "description": "Use Photon Dash to reach the target destination",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 1009,
+        "clearCondition": "Complete the Main Mission",
+        "failCondition": "Time exceeds 1:00:00",
+        "mainMission": [
+          "Defeat the Bujin"
+        ],
+        "sideMission": [
+          "Clear before 1:55",
+          "Clear before 2:35",
+          "Obtain 5 Point Cubes",
+          "Complete all Side Missions and clear"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
+      "lng": 413.900586,
+      "lat": 207.817615
+    }
   ]
 }

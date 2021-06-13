@@ -6,16 +6,16 @@
   "ryuker": {
     "markerType": 0,
     "landmarkName": "Ryuker Device",
-    "description": "Teleport, Access Storage, Cook Quick Food, Change Rooms"
+    "description": "Teleport, Access Storage, Cook Quick Food, Change Rooms, Change Blocks, Access PSO2"
   },
   "cocoon": {
     "markerType": 1,
-    "landmarkName": "Cocoon",
+    "landmarkName": "Trainia Cocoon",
     "description": ""
   },
   "tower": {
     "markerType": 2,
-    "landmarkName": "Tower",
+    "landmarkName": "Trainia Tower",
     "description": ""
   },
   "mag": {

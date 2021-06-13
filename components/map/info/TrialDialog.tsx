@@ -13,12 +13,14 @@ function generateContentBody(contentProps){
 const localeStrings = {
   "en": {
     "partyLimit": "Party Limit",
-    "recommendedCP": "Recommended CP",
+    "recommendedCP": "Recommended Stats",
+    "enemyLvl": "Lv. of Enemies Present",
     "clearCondition": "Clear Condition",
     "failCondition": "Fail Condition",
     "mainMission": "Main Mission",
     "sideMission": "Side Missions",
-    "rewards": "Rewards"
+    "rewards": "1st Clear Reward",
+    "firstReward": ""
   },
   "jp": {
     "partyLimit": "パーティー",
@@ -27,7 +29,8 @@ const localeStrings = {
     "failCondition": "失敗条件",
     "mainMission": "メインミッション",
     "sideMission": "サイドミッション",
-    "rewards": "報酬"
+    "rewards": "初回クリア報酬",
+    "firstReward": ""
   }
 }
   return(
