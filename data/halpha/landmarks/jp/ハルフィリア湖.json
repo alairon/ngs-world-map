@@ -20,7 +20,7 @@
         "clearCondition": "メインミッションの達成",
         "failCondition": "30回戦闘不能になる",
         "mainMission": [
-          "Defeat the ブジﾝ"
+          "ブジンを倒す"
         ],
         "sideMission": [
           "5:00 未満でクリア",
