@@ -1,5 +1,6 @@
 ## Update (2021-06-10)
-In light of a more up-to-date map available with better support from the PSO2:NGS community, please visit the map at https://ngs-map.kosnag.ru/, or visit its GitHub repo at https://github.com/kosnag/NGS_InterMap/ for more details on contributing. That being said, this project will still be updated with content and ideas, just not as frequently or as up-to-date as the main map.
+In light of a more up-to-date map available with better support from the PSO2:NGS community, please visit the map at https://ngs-map.kosnag.ru/
+That being said, this project will still be updated with content and ideas, just not as quickly as the main map.
 <hr/>
 
 # ngs-world-map
