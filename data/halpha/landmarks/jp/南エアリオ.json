@@ -39,6 +39,30 @@
       },
       "lat": 131.816246,
       "lng": 388.827780
+    },
+    {
+      "locationName": "ローンウェイ",
+      "description": "戦闘技術を駆使して、“ゴロロクス”を撃破せよ。",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 1009,
+        "clearCondition": "メインミッションの達成",
+        "failCondition": "1:00:00以上経過する",
+        "mainMission": [
+          "Defeat the Bujin"
+        ],
+        "sideMission": [
+          "1:55未満でクリア",
+          "2:35未満でクリア",
+          "ポイントキューブを5個取得してクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+1 Skill Point"
+        ]
+      },
+      "lng": 413.900586,
+      "lat": 207.817615
     }
   ],
   "tower": [
