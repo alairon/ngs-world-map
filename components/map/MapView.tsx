@@ -71,7 +71,7 @@ export default function Map(props): JSX.Element{
         </LayersControl.BaseLayer>
         <LayersControl.BaseLayer name="Caves">
           <FeatureGroup attribution={"Rappy Burst"}>
-            <Caves />
+            <Caves data={props.caves} />
           </FeatureGroup>
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name={localeStrings[locale].landmarks}>
