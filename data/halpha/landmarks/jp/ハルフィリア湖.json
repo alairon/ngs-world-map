@@ -2,5 +2,38 @@
   "info": {
     "id": 11103,
     "region": "ハルフィリア湖"
-  }
+  },
+  "ryuker": [
+    {
+      "locationName": "ハルフィリア湖",
+      "lng": 447.039739,
+      "lat": 472.134753
+    }
+  ],
+  "cocoon": [
+    {
+      "locationName": "セツナノイッセン",
+      "description": "Make use of your battle skills to defeat the Bujin",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 1184,
+        "clearCondition": "メインミッションの達成",
+        "failCondition": "30回戦闘不能になる",
+        "mainMission": [
+          "Defeat the ブジﾝ"
+        ],
+        "sideMission": [
+          "5:00 未満でクリア",
+          "戦闘不能回数5回未満でクリア",
+          "ダメージ回数20回未満でクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+1 SP"
+        ]
+      },
+      "lng": 460.071533,
+      "lat": 436.638437
+    }
+  ]
 }

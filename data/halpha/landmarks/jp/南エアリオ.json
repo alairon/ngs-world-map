@@ -18,19 +18,19 @@
   "cocoon": [
     {
       "locationName": "ワイルドラッシュ",
-      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Use your combat skills to take out every enemy.",
+      "description": "戦闘技術を駆使して、全てのエネミーを撃破せよ。",
       "details": {
-        "partyLimit": 1,
-        "recommendedCP": 800,
-        "clearCondition": "Complete Main Mission",
-        "failCondition": "20回戦闘不能になる",
+        "partyLimit": 4,
+        "recommendedCP": 894,
+        "clearCondition": "メインミッションの達成",
+        "failCondition": "制限時間1:00:00の経過",
         "mainMission": [
-          "Reach for the goal!"
+          ""
         ],
         "sideMission": [
-          "0:50以内にクリア",
+          "1:45 未満でクリア",
           "戦闘不能回数5回未満でクリア",
-          "ダメージ回数5回未満でクリア",
+          "ポイントキューブを5個取得してクリア",
           "サイドミッションをすべて達成してクリア"
         ],
         "rewards": [
@@ -43,28 +43,35 @@
   ],
   "tower": [
     {
-      "locationName": "グレートウォール",
+      "locationName": "エアロランナー",
       "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Make full use of your combat abilities as a Daedal Sword awaits you in the final area.",
       "details": {
         "partyLimit": 4,
-        "recommendedCP": 950,
-        "clearCondition": "Complete Main Mission",
-        "failCondition": "制限時間1:39:00の経過",
+        "recommendedCP": 1184,
+        "clearCondition": "メインミッションの達成",
+        "failCondition": "99回落下する",
         "mainMission": [
-          "Defeat the Daedal Sword!"
+          "フィニッシュポイント到達する"
         ],
         "sideMission": [
-          "23:00以内にクリア",
-          "戦闘不能回数5回未満でクリア",
-          "ポイントキューブを5個取得してクリア",
+          "2:05 未満でクリア",
+          "落下回数5回未満でクリア",
+          "ポイントキューブを10個取得してクリア",
           "サイドミッションをすべて達成してクリア"
         ],
         "rewards": [
-          "+2 SP"
+          "+4 SP"
         ]
       },
       "lat": 120.143909,
       "lng": 432.411104
+    }
+  ],
+  "mag": [
+    {
+      "locationName": "千金のリージョンマグ",
+      "lat": 98.502213,
+      "lng": 301.928687
     }
   ]
 }

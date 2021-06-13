@@ -5,12 +5,12 @@
   },
   "ryuker": [
     {
-      "locationName": "マヒナパリ山",
+      "locationName": "ハルファナ平原:西",
       "lat": 294.905127,
       "lng": 215.766188
     },
     {
-      "locationName": "ハルファナ平原",
+      "locationName": "ハルファナ平原:東",
       "lat": 369.078752,
       "lng": 355.872366
     }
@@ -18,14 +18,14 @@
   "cocoon": [
     {
       "locationName": "ファーストステップ",
-      "description": "This is the facility where an Instructor who tests the basic abilities of every ARKS. By following the instructions, one can learn new abilities while reaching the targeted goal.",
+      "description": "指示に従い、新たなアクションを習得しつつ、目標地点に到達せよ。",
       "details": {
         "partyLimit": 1,
         "recommendedCP": 800,
-        "clearCondition": "Complete Main Mission",
+        "clearCondition": "メインミッションの達成",
         "failCondition": "30:00以上経過する",
         "mainMission": [
-          "Reach for the goal!"
+          "ゴールへ到達せよ！"
         ],
         "sideMission": [
           "5:00以内にクリア",
@@ -46,15 +46,15 @@
       "details": {
         "partyLimit": 4,
         "recommendedCP": 864,
-        "clearCondition": "Complete Main Mission",
+        "clearCondition": "メインミッションの達成",
         "failCondition": "20回戦闘不能になる",
         "mainMission": [
-          "Defeat the Pedas Sword!"
+          "ペダス・ソードを倒せ！"
         ],
         "sideMission": [
-          "0:50以内にクリア",
+          "0:55以内にクリア",
           "戦闘不能回数5回未満でクリア",
-          "ダメージ回数5回未満でクリア",
+          "ダメージ回数10回未満でクリア",
           "サイドミッションをすべて達成してクリア"
         ],
         "rewards": [
@@ -63,6 +63,32 @@
       },
       "lat": 396.839959,
       "lng": 324.933635
+    }
+  ],
+  "tower": [
+    {
+      "locationName": "グレートウォール",
+      "description": "This is the facility where an Instructor who tests the combat abilities of every ARKS. Make full use of your combat abilities as a Daedal Sword awaits you in the final area.",
+      "details": {
+        "partyLimit": 4,
+        "recommendedCP": 950,
+        "clearCondition": "メインミッションの達成",
+        "failCondition": "制限時間1:00:00の経過",
+        "mainMission": [
+          "Defeat the Daedal Sword!"
+        ],
+        "sideMission": [
+          "23:00以内にクリア",
+          "戦闘不能回数5回未満でクリア",
+          "ポイントキューブを5個取得してクリア",
+          "サイドミッションをすべて達成してクリア"
+        ],
+        "rewards": [
+          "+4 SP"
+        ]
+      },
+      "lng": 419.801501,
+      "lat": 353.895639
     }
   ]
 }
