@@ -1,21 +1,20 @@
-## Update (2021-06-10)
-In light of a more up-to-date map available with better support from the PSO2:NGS community, please visit the map at https://ngs-map.kosnag.ru/
-That being said, this project will still be updated with content and ideas, just not as quickly as the main map.
-<hr/>
-
 # ngs-world-map
-The World Map of Halpha at your disposal
+An interactive world map of Phantasy Star Online 2 New Genesis.
+The purpose of this map is to provide a smooth and simple interface that is mobile-friendly.
 
-Documentation to come, but here's the current roadmap:
+Tech Stack:
+Map: Leaflet.js
+Backend: Node/React/Next.js
+UI Elements: Modified Chakra UI
 
-* Come up with a better name for this project. No one wants to type "ngs-world-map...".
-* ~~Add the ability to toggle landmark and gathering nodes~~
-* ~~Add the ability to view the regions and what kind of zone it is~~
-* ~~Partially block out the rest of the map due to the game only launching with the Aelio region~~
-* Add a side control panel to make it a legitimate map
-* Replace the traced SVG landmark icons with an official version
-* ~~Implement tooltips~~
-* ~~Add the ability to add localized text~~
+Current Data:
+* Key landmarks (Ryuker Devices, Cocoons, Towers, Region Mags)
+* Gathering Nodes (credits: Ani/Rappy Burst)
+* Caves
+* Red Containers (credits: Ani/Rappy Burst)
+* Regions (Exploration/Battle)
+With more to come!
+
 
 <hr/>
 DISCLAIMER: 
