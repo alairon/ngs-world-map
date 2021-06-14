@@ -35,7 +35,7 @@ function areaHeader(region: number): string{
   const { locale } = useRouter();
 
   const localeString = {
-    "en": ["City Area", "Gathering Area", "Combat Area", "??? Area"], 
+    "en": ["City/Lobby Area", "Exploration Section", "Battle Section", "??? Section"], 
     "jp": ["都市", "探索セクション", "戦闘セクション", "??? セクション"]
   }
 
