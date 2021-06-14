@@ -9,24 +9,24 @@ function regionStyle(region: number): GenericMarkerConfig {
     case 0: // City
       return ({
         "color": "#ffffff",
-        "weight": 5,
+        "weight": 3,
         "opacity": 0.80
       });
     case 1: // Exploration
       return({
         "color": "#63D668",
-        "weight": 5,
+        "weight": 3,
         "opacity": 0.80
       });
     case 2: // Combat
       return({
         "color": "#FE5D5D",
-        "weight": 5,
+        "weight": 3,
         "opacity": 0.80
       });
     default: // Others??
       return ({"color": "#000000",
-      "weight": 5,
+      "weight": 3,
       "opacity": 0.80});
   }
 }
@@ -35,7 +35,7 @@ function areaHeader(region: number): string{
   const { locale } = useRouter();
 
   const localeString = {
-    "en": ["City Area", "Gathering Area", "Combat Area", "??? Area"], 
+    "en": ["City/Lobby Area", "Exploration Section", "Battle Section", "??? Section"], 
     "jp": ["都市", "探索セクション", "戦闘セクション", "??? セクション"]
   }
 
