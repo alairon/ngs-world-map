@@ -16,7 +16,7 @@ More to come!
 
 ## Tech Stack
 - Map Library: [Leaflet.js](https://leafletjs.com/) - [React Leaflet](https://react-leaflet.js.org/)
-- Backend: [Node](https://nodejs.org)/[Next.js](https://nextjs.org)/[React](https://reactjs.org/)
+- Framework: [Node](https://nodejs.org)/[Next.js](https://nextjs.org)/[React](https://reactjs.org/)
 - UI Elements: Modified [Chakra UI](https://chakra-ui.com/)
 - Others: [potrace](http://potrace.sourceforge.net/) (for SVG icon generation), [WebP](https://developers.google.com/speed/webp) (image compression)
 
