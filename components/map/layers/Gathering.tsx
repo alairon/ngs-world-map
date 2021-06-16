@@ -1,6 +1,6 @@
 import { Marker, Popup } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
-import GatheringDialog from '../info/GatheringDialog';
+import GatheringDialog from '../dialog/GatheringDialog';
 
 function genericIcon(fill: string, inCave: boolean | undefined): DivIcon{
   const svg = (inCave) => { 

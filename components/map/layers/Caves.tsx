@@ -12,7 +12,7 @@ function genericIcon(): DivIcon{
   )
 }
 
-export default function BaseLayer_Caves(caveData: any):JSX.Element {
+export default function Caves(caveData: any):JSX.Element {
   const dataHeaders = Object.keys(caveData.data);
   //@ts-expect-error
   const Caves: JSX.Element = dataHeaders.map((entry) => {

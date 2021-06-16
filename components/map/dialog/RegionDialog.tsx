@@ -6,7 +6,7 @@ function generateContentBody(contentProps){
   const localeStrings = {
     "en": {
       "maxPlayers": "Max Players",
-      "recommendedCP": "Recommended BP",
+      "recommendedCP": "Rec. BP",
       "avgEnemyLvl": "Average Enemy Level"
     },
     "jp": {
