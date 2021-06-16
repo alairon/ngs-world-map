@@ -10,6 +10,11 @@ export async function getLandmarkMarkers(lang: string): Promise<JSON>{
   return (data);
 }
 
+export async function getBossMarkers(lang: string): Promise<JSON>{
+  const data: JSON = require('../../data/ngs/bosses_' + lang + '.json');
+  return (data)
+}
+
 export async function getLabelMarkers(lang: string): Promise<JSON>{
   const data: JSON = require('../../data/ngs/labels_' + lang + '.json');
   return (data);
