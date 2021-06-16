@@ -1,7 +1,7 @@
 import { GeoJSON, Popup } from 'react-leaflet';
 import { GenericMarkerConfig } from '../MapView.d';
-import RegionDialog from '../info/RegionDialog';
-import PopupContent from '../info/ContentDialog';
+import RegionDialog from '../dialog/RegionDialog';
+import PopupContent from '../dialog/ContentDialog';
 import { useRouter } from 'next/router';
 
 function regionStyle(region: number): GenericMarkerConfig {

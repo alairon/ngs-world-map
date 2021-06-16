@@ -1,0 +1,130 @@
+{
+  "dolls": [
+    {
+      "name": "オルク",
+      "description": "Flying enemy capable of long-distance attacks. Switches to a tentacle form when at low health",
+      "elementalWeakness": 2,
+      "lng": 55.803401,
+      "lat": 279.5497
+    },
+    {
+      "name": "ネクス・エアリオ",
+      "description": "Believed to be a mistake in the Global version. Appears in the Japanese Version as \"Nex Aelio\"",
+      "elementalWeakness": 2,
+      "lng": 28.365143,
+      "lat": 74.039089
+    },
+    {
+      "name": "ヴァラス",
+      "description": "",
+      "elementalWeakness": 2,
+      "lng": 162.352374,
+      "lat": 548.978111
+    },
+    {
+      "name": "ダイダル・ソード",
+      "description": "Giant DOLLS enemy. Can be knocked down by attacking their feet, making it easier to attack the weakpoint on its chest.",
+      "elementalWeakness": 2,
+      "weakPoints": ["Chest Armor", "Back Core"],
+      "lng": 187.427946,
+      "lat": 344.92627
+    },
+    {
+      "name": "ダイダル・アックス",
+      "description": "",
+      "elementalWeakness": 2,
+      "weakPoints": ["Chest Armor", "Back Core"],
+      "lng": 187.427946,
+      "lat": 344.92627
+    },
+    {
+      "name": "ナグルス",
+      "description": "",
+      "elementalWeakness": 2,
+      "lng": 187.427946,
+      "lat": 344.92627
+    },
+    {
+      "name": "ブジン",
+      "description": "A small DOLLS boss enemy with quick, ninja-like attacks. Attacks with clones once its HP is low.",
+      "elementalWeakness": 2,
+      "lng": 238.683315,
+      "lat": 428.682646
+    }
+  ],
+  "alters": [
+    {
+      "name": "ビグフロッガ",
+      "description": "",
+      "elementalWeakness": 1,
+      "lng": 118.954524,
+      "lat": 397.972286
+    },
+
+    {
+      "name": "チアキュリオ",
+      "description": "Enhances other enemies",
+      "elementalWeakness": 1,
+      "lng": 170.857773,
+      "lat": 483.034473
+    },
+    {
+      "name": "エルディサイズ",
+      "description": "",
+      "elementalWeakness": 1,
+      "destructables": ["腕 x2"],
+      "lng": 267.306252,
+      "lat": 461.869813
+    },
+    {
+      "name": "ワウロン",
+      "description": "Has kicks that sends out shockwaves.",
+      "elementalWeakness": 1,
+      "lng": 411.088632,
+      "lat": 436.713016
+    }
+  ],
+  "formers": [
+    {
+      "name": "サンダバンシー",
+      "description": "",
+      "elementalWeakness": 1,
+      "lng": 81.977495,
+      "lat": 403.34702
+    },
+    {
+      "name": "サンダバンサー",
+      "description": "",
+      "elementalWeakness": 1,
+      "lng": 103.736746,
+      "lat": 457.86496
+    },
+
+    {
+      "name": "アードバンシー",
+      "description": "Resembles a Fang Banshee Sylvant from PSO2. Can attack at long-range with wind attacks.",
+      "elementalWeakness": 1,
+      "destructables": "Head, Claws",
+      "weakPoint": "Head (Broken)",
+      "lng": 353.11719,
+      "lat": 134.46009
+    },
+    {
+      "name": "アードバンサー",
+      "description": "Resembles a Fang Banser Sylvant from PSO2. Attacks with zan-like (wind) attacks.",
+      "elementalWeakness": 1,
+      "destructables": "Head, Claws",
+      "weakPoint": "Head (Broken)",
+      "lng": 312.902118,
+      "lat": 246.408653
+    },
+    {
+      "name": "クラッグベア",
+      "description": "Resembles the Rockbear Sylvant from PSO2. Can create shockwaves from punching the ground as well as grabbing players midair",
+      "elementalWeakness": 1,
+      "weakPoint": "Face",
+      "lng": 393.432344,
+      "lat": 342.34218
+    }
+  ]
+}

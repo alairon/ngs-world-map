@@ -1,9 +1,9 @@
 import { Marker, Popup } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
 import { IconObject, LandmarkObject_L3 } from '../MapView.d';
-import RyukerPopupDialog from '../info/RyukerDialog';
-import TrialPopopDialog from '../info/TrialDialog';
-import PopupContent from '../info/ContentDialog';
+import RyukerPopupDialog from '../dialog/RyukerDialog';
+import TrialPopopDialog from '../dialog/TrialDialog';
+import PopupContent from '../dialog/ContentDialog';
 
 function genericIcon(fill: string): DivIcon{
   const img = `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" stroke="black" fill="${fill}"><circle cx="100" cy="100" r="800"/></svg>`;

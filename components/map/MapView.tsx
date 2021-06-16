@@ -1,10 +1,11 @@
 import { MapContainer, ImageOverlay, LayersControl, LayerGroup, AttributionControl, ZoomControl, TileLayer, FeatureGroup } from 'react-leaflet'
 import { CRS, LatLngBounds } from 'leaflet';
-import Landmarks from './layers/landmarks';
-import Gathering from './layers/gathering';
-import Regions from './layers/regions';
-import Caves from './layers/b_caves';
-import Containers from './layers/containers';
+import Landmarks from './layers/Landmarks';
+import Gathering from './layers/Gathering';
+import Regions from './layers/Regions';
+import Caves from './layers/Caves';
+import Containers from './layers/Containers';
+import Bosses from './layers/VetEnemy';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
@@ -17,18 +18,24 @@ export default function Map(props): JSX.Element{
 
   const localeStrings = {
     "en": {
+      "continent": "Halpha",
       "caves": "Caves",
       "landmarks": "Landmarks",
       "gathering": "Gathering",
       "containers": "Containers",
-      "regions": "Regions"
+      "regions": "Regions",
+      "bosses": "Rare Enemies (&beta;)",
+      "attribution": `<a href="https://ngs.pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`
     },
     "jp": {
+      "continent": "ハルファ",
       "caves": "洞窟",
       "landmarks": "Landmarks",
       "gathering": "ギャザリング",
       "containers": "アイテムコンテナ",
-      "regions": "リージョン"
+      "regions": "リージョン",
+      "bosses": "レアエネミー (&beta;)",
+      "attribution": `<a href="https://pso2.jp" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`
     }
   }
 
@@ -61,24 +68,23 @@ export default function Map(props): JSX.Element{
       />
 
 
-      <ImageOverlay 
-        url='../../ngs/halpha_release.webp'
-        bounds={imageBounds}
-        attribution={`<a href="https://pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`}
-      />
 
       <LayersControl position="topright" collapsed>
-        <LayersControl.BaseLayer checked name="Default">
-          <TileLayer url={""}></TileLayer>
-        </LayersControl.BaseLayer>
-        <LayersControl.BaseLayer name={localeStrings[locale].caves}>
-          <FeatureGroup attribution={"Rappy Burst"}>
-            <Caves data={props.caves} />
-          </FeatureGroup>
+        <LayersControl.BaseLayer checked name={localeStrings[locale].continent}>
+          <ImageOverlay 
+            url='../../ngs/halpha_release.webp'
+            bounds={imageBounds}
+            attribution={localeStrings[locale].attribution}
+          />
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name={localeStrings[locale].landmarks}>
           <LayerGroup>
             <Landmarks data={props.landmarks} />
+          </LayerGroup>
+        </LayersControl.Overlay>
+        <LayersControl.Overlay name={localeStrings[locale].caves}>
+          <LayerGroup attribution={"Rappy Burst"}>
+            <Caves data={props.caves} />
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name={localeStrings[locale].gathering}>
@@ -94,6 +100,11 @@ export default function Map(props): JSX.Element{
         <LayersControl.Overlay name={localeStrings[locale].regions}>
           <LayerGroup>
             <Regions data={props.regions} />
+          </LayerGroup>
+        </LayersControl.Overlay>
+        <LayersControl.Overlay name={localeStrings[locale].bosses}>
+          <LayerGroup>
+            <Bosses data={props.bosses} />
           </LayerGroup>
         </LayersControl.Overlay>
       </LayersControl>
