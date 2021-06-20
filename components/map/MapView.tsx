@@ -24,7 +24,7 @@ export default function Map(props): JSX.Element{
       "gathering": "Gathering",
       "containers": "Containers",
       "regions": "Regions",
-      "bosses": "Rare Enemies (&beta;)",
+      "bosses": "Rare Enemies",
       "attribution": `<a href="https://ngs.pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`
     },
     "jp": {
@@ -34,7 +34,7 @@ export default function Map(props): JSX.Element{
       "gathering": "ギャザリング",
       "containers": "アイテムコンテナ",
       "regions": "リージョン",
-      "bosses": "レアエネミー (&beta;)",
+      "bosses": "レアエネミー",
       "attribution": `<a href="https://pso2.jp" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`
     }
   }
