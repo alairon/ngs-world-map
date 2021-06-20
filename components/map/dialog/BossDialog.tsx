@@ -1,4 +1,4 @@
-import { Box, Container, Heading, ListIcon, ListItem, List } from "@chakra-ui/react";
+import { Box, Container, Heading } from "@chakra-ui/react";
 
 import {useRouter} from 'next/router';
 
@@ -8,13 +8,10 @@ function generateContentBody(contentProps){
   const localeStrings = {
     "en": {
       strings: {
-        elementalWeakness: "Elemental Weakness"
+        elementalWeakness: "Elemental Weakness",
+        classification: "Classification"
       },
-      enemyClass: {
-        dolls: "DOLLS",
-        alter: "ALTERS",
-        formers: "FORMERS"
-      },
+      enemyClass: [ "DOLLS", "ALTERS", "FORMERS", "GIGANTIX" ],
       elementalWeakness: [
         "None",
         "Foie (Fire)",
@@ -27,13 +24,10 @@ function generateContentBody(contentProps){
     },
     "jp": {
       strings: {
-        elementalWeakness: "弱属性"
+        elementalWeakness: "弱属性",
+        classification: "分類"
       },
-      enemyClass: {
-        dolls: "ドールズ",
-        alter: "アルターズ",
-        formers: "フォーマーズ"
-      },
+      enemyClass: [ "ドールズ", "アルターズ", "フォーマーズ", "ギガンティクス"],
       elementalWeakness: [
         "無",
         "フォイエ (炎)",
@@ -47,14 +41,15 @@ function generateContentBody(contentProps){
   }
 
   return(
-    <Container margin={0} padding={0}>
-      <Box paddingTop={1} paddingBottom={1} textAlign="center">
-        {contentProps.enemyClass}
+    <Container margin={0}>
+      <Box sx={{margin: "5px"}}>
+        <Box textAlign="center">
+          <b>{localeStrings[locale].strings.classification}: </b>{localeStrings[locale].enemyClass[contentProps.enemyClass]}
+        </Box>
+        <Box textAlign="center">
+          <b>{localeStrings[locale].strings.elementalWeakness}: </b>{localeStrings[locale].elementalWeakness[contentProps.elementalWeakness]}
+        </Box>
       </Box>
-      <Box>
-        <b>{localeStrings[locale].strings.elementalWeakness}: </b>{localeStrings[locale].elementalWeakness[contentProps.elementalWeakness]}
-      </Box>
-
     </Container>
   )
 }
