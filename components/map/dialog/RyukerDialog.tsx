@@ -20,7 +20,7 @@ export default function PopupContent(props: any){
       </Box>
 
       {/* Contents */}
-      <Box fontSize={"semibold"} sx={{padding: "5px", paddingTop: "10px", backgroundColor: "inherit"}}>
+      <Box sx={{padding: "5px", paddingTop: "10px", backgroundColor: "inherit"}}>
         <Heading as={"h3"} size="sm">{props.contentHeader}</Heading>
         {content}
       </Box>
