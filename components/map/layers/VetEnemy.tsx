@@ -10,10 +10,10 @@ export default function VeteranEnemy(bosses: any){
   
   const localeStrings = {
     "en": {
-      title: "Veteran Boss Enemy"
+      title: "Rare Enemy"
     },
     "jp": {
-      "title": "ドレッドエネミー"
+      "title": "レアエネミー"
     }
   }
 

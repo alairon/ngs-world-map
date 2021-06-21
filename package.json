@@ -15,25 +15,25 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
-    "@chakra-ui/react": "^1.6.3",
+    "@chakra-ui/react": "^1.6.4",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "leaflet-geosearch": "^3.3.2",
-    "next": "^10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-flow-renderer": "^9.6.0",
+    "next": "^11.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-flow-renderer": "^9.6.1",
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.5",
-    "@types/leaflet": "^1.7.2",
+    "@babel/core": "^7.14.6",
+    "@types/leaflet": "^1.7.3",
     "@types/react": "^17.0.11",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.4"
   },
   "repository": {
     "type": "git",

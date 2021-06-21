@@ -1,6 +1,7 @@
 const landmarks = require('./condenseLandmarkData').getMarkers; // L3
 const gathering = require('./condenseGatheringData').mapDataMerge; //G4
 const containers = require('./condenseContainerData').mapDataMerge; //C1
+const emergencyQuest = require('./condenseQuestData').getMarkers; //UQ1
 
 /** Supported Languages
  * en: English
@@ -15,5 +16,6 @@ continents.map((continent) => {
     landmarks(lang, continent);
     gathering(lang, continent);
     containers(lang, continent);
+    emergencyQuest(lang, continent);
   });
 })

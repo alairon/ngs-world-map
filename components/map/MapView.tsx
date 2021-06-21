@@ -6,6 +6,7 @@ import Regions from './layers/Regions';
 import Caves from './layers/Caves';
 import Containers from './layers/Containers';
 import Bosses from './layers/VetEnemy';
+import EmergencyQuests from './layers/EmergencyQuests';
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'leaflet-defaulticon-compatibility';
@@ -24,7 +25,8 @@ export default function Map(props): JSX.Element{
       "gathering": "Gathering",
       "containers": "Containers",
       "regions": "Regions",
-      "bosses": "Rare Enemies (&beta;)",
+      "bosses": "Rare Enemies",
+      "emergencyQuests": "Urgent Quests",
       "attribution": `<a href="https://ngs.pso2.com" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`
     },
     "jp": {
@@ -34,7 +36,8 @@ export default function Map(props): JSX.Element{
       "gathering": "ギャザリング",
       "containers": "アイテムコンテナ",
       "regions": "リージョン",
-      "bosses": "レアエネミー (&beta;)",
+      "bosses": "レアエネミー",
+      "emergencyQuests": "緊急クエスト",
       "attribution": `<a href="https://pso2.jp" target="_blank" rel="noreferrer" style="color: inherit">PHANTASY STAR ONLINE 2 NEW GENESIS</a>`
     }
   }
@@ -43,7 +46,7 @@ export default function Map(props): JSX.Element{
     <MapContainer 
       id={"ngs-halpha"}
       crs={CRS.Simple}
-      center={[326,294]}
+      center={[326,294] /*Central City*/}
       minZoom={0.5}
       maxZoom={2.5}
       
@@ -67,8 +70,7 @@ export default function Map(props): JSX.Element{
         position={"bottomright"}
       />
 
-
-
+      {/* Layers */}
       <LayersControl position="topright" collapsed>
         <LayersControl.BaseLayer checked name={localeStrings[locale].continent}>
           <ImageOverlay 
@@ -97,14 +99,19 @@ export default function Map(props): JSX.Element{
             <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name={localeStrings[locale].regions}>
-          <LayerGroup>
-            <Regions data={props.regions} />
-          </LayerGroup>
-        </LayersControl.Overlay>
         <LayersControl.Overlay name={localeStrings[locale].bosses}>
           <LayerGroup>
             <Bosses data={props.bosses} />
+          </LayerGroup>
+        </LayersControl.Overlay>
+        <LayersControl.Overlay name={localeStrings[locale].emergencyQuests}>
+          <LayerGroup>
+            <EmergencyQuests data={props.emergencyQuests}/>
+          </LayerGroup>
+        </LayersControl.Overlay>
+        <LayersControl.Overlay name={localeStrings[locale].regions}>
+          <LayerGroup>
+            <Regions data={props.regions} />
           </LayerGroup>
         </LayersControl.Overlay>
       </LayersControl>

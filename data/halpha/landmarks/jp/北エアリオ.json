@@ -25,7 +25,7 @@
         "clearCondition": "メインミッションの達成",
         "failCondition": "99回落下する",
         "mainMission": [
-          "Reach the Goal!"
+          "ゴールへ到達せよ！"
         ],
         "sideMission": [
           "1:25秒以内にクリア",
@@ -43,7 +43,7 @@
   ],
   "mag": [
     {
-      "locationName": "ハルファナ湿原",
+      "locationName": "練達のリージョンマグ",
       "lat": 412.592693,
       "lng": 133.465192
     }

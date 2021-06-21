@@ -1,0 +1,30 @@
+{
+  "quest": {
+    "name": "ネクス・ヴェラ討伐戦",
+    "region": "レゾルの森",
+    "details": {
+      "partyLimit": 8,
+      "recommendedCP": 1184,
+      "enemyLvl": 17,
+      "clearCondition": "対象エネミーの撃破",
+      "failCondition": "30:00以上経過する",
+      "mainMission": [
+        "ネクス・ヴェラ討伐"
+      ],
+      "pointAllocation": [
+        "エネミー撃破達成度: 400pt",
+        "クリア時間: 300pt (15分経過後、1秒毎に1ptずつ減算)",
+        "復活ボーナス: 300pt",
+        "MAXスコア: 1000pt"
+      ],
+      "rewards": [
+        "2,000 メセタ"
+      ],
+      "firstClearRewards": [
+        "5,000 メセタ"
+      ]
+    },
+    "lng": 254.878152,
+    "lat": 460.331494
+  }
+}

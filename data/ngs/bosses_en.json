@@ -3,6 +3,7 @@
     {
       "name": "Oruq",
       "description": "Flying enemy capable of long-distance attacks. Switches to a tentacle form when at low health",
+      "enemyClass": 0,
       "elementalWeakness": 2,
       "lng": 55.803401,
       "lat": 279.5497
@@ -10,6 +11,7 @@
     {
       "name": "Varas",
       "description": "Believed to be a mistake in the Global version. Appears in the Japanese Version as \"Nex Aelio\"",
+      "enemyClass": 0,
       "elementalWeakness": 2,
       "lng": 28.365143,
       "lat": 74.039089
@@ -17,6 +19,7 @@
     {
       "name": "Varas",
       "description": "",
+      "enemyClass": 0,
       "elementalWeakness": 2,
       "lng": 162.352374,
       "lat": 548.978111
@@ -24,6 +27,7 @@
     {
       "name": "Daityl Sword",
       "description": "Giant DOLLS enemy. Can be knocked down by attacking their feet, making it easier to attack the weakpoint on its chest.",
+      "enemyClass": 0,
       "elementalWeakness": 2,
       "weakPoints": ["Chest Armor", "Back Core"],
       "lng": 187.427946,
@@ -32,6 +36,7 @@
     {
       "name": "Daityl Axe",
       "description": "",
+      "enemyClass": 0,
       "elementalWeakness": 2,
       "weakPoints": ["Chest Armor", "Back Core"],
       "lng": 248.246368,
@@ -40,6 +45,7 @@
     {
       "name": "Nogleth",
       "description": "",
+      "enemyClass": 0,
       "elementalWeakness": 2,
       "lng": 312.49266,
       "lat": 104.423867
@@ -47,6 +53,7 @@
     {
       "name": "Bujin",
       "description": "A small DOLLS boss enemy with quick, ninja-like attacks. Attacks with clones once its HP is low.",
+      "enemyClass": 0,
       "elementalWeakness": 2,
       "lng": 238.683315,
       "lat": 428.682646
@@ -56,6 +63,7 @@
     {
       "name": "Big Frogga",
       "description": "",
+      "enemyClass": 1,
       "elementalWeakness": 1,
       "lng": 118.954524,
       "lat": 397.972286
@@ -64,6 +72,7 @@
     {
       "name": "Chiacurio",
       "description": "Enhances other enemies",
+      "enemyClass": 1,
       "elementalWeakness": 1,
       "lng": 170.857773,
       "lat": 483.034473
@@ -71,6 +80,7 @@
     {
       "name": "Eldi Scythe",
       "description": "",
+      "enemyClass": 1,
       "elementalWeakness": 1,
       "destructables": ["Arms x2"],
       "lng": 267.306252,
@@ -79,6 +89,7 @@
     {
       "name": "Waulon",
       "description": "Has kicks that sends out shockwaves.",
+      "enemyClass": 1,
       "elementalWeakness": 1,
       "lng": 411.088632,
       "lat": 436.713016
@@ -88,6 +99,7 @@
     {
       "name": "Thunder Banshee",
       "description": "",
+      "enemyClass": 2,
       "elementalWeakness": 1,
       "lng": 81.977495,
       "lat": 403.34702
@@ -95,6 +107,7 @@
     {
       "name": "Thunder Banser",
       "description": "",
+      "enemyClass": 2,
       "elementalWeakness": 1,
       "lng": 103.736746,
       "lat": 457.86496
@@ -103,6 +116,7 @@
     {
       "name": "Ard Banshee",
       "description": "Resembles a Fang Banshee Sylvant from PSO2. Can attack at long-range with wind attacks.",
+      "enemyClass": 2,
       "elementalWeakness": 1,
       "destructables": "Head, Claws",
       "weakPoint": "Head (Broken)",
@@ -112,6 +126,7 @@
     {
       "name": "Ard Banser",
       "description": "Resembles a Fang Banser Sylvant from PSO2. Attacks with zan-like (wind) attacks.",
+      "enemyClass": 2,
       "elementalWeakness": 1,
       "destructables": "Head, Claws",
       "weakPoint": "Head (Broken)",
@@ -121,6 +136,7 @@
     {
       "name": "Crag Bear",
       "description": "Resembles the Rockbear Sylvant from PSO2. Can create shockwaves from punching the ground as well as grabbing players midair",
+      "enemyClass": 2,
       "elementalWeakness": 1,
       "weakPoint": "Face",
       "lng": 393.432344,
