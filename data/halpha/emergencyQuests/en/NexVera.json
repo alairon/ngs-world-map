@@ -1,0 +1,30 @@
+{
+  "quest": {
+    "name": "Nex Vera Suppression Op",
+    "region": "Resol Forest",
+    "details": {
+      "partyLimit": 8,
+      "recommendedCP": 1184,
+      "enemyLvl": 17,
+      "clearCondition": "Defeat the target enemy",
+      "failCondition": "Time exceeds 30:00",
+      "mainMission": [
+        "Defeat Nex Vera"
+      ],
+      "pointAllocation": [
+        "Defeating the enemy: 400pt",
+        "Clear time: 300pt (1pt/sec deduction after 15 min)",
+        "Revival Bonus: 300pt",
+        "Max Score: 1000pt"
+      ],
+      "rewards": [
+        "2,000 N-Meseta"
+      ],
+      "firstClearRewards": [
+        "5,000 N-Meseta"
+      ]
+    },
+    "lng": 254.878152,
+    "lat": 460.331494
+  }
+}
