@@ -15,6 +15,11 @@ export async function getBossMarkers(lang: string): Promise<JSON>{
   return (data)
 }
 
+export async function getEmergencyQuestMarkers(lang: string): Promise<JSON>{
+  const data: JSON = require('../../data/ngs/emergencyQuest_' + lang + '.json');
+  return (data);
+}
+
 export async function getLabelMarkers(lang: string): Promise<JSON>{
   const data: JSON = require('../../data/ngs/labels_' + lang + '.json');
   return (data);
