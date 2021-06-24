@@ -1,4 +1,4 @@
-import { Marker, Popup } from 'react-leaflet';
+import { Marker, Popup, Tooltip } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import PopupContent from '../dialog/ContentDialog';
 import PopupBody from '../dialog/EmergencyQuestDialog';
@@ -21,6 +21,7 @@ export default function EmergencyQuests(quests: any){
         <Popup className={"NGSPopup"}>
           <PopupContent title={localeStrings[locale]} content={content}></PopupContent>
         </Popup>
+        <Tooltip direction="top" sticky>{quest.name}</Tooltip>
       </Marker>
     )
   });

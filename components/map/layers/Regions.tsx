@@ -1,4 +1,4 @@
-import { GeoJSON, Popup } from 'react-leaflet';
+import { GeoJSON, Popup, Tooltip } from 'react-leaflet';
 import { GenericMarkerConfig } from '../MapView.d';
 import RegionDialog from '../dialog/RegionDialog';
 import PopupContent from '../dialog/ContentDialog';
@@ -49,6 +49,7 @@ export default function Regions(boundaries: any): JSX.Element{
         <Popup className={"NGSPopup"}>
           <PopupContent title={boundary.properties.name} contentHeader={areaHeader(boundary.properties.region)} content={RegionDialog(boundary.properties)} />
         </Popup>
+        <Tooltip direction="top" sticky>{boundary.properties.name}</Tooltip>
       </GeoJSON>
     )
   });
