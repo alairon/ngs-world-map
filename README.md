@@ -25,7 +25,6 @@ The purpose of this map is to provide a smooth and simple interface that is also
 </details>
 
 <br/>
-
 ## Tech Stack
 - Map Library: [Leaflet.js](https://leafletjs.com/) - [React Leaflet](https://react-leaflet.js.org/)
 - Framework: [Node](https://nodejs.org)/[Next.js](https://nextjs.org)/[React](https://reactjs.org/)
