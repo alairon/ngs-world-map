@@ -1,4 +1,4 @@
-import { Marker, Popup } from 'react-leaflet';
+import { Marker, Popup, Tooltip } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
 import PopupContent from '../dialog/ContainerDialog';
 
@@ -21,6 +21,7 @@ export default function Containers(containers: any): JSX.Element{
           <Popup className={"NGSPopup"}>
             <PopupContent title={nodes.info.name} content={nodes.info.desc} />
           </Popup>
+          <Tooltip direction="top" sticky>{nodes.info.name}</Tooltip>
         </Marker>
       );
     }));

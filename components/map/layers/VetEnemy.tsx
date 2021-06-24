@@ -1,4 +1,4 @@
-import { Marker, Popup } from 'react-leaflet';
+import { Marker, Popup, Tooltip } from 'react-leaflet';
 import PopupContent from '../dialog/ContentDialog';
 import BossDialog from '../dialog/BossDialog';
 import {useRouter} from 'next/router';
@@ -28,6 +28,7 @@ export default function VeteranEnemy(bosses: any){
           <Popup className={"NGSPopup"}>
             <PopupContent title={localeStrings[locale].title} contentHeader={boss.name} description={boss.description} content={BossDialog(boss)}></PopupContent>
           </Popup>
+          <Tooltip direction="top" sticky>{boss.name}</Tooltip>
         </Marker>
       )
     });

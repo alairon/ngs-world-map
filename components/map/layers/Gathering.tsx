@@ -1,4 +1,4 @@
-import { Marker, Popup } from 'react-leaflet';
+import { Marker, Popup, Tooltip } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
 import GatheringDialog from '../dialog/GatheringDialog';
 
@@ -22,10 +22,9 @@ export default function Gathering(gathering): JSX.Element{
   const Markers: JSX.Element = gathering.data.map((nodes, idx: number) => {
     return nodes.coordinates.map((coord, idy: number) => {
       return(
-        <Marker key={'g'+(idx*idy+idy)} position={[coord.lat, coord.lng]} title={nodes.info.materialName} icon={genericIcon(nodes.info.color, coord.inCave)}>
-          <Popup className={"NGSPopup"}>
-            {GatheringDialog(nodes.info)}
-        </Popup>
+        <Marker key={'g'+(idx*idy+idy)} position={[coord.lat, coord.lng]} icon={genericIcon(nodes.info.color, coord.inCave)}>
+          <Popup className={"NGSPopup"}>{GatheringDialog(nodes.info)}</Popup>
+          <Tooltip sticky className={"NGSPopup"}>{nodes.info.materialName}</Tooltip>
         </Marker>
       );
     });

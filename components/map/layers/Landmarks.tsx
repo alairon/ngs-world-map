@@ -1,4 +1,4 @@
-import { Marker, Popup } from 'react-leaflet';
+import { Marker, Popup, Tooltip } from 'react-leaflet';
 import { Icon, DivIcon } from 'leaflet';
 import { IconObject, LandmarkObject_L3 } from '../MapView.d';
 import RyukerPopupDialog from '../dialog/RyukerDialog';
@@ -63,6 +63,7 @@ export default function Landmarks(landmarks: LandmarkObject_L3 | any){
         <Popup className={"NGSPopup"} >
           <PopupContent title={landmark.landmarkName} contentHeader={landmark.locationName} description={landmark.description} content={popupContent}/>
         </Popup>
+        <Tooltip direction="top" sticky>{landmark.locationName} ({landmark.landmarkName})</Tooltip>
       </Marker>
     );
   });
