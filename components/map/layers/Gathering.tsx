@@ -24,7 +24,7 @@ export default function Gathering(gathering): JSX.Element{
       return(
         <Marker key={'g'+(idx*idy+idy)} position={[coord.lat, coord.lng]} icon={genericIcon(nodes.info.color, coord.inCave)}>
           <Popup className={"NGSPopup"}>{GatheringDialog(nodes.info)}</Popup>
-          <Tooltip sticky className={"NGSPopup"}>{nodes.info.materialName}</Tooltip>
+          <Tooltip direction="top" sticky>{nodes.info.materialName}</Tooltip>
         </Marker>
       );
     });
