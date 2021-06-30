@@ -25,6 +25,7 @@ The purpose of this map is to provide a smooth and simple interface that is also
 </details>
 
 <br/>
+
 ## Tech Stack
 - Map Library: [Leaflet.js](https://leafletjs.com/) - [React Leaflet](https://react-leaflet.js.org/)
 - Framework: [Node](https://nodejs.org)/[Next.js](https://nextjs.org)/[React](https://reactjs.org/)
@@ -35,6 +36,7 @@ The purpose of this map is to provide a smooth and simple interface that is also
 * Shadowth117 for the NGS map
 * Ani from [Rappy Burst](https://new-gen.rappy-burst.com/) for the gathering and container data
 * Hinadori for the numerous suggestions
+* PSO2:NGS swiki contributors
 
 ## Disclaimer
 The data presented is based on data shared by the NGS community. Actual locations of items in-game may vary based on updates provided by SEGA.
