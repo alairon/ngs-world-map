@@ -63,7 +63,7 @@ export default function Map(props): JSX.Element{
       
       <AttributionControl 
         position={"bottomright"}
-        prefix={"&copy; SEGA"}
+        prefix={`&copy; SEGA ${localeStrings[locale].attribution}`}
       />
 
       <ZoomControl 
@@ -76,7 +76,6 @@ export default function Map(props): JSX.Element{
           <ImageOverlay 
             url='../../ngs/halpha_release.webp'
             bounds={imageBounds}
-            attribution={localeStrings[locale].attribution}
           />
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name={localeStrings[locale].landmarks}>
@@ -95,7 +94,7 @@ export default function Map(props): JSX.Element{
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name={localeStrings[locale].containers}>
-          <LayerGroup attribution={"Rappy Burst"}>
+          <LayerGroup attribution={"swiki"}>
             <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>
