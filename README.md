@@ -2,6 +2,9 @@
 An interactive world map for Phantasy Star Online 2 New Genesis (PSO2:NGS).
 The purpose of this map is to provide a smooth and simple interface that is also mobile-friendly.
 
+You can visit the map over at: https://ngs-world-map.vercel.app/en/map
+![View of the world map on Vercel](https://raw.githubusercontent.com/wiki/Snowthorne/ngs-world-map/readme/mapShowcase.png)
+
 ## Current Data 
 <details>
   <summary>Halpha</summary>
@@ -11,7 +14,7 @@ The purpose of this map is to provide a smooth and simple interface that is also
 * Key landmarks: Ryuker Devices, Cocoons, Towers, Region Mags
 * Gathering Nodes (credits: [Ani/Rappy Burst](https://new-gen.rappy-burst.com/gathering/))
 * Caves and Tunnels (credits: [Ani/Rappy Burst](https://new-gen.rappy-burst.com/gathering/))
-* Red Item Containers (credits: [Ani/Rappy Burst](https://new-gen.rappy-burst.com/gathering/))
+* Collectibles: Red Item Containers (credits: [Ani/Rappy Burst](https://new-gen.rappy-burst.com/gathering/))
 * Field Bosses (Veteran enemies)
 * Regions (Exploration/Battle)
 </details>
@@ -24,13 +27,12 @@ The purpose of this map is to provide a smooth and simple interface that is also
   * The desert region
 </details>
 
-<br/>
-
 ## Tech Stack
 - Map Library: [Leaflet.js](https://leafletjs.com/) - [React Leaflet](https://react-leaflet.js.org/)
-- Framework: [Node](https://nodejs.org)/[Next.js](https://nextjs.org)/[React](https://reactjs.org/)
+- Framework: [Next.js](https://nextjs.org)/[React](https://reactjs.org/)
 - UI Elements: Modified [Chakra UI](https://chakra-ui.com/)
 - Others: [potrace](http://potrace.sourceforge.net/) (for SVG icon generation), [WebP](https://developers.google.com/speed/webp) (image compression)
+- Server Hosting Platform: [Vercel](https://vercel.com/) using [Node](https://nodejs.org)
 
 ## Special Thanks
 * Shadowth117 and Akhshtar for the NGS map
