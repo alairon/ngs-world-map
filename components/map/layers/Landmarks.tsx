@@ -63,7 +63,7 @@ export default function Landmarks(landmarks: LandmarkObject_L3 | any){
         <Popup className={"NGSPopup"} >
           <PopupContent title={landmark.landmarkName} contentHeader={landmark.locationName} description={landmark.description} content={popupContent}/>
         </Popup>
-        <Tooltip direction="top" sticky>{landmark.locationName} ({landmark.landmarkName})</Tooltip>
+        <Tooltip direction="top" sticky>{landmark.locationName}</Tooltip>
       </Marker>
     );
   });
