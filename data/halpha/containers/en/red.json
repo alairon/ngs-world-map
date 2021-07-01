@@ -4,7 +4,23 @@
       "dataStructRev": "C1",
       "name": "Red Container",
       "color": "#d10306",
-      "desc": "Can only be opened once per account and may be protected by a barrier. Usually contains N-Meseta, but some may contain Units or SG."
-    }
+      "desc": [
+        "Red Item Container",
+
+        "10 SG",
+        "10,000 N-Meseta",
+        "25,000 N-Meseta",
+
+        "C/Aeilo Note A×10",
+        "C/Aeilo Note B×10",
+        "C/Aeilo Note C×10",
+        "C/Aeilo Note Dx10",
+        
+        "Qual De Armor: Arga [4★]",
+        "Qual De Armor: Belta [4★]",
+        "Qual De Armor: Sheza [4★]"
+      ]
+    },
+    "coordinates": []
   }
 }
