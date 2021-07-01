@@ -1,5 +1,4 @@
 import { Link, Box, Modal, ModalOverlay, ModalContent, Button, useDisclosure, ModalHeader, ModalBody, ModalFooter } from '@chakra-ui/react';
-import Notices from '../MenuItems/Notices';
 import { useRef } from 'react';
 
 export default function AboutDialog(){
@@ -25,7 +24,7 @@ export default function AboutDialog(){
           <ModalBody>
               
             <Box>
-              Thanks for checking out this site! If you would like to report an issue or provide suggestions, please message Snowthorne#7465 on Discord, or visit the <Link href="https://github.com/Snowthorne/ngs-world-map" isExternal>GitHub repository</Link>
+              Thanks for checking out this site! If you would like to report an issue or provide suggestions, please message Snowthorne#7465 on Discord, or visit the <Link href="https://github.com/Snowthorne/ngs-world-map" isExternal sx={{textDecoration: "underline"}}>GitHub repository</Link>
             </Box>
           </ModalBody>
           <ModalFooter>

@@ -1,8 +1,10 @@
 /** condenseContainerData.js
- * Built for gathering data structure version: C1 (2021-06-05)
+ * Built for gathering data structure version: C1.1 (C1 base 2021-06-05, update 2021-06-30)
  * 
  * This program merges the localized strings files with the coordinates found in the associated coordinates file
  * The program will also condense the information section to reduce processing on the client's device
+ * 
+ * C1.1 improves the flexibility of coordinate files, allowing the data to be placed in multiple files
  */
 
 const fs = require('fs');
@@ -22,44 +24,51 @@ function mapDataMerge(lang, continent){
 
   // Data
   const localeData= {};
-  const mergedJSON = [];
 
-  inputStringFiles.map((value) => {
-    if (jsonRegex.test(value)){
-      const data = JSON.parse(fs.readFileSync(path.join(inputStringsDir, value), 'utf8'));
+  // Reads the localized text .json files from a directory
+  inputStringFiles.map((fileName) => {
+    if (jsonRegex.test(fileName)){
+      // Reads
+      const data = JSON.parse(fs.readFileSync(path.join(inputStringsDir, fileName), 'utf8'));
       if (data){
-        for (const value in data){
-          if (data[value].info.dataStructRev == structVer){
-            localeData[value] = data[value];
-            delete localeData[value].info.dataStructRev;
+        for (const langContainerType in data){
+          // Checks for the dataStructRev version
+          if (data[langContainerType].info.dataStructRev == structVer){
+            localeData[langContainerType] = data[langContainerType];
+            delete localeData[langContainerType].info.dataStructRev;
+
+            // Goes through the coordinate files
+            inputMapDataFiles.map((value) => {
+              if (jsonRegex.test(value)){
+                const data = JSON.parse(fs.readFileSync(path.join(inputMapDataDir, value), 'utf8'));
+                if (data){
+                  for (const coordinateContainerType in data){
+                    if (localeData[coordinateContainerType] != 'undefined' && langContainerType === coordinateContainerType){
+                      data[coordinateContainerType].coordinates.map((coords) => {
+                        localeData[langContainerType].coordinates.push(coords);
+                      });
+                    }
+                  }
+                }
+              }
+            });
+
+            console.log(`>  Processed ${localeData[langContainerType].coordinates.length} ${langContainerType} containers`);
           }
           else{
-           console.log(`Error while processing '${value}'\n  Expected structure version ${structVer}, but got ${data[value].info.dataStructRev}`);
-           localeData[value] = {};
-         }
-        }
-      }
-    }
-  });
-
-  inputMapDataFiles.map((value) => {
-    if (jsonRegex.test(value)){
-      const data = JSON.parse(fs.readFileSync(path.join(inputMapDataDir, value), 'utf8'));
-      if (data){
-        for (const value in data){
-          if (localeData[value] != 'undefined'){
-            mergedJSON.push(Object.assign(localeData[value], data[value]));
+            console.log(`Error while processing '${langContainerType}'\n  Expected structure version ${structVer}, but got ${data[langContainerType].info.dataStructRev}`);
+            localeData[value] = {};
           }
         }
       }
     }
   });
-
+  
   try{
     if (!fs.existsSync(outputDir)){
       fs.mkdirSync(outputDir);
     }
-    fs.writeFileSync(path.join(outputDir, 'containers_' + lang + '.json'), JSON.stringify(mergedJSON));
+    fs.writeFileSync(path.join(outputDir, 'containers_' + lang + '.json'), JSON.stringify([localeData]));
     console.log(`JSON created at: ${path.join(outputDir, 'containers_' + lang + '.json')}`);
   }
   catch(err){

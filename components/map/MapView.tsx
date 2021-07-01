@@ -23,7 +23,7 @@ export default function Map(props): JSX.Element{
       "caves": "Caves",
       "landmarks": "Landmarks",
       "gathering": "Gathering",
-      "containers": "Containers",
+      "collectibles": "Collectibles",
       "regions": "Regions",
       "bosses": "Rare Enemies",
       "emergencyQuests": "Urgent Quests",
@@ -34,7 +34,7 @@ export default function Map(props): JSX.Element{
       "caves": "洞窟",
       "landmarks": "Landmarks",
       "gathering": "ギャザリング",
-      "containers": "アイテムコンテナ",
+      "collectibles": "コレクタブル",
       "regions": "リージョン",
       "bosses": "レアエネミー",
       "emergencyQuests": "緊急クエスト",
@@ -63,7 +63,7 @@ export default function Map(props): JSX.Element{
       
       <AttributionControl 
         position={"bottomright"}
-        prefix={"&copy; SEGA"}
+        prefix={`&copy; SEGA ${localeStrings[locale].attribution}`}
       />
 
       <ZoomControl 
@@ -76,7 +76,6 @@ export default function Map(props): JSX.Element{
           <ImageOverlay 
             url='../../ngs/halpha_release.webp'
             bounds={imageBounds}
-            attribution={localeStrings[locale].attribution}
           />
         </LayersControl.BaseLayer>
         <LayersControl.Overlay checked name={localeStrings[locale].landmarks}>
@@ -94,8 +93,8 @@ export default function Map(props): JSX.Element{
             <Gathering data={props.gathering} />
           </LayerGroup>
         </LayersControl.Overlay>
-        <LayersControl.Overlay name={localeStrings[locale].containers}>
-          <LayerGroup attribution={"Rappy Burst"}>
+        <LayersControl.Overlay name={localeStrings[locale].collectibles}>
+          <LayerGroup attribution={"swiki"}>
             <Containers data={props.containers} />
           </LayerGroup>
         </LayersControl.Overlay>

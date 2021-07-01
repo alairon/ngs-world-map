@@ -1,5 +1,4 @@
 import { Flex, Box, Spacer, Heading } from '@chakra-ui/react';
-import MenuDrawer from './Menu'; 
 import LanguageSelector from './MenuItems/Languages';
 import About from './MenuItems/About'
 
