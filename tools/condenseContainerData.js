@@ -52,6 +52,8 @@ function mapDataMerge(lang, continent){
                 }
               }
             });
+
+            console.log(`>  Processed ${localeData[langContainerType].coordinates.length} ${langContainerType} containers`);
           }
           else{
             console.log(`Error while processing '${langContainerType}'\n  Expected structure version ${structVer}, but got ${data[langContainerType].info.dataStructRev}`);
