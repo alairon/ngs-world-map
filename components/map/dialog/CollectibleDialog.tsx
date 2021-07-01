@@ -6,13 +6,17 @@ export default function ContainerDialog(contentProps){
   const localeStrings: Object = {
     en: {
       redContainer: "Red Item Container",
+      barrierText: "Protected by a barrier",
       reward: "Reward"
     },
     jp: {
       redContainer: "アイテムコンテナ[赤]",
+      barrierText: "プロテクトコンテナ",
       reward: "報酬"
     }
   }
+
+  const barrierText = contentProps.barrier ? <Box><b>{localeStrings[locale].barrierText}</b></Box> : <Box/>
 
   return (
     <Box>
@@ -21,11 +25,12 @@ export default function ContainerDialog(contentProps){
         <Heading size="sm" padding="5px 0 5px 5px">{contentProps.title}</Heading>
       </Box>
 
-      <Box margin={"5px"} padding={"5px"} sx={{backgroundColor: "rgba(29,38,53,0.6)"}}>
+      <Box margin={"5px"} padding={"3px"} sx={{backgroundColor: "rgba(29,38,53,0.6)"}}>
         <Container margin={0}>
           <Box sx={{textAlign: "center", padding: "5px", backgroundColor: "none"}}>
             <Heading size="sm">{contentProps.name}</Heading>
-            {localeStrings[locale].reward}: {contentProps.content}
+            {barrierText}
+            <b>{localeStrings[locale].reward}</b>: {contentProps.content}
           </Box>
         </Container>
       </Box>

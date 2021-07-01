@@ -33,7 +33,7 @@ export default function Containers(containers: any): JSX.Element{
         return(
           <Marker key={'c'+(idx*idy+idy)} position={[coord.lat, coord.lng]} icon={containerIcon(nodes[key].info.color)}>
             <Popup className={"NGSPopup"}>
-              <PopupContent title={localeStrings[locale].title} name={nodes[key].info.name} content={nodes[key].info.desc[coord.item] || `Lat: ${coord.lat} Lng: ${coord.lng}`} />
+              <PopupContent title={localeStrings[locale].title} name={nodes[key].info.name} barrier={coord.barrier} content={nodes[key].info.desc[coord.item] || `Lat: ${coord.lat} Lng: ${coord.lng}`} />
             </Popup>
             <Tooltip direction="top" sticky>{nodes[key].info.name}</Tooltip>
             {/*<Tooltip direction="bottom" sticky>Lat: {coord.lat}, Lng: {coord.lng}</Tooltip>*/}
