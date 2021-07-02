@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { getGatheringMarkers, getCaveData } from './api/gathering';
+import { getGatheringMarkers, getCaveData, getDatapodMarkers } from './api/gathering';
 import { getLandmarkMarkers, getBossMarkers, getEmergencyQuestMarkers } from './api/landmarks';
 import { getContainerMarkers } from './api/containers'
 import { getRegions } from './api/regions';
@@ -13,6 +13,7 @@ interface StaticProps{
     gathering: JSON,
     regions: JSON,
     containers: JSON,
+    datapods: JSON,
     caves: JSON,
     bosses: JSON,
     emergencyQuests: JSON
@@ -24,6 +25,7 @@ export async function getStaticProps({locale}): Promise<StaticProps>{
   const gathering: JSON = await getGatheringMarkers(locale);
   const regions: JSON = await getRegions(locale);
   const containers: JSON = await getContainerMarkers(locale);
+  const datapods: JSON = await getDatapodMarkers(locale);
   const bosses: JSON = await getBossMarkers(locale);
   const emergencyQuests: JSON = await getEmergencyQuestMarkers(locale);
   const caves: JSON = await getCaveData();
@@ -34,6 +36,7 @@ export async function getStaticProps({locale}): Promise<StaticProps>{
       gathering,
       regions,
       containers,
+      datapods,
       caves,
       bosses,
       emergencyQuests

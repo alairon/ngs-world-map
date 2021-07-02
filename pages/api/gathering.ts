@@ -10,6 +10,11 @@ export async function getGatheringMarkers(lang: string): Promise<JSON>{
   return (data);
 }
 
+export async function getDatapodMarkers(lang: string): Promise<JSON>{
+  const data: JSON = require('../../data/ngs/datapods_' + lang + '.json');
+  return (data);
+}
+
 export async function getCaveData(): Promise<JSON>{
   const data: JSON = require('../../data/ngs/caves.json');
   return (data);

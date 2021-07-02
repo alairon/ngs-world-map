@@ -1,0 +1,48 @@
+{
+  "datapod": {
+    "coordinates": [
+      { 
+        "msg": "There are various colors of Item Containers. You'll definitely find some great stuff in the Gold ones.",
+        "reward": "",
+        "lng": 299.131944,
+        "lat": 399.161778
+      },
+      {
+        "msg": "This area is a cornucopia of fruits and vegetables. It's a great spot for ingredient hunters.",
+        "reward": "",
+        "lng": 376.759636,
+        "lat": 391.737157
+      },
+      {
+        "msg": "You may be able to find abandoned Item Containers near the cliffs of Central Aelio.",
+        "reward": "",
+        "lng": 434.034043,
+        "lat": 381.660885
+      },
+      {
+        "msg": "The wide plains of Central Aelio are spotted with gently sloping hills. Many TAMES inhabit these lands.",
+        "reward": "",
+        "lng": 331.300489,
+        "lat": 344.007449
+      },
+      {
+        "msg": "ARKS can increae their Attack for a short time by chowing down on Quick Food made with TAMES meat.",
+        "reward": "Crisp Aelio Meat [×5]",
+        "lng": 233.182436,
+        "lat": 331.279527
+      },
+      {
+        "msg": "Yellow, blinking Ryuker Devices have yet to be connected. Get them linked up to expand your range of operations.",
+        "reward": "",
+        "lng": 247.682369,
+        "lat": 305.470129
+      },
+      {
+        "msg": "ARKS can increase their Defense for a short time by chowing down on Quick Food made with vegetables.",
+        "reward": "Light Aelio Mushroom [×5]",
+        "lng": 250.157968,
+        "lat": 273.119994
+      }
+    ]
+  }
+}

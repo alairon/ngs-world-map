@@ -960,7 +960,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "South Aeilo",
+        "name": "South Aelio",
         "region": 1,
         "maxPlayers": 32,
         "recommendedCP": 831,
@@ -1217,7 +1217,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "West Aeilo",
+        "name": "West Aelio",
         "region": 1,
         "maxPlayers": 32,
         "recommendedCP": 933,
@@ -1806,7 +1806,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "North Aeilo",
+        "name": "North Aelio",
         "region": 1,
         "maxPlayers": 32,
         "recommendedCP": 1045,
@@ -2083,7 +2083,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Central Aeilo",
+        "name": "Central Aelio",
         "region": 1,
         "maxPlayers": 32,
         "recommendedCP": 800,

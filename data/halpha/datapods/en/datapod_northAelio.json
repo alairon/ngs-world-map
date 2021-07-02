@@ -1,0 +1,36 @@
+{
+  "datapod": {
+    "coordinates": [
+      {
+        "msg": "There are recon supply caches still left in the mountains of North Aelio. Make use of any Item Containers you might come across.",
+        "reward": "",
+        "lng": 159.275546,
+        "lat": 515.25
+      },
+      {
+        "msg": "You need some minerals and ore to enhance your weapons, right? You may just strike the motherlode here.",
+        "reward": "",
+        "lng": 146.021667,
+        "lat": 476.5
+      },
+      {
+        "msg": "Tossing a North Aelio Region Mag some items will bolster the growth of ARKS defenders... or so they say.",
+        "reward": "",
+        "lng": 144.521228,
+        "lat": 437.5
+      },
+      {
+        "msg": "You won't be able to find many ingredients around here... But there's a veritable bounty of quality minerals to gather.",
+        "reward": "",
+        "lng": 154.774229,
+        "lat": 403.5
+      },
+      {
+        "msg": "The wetlands and plateaus of North Aelio stretch far and wide. Sightings have been reported of enormous DOLLS appearing on the plateaus...",
+        "reward": "",
+        "lng": 212.290771,
+        "lat": 385.75
+      }
+    ]
+  }
+}

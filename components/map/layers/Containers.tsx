@@ -1,6 +1,6 @@
 import { Marker, Popup, Tooltip } from 'react-leaflet';
 import { DivIcon } from 'leaflet';
-import PopupContent from '../dialog/CollectibleDialog';
+import PopupContent from '../dialog/ContainerDialog';
 import { useRouter } from 'next/router';
 
 function containerIcon(fill: string): DivIcon{
