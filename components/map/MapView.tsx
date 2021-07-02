@@ -5,6 +5,7 @@ import Gathering from './layers/Gathering';
 import Regions from './layers/Regions';
 import Caves from './layers/Caves';
 import Containers from './layers/Containers';
+import Datapods from './layers/Datapods';
 import Bosses from './layers/VetEnemy';
 import EmergencyQuests from './layers/EmergencyQuests';
 import 'leaflet/dist/leaflet.css'
@@ -94,9 +95,14 @@ export default function Map(props): JSX.Element{
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name={localeStrings[locale].collectibles}>
-          <LayerGroup attribution={"swiki"}>
-            <Containers data={props.containers} />
-          </LayerGroup>
+          <FeatureGroup>
+            <LayerGroup attribution={"swiki"}>
+              <Containers data={props.containers} />
+            </LayerGroup>
+            <LayerGroup attribution={"swiki"}>
+              <Datapods data={props.datapods} />
+            </LayerGroup>
+          </FeatureGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay name={localeStrings[locale].bosses}>
           <LayerGroup>

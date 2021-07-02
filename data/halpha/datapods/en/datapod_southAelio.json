@@ -1,0 +1,42 @@
+{
+  "datapod": {
+    "coordinates": [
+      {
+        "msg": "The peaks and valleys of South Aelio boast mountains and waterfalls plenty. Its bountiful natural resources make it a hotspot for mining and fishing.",
+        "reward": "",
+        "lng": 295.938008,
+        "lat": 231.223917
+      },
+      {
+        "msg": "This area holds a bounty of ingredients. You can find some minerals here too. I highly recommend Gathering here!",
+        "reward": "",
+        "lng": 292.136196,
+        "lat": 222.650248
+      },
+      {
+        "msg": "There are old campsites in the underbrush and in caves around South Aelio. Feel free to keep anything from the Item Containers you may find there.",
+        "reward": "",
+        "lng": 255.990149,
+        "lat": 223.976073
+      },
+      {
+        "msg": "Internal photon stores will be bolstered for a short time by chowing down on Quick Food made with fruit.",
+        "reward": "Rich Aelio Apple [×5]",
+        "lng": 325.479332,
+        "lat": 152.735065
+      },
+      {
+        "msg": "ARKS can increase their HP for a short time by chowing down on Quick Food made with seafood.",
+        "reward": "Robust Aelio Lobster [×5]",
+        "lng": 313.808654,
+        "lat": 105.182134
+      },
+      {
+        "msg": "There's a rumor going around that putting items into a South Aelio Region Mag bolsters the luck of ARKS defenders.",
+        "reward": "",
+        "lng": 324.418362,
+        "lat": 100.762716
+      }
+    ]
+  }
+}
