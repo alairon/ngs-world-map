@@ -29,8 +29,10 @@ export default function ContainerDialog(contentProps){
         <Container margin={0}>
           <Box sx={{textAlign: "center", padding: "5px", backgroundColor: "none"}}>
             <Heading size="sm">{contentProps.name}</Heading>
-            {barrierText}
-            <b>{localeStrings[locale].reward}</b>: {contentProps.content}
+            <Box paddingTop="5px">
+              {barrierText}
+              <b>{localeStrings[locale].reward}</b>: {contentProps.content}
+            </Box>
           </Box>
         </Container>
       </Box>
