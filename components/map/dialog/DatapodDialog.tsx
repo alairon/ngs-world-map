@@ -25,9 +25,9 @@ export default function ContainerDialog(contentProps){
         <Container margin={0}>
           <Box sx={{textAlign: "center", padding: "5px", backgroundColor: "none"}}>
             <Heading size="sm">{contentProps.name}</Heading>
-            <Box paddingTop="10px">
-            {contentProps.content}
-            {rewardText}
+            <Box paddingTop="5px">
+              {contentProps.content}
+              {rewardText}
             </Box>
           </Box>
         </Container>
