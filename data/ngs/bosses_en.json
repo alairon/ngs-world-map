@@ -9,8 +9,8 @@
       "lat": 279.5497
     },
     {
-      "name": "Varas",
-      "description": "Believed to be a mistake in the Global version. Appears in the Japanese Version as \"Nex Aelio\"",
+      "name": "Nex Aelio",
+      "description": "Formerly a duplicate Varas. Corrected on 2021-07-07",
       "enemyClass": 0,
       "elementalWeakness": 2,
       "lng": 28.365143,
